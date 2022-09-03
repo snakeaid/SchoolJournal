@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolJournal.BusinessLogic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolJournal.Mapping", "SchoolJournal.Mapping\SchoolJournal.Mapping.csproj", "{6EE6516E-D635-4D80-976E-2E5216F8EC6B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolJournal.DataAccess.Abstractions", "SchoolJournal.DataAccess.Abstractions\SchoolJournal.DataAccess.Abstractions.csproj", "{AF958251-E6F3-4628-90A8-5069CA4A2ED8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +50,9 @@ Global
 		{6EE6516E-D635-4D80-976E-2E5216F8EC6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EE6516E-D635-4D80-976E-2E5216F8EC6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EE6516E-D635-4D80-976E-2E5216F8EC6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF958251-E6F3-4628-90A8-5069CA4A2ED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF958251-E6F3-4628-90A8-5069CA4A2ED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF958251-E6F3-4628-90A8-5069CA4A2ED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF958251-E6F3-4628-90A8-5069CA4A2ED8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
