@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolJournal.API", "SchoolJournal.API\SchoolJournal.API.csproj", "{B201010B-3C68-49CF-BE11-F44B03F14E41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolJournal.DataAccess", "SchoolJournal.DataAccess\SchoolJournal.DataAccess.csproj", "{6B98C29E-E4BD-46D2-88A3-655487524B50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolJournal.DataAccess.Primitives", "SchoolJournal.DataAccess.Primitives\SchoolJournal.DataAccess.Primitives.csproj", "{FD8738FC-F291-415B-BA94-89C26A316F2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolJournal.Primitives", "SchoolJournal.Primitives\SchoolJournal.Primitives.csproj", "{3D36F8DD-D140-4079-B9D7-AC6921B4A537}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolJournal.Middleware", "SchoolJournal.Middleware\SchoolJournal.Middleware.csproj", "{A808E481-D16F-412B-9505-E32DF648C18B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolJournal.BusinessLogic", "SchoolJournal.BusinessLogic\SchoolJournal.BusinessLogic.csproj", "{2650745E-3147-43DA-B585-DD0FDD8AAF81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolJournal.Mapping", "SchoolJournal.Mapping\SchoolJournal.Mapping.csproj", "{6EE6516E-D635-4D80-976E-2E5216F8EC6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B201010B-3C68-49CF-BE11-F44B03F14E41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B201010B-3C68-49CF-BE11-F44B03F14E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B201010B-3C68-49CF-BE11-F44B03F14E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B201010B-3C68-49CF-BE11-F44B03F14E41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B98C29E-E4BD-46D2-88A3-655487524B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B98C29E-E4BD-46D2-88A3-655487524B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B98C29E-E4BD-46D2-88A3-655487524B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B98C29E-E4BD-46D2-88A3-655487524B50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD8738FC-F291-415B-BA94-89C26A316F2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD8738FC-F291-415B-BA94-89C26A316F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD8738FC-F291-415B-BA94-89C26A316F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD8738FC-F291-415B-BA94-89C26A316F2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D36F8DD-D140-4079-B9D7-AC6921B4A537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D36F8DD-D140-4079-B9D7-AC6921B4A537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D36F8DD-D140-4079-B9D7-AC6921B4A537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D36F8DD-D140-4079-B9D7-AC6921B4A537}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A808E481-D16F-412B-9505-E32DF648C18B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A808E481-D16F-412B-9505-E32DF648C18B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A808E481-D16F-412B-9505-E32DF648C18B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A808E481-D16F-412B-9505-E32DF648C18B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2650745E-3147-43DA-B585-DD0FDD8AAF81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2650745E-3147-43DA-B585-DD0FDD8AAF81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2650745E-3147-43DA-B585-DD0FDD8AAF81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2650745E-3147-43DA-B585-DD0FDD8AAF81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EE6516E-D635-4D80-976E-2E5216F8EC6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EE6516E-D635-4D80-976E-2E5216F8EC6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EE6516E-D635-4D80-976E-2E5216F8EC6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EE6516E-D635-4D80-976E-2E5216F8EC6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
