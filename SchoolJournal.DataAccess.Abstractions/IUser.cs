@@ -3,7 +3,7 @@ namespace SchoolJournal.DataAccess.Abstractions;
 /// <summary>
 /// Interface which describes a person.
 /// </summary>
-public interface IPerson
+public interface IUser
 {
     /// <summary>
     /// Gets and sets the first name of the person.
@@ -19,6 +19,16 @@ public interface IPerson
     /// Gets and sets the date of birth of the person.
     /// </summary>
     public DateOnly Birthday { get; set; }
+
+    /// <summary>
+    /// Gets and sets login of the person.
+    /// </summary>
+    public string Login { get; set; }
+
+    /// <summary>
+    /// Gets and sets password of the person.
+    /// </summary>
+    public string Password { get; set; }
 
     //TODO: Add contact information
 }

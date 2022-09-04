@@ -5,7 +5,7 @@ namespace SchoolJournal.DataAccess.Primitives;
 /// <summary>
 /// Entity class which represents a student.
 /// </summary>
-public class Student : IPerson
+public class Student : IUser
 {
     /// <summary>
     /// Gets and sets the unique identifier of the student.
@@ -31,6 +31,16 @@ public class Student : IPerson
     /// Gets and sets the date of birth of the student.
     /// </summary>
     public DateOnly Birthday { get; set; }
+
+    /// <summary>
+    /// Gets and sets login of the student.
+    /// </summary>
+    public string Login { get; set; } = null!;
+
+    /// <summary>
+    /// Gets and sets password of the person.
+    /// </summary>
+    public string Password { get; set; } = null!;
 
     //TODO: Add info for student
 }
