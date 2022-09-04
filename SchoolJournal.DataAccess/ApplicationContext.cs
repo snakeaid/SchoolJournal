@@ -16,17 +16,32 @@ public class ApplicationContext : DbContext
     public ApplicationContext(DbContextOptions<ApplicationContext> options)
         : base(options)
     {
-        Database.EnsureCreated(); //TODO: Should we use it?
+        //Database.EnsureCreated(); //TODO: Should we use it?
     }
 
     /// <summary>
-    /// 
+    /// Gets and sets the instance of <see cref="DbSet{TEntity}"/> for <see cref="Student"/>,
+    /// represents the students table and is used for database interactions.
     /// </summary>
-    public DbSet<Student> Students { get; set; }
+    public DbSet<Student> Students { get; set; } = null!;
 
-    public DbSet<Teacher> Teachers { get; set; }
-    public DbSet<Class> Classes { get; set; }
-    public DbSet<Subject> Subjects { get; set; }
+    /// <summary>
+    /// Gets and sets the instance of <see cref="DbSet{TEntity}"/> for <see cref="Teacher"/>,
+    /// represents the teachers table and is used for database interactions.
+    /// </summary>
+    public DbSet<Teacher> Teachers { get; set; } = null!;
+
+    /// <summary>
+    /// Gets and sets the instance of <see cref="DbSet{TEntity}"/> for <see cref="Class"/>,
+    /// represents the classes table and is used for database interactions.
+    /// </summary>
+    public DbSet<Class> Classes { get; set; } = null!;
+
+    /// <summary>
+    /// Gets and sets the instance of <see cref="DbSet{TEntity}"/> for <see cref="Subjects"/>,
+    /// represents the subjects table and is used for database interactions.
+    /// </summary>
+    public DbSet<Subject> Subjects { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
