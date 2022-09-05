@@ -5,5 +5,3 @@ heroku_deploy:
         - gem install dpl
         - gem install dpl
         - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_PRODUCTION_KEY
-    only:
-        - master
