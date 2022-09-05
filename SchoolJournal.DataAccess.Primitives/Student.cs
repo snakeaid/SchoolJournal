@@ -42,5 +42,5 @@ public class Student : IUser
     /// </summary>
     public string Password { get; set; } = null!;
 
-    //TODO: Add info for student
+    //TODO: Add support for pdf passport/birth certificate (S3)
 }
