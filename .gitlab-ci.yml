@@ -1,7 +1,4 @@
 heroku_deploy:
     script:
-        - apt-get update -qy
-        - apt-get install -y ruby-dev
         - gem install dpl
-        - gem install faraday-net_http -v 2.1.0
         - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_PRODUCTION_KEY
