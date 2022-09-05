@@ -3,5 +3,4 @@ heroku_deploy:
         - apt-get update -qy
         - apt-get install -y ruby-dev
         - gem install dpl
-        - gem install dpl
         - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_PRODUCTION_KEY
