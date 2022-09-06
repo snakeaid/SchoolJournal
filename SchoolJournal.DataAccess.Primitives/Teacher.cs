@@ -13,16 +13,6 @@ public class Teacher : IUser
     public int Id { get; set; }
 
     /// <summary>
-    /// Gets and sets the list of classes of the teacher.
-    /// </summary>
-    public List<Class> Classes { get; set; } = null!; //TODO: List or Dictionary?
-
-    /// <summary>
-    /// Gets and sets the specialization of the teacher.
-    /// </summary>
-    public List<Subject> Specialization { get; set; } = null!;
-
-    /// <summary>
     /// Gets and sets the first name of the teacher.
     /// </summary>
     public string FirstName { get; set; } = null!;
@@ -46,6 +36,4 @@ public class Teacher : IUser
     /// Gets and sets password of the teacher.
     /// </summary>
     public string Password { get; set; } = null!;
-
-    //TODO: Add schedule for the teacher
 }

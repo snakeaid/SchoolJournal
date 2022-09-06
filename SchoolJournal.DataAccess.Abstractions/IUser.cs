@@ -30,5 +30,5 @@ public interface IUser
     /// </summary>
     public DateOnly Birthday { get; set; }
 
-    //TODO: Add contact information
+    //TODO: Add contact information and passport/birth certificate (blob storage)
 }

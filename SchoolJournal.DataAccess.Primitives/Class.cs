@@ -16,11 +16,9 @@ public class Class
     public int Number { get; set; }
 
     /// <summary>
-    /// Gets and sets the specialization (main subjects) of the class.
+    /// Gets and sets the class teacher of the class.
     /// </summary>
-    public List<Subject> Specialization { get; set; } = null!;
-
-    //TODO: Add schedule for class
+    public Teacher ClassTeacher { get; set; } = null!;
 
     /// <summary>
     /// Gets and sets the list of students in the class.
@@ -28,12 +26,7 @@ public class Class
     public List<Student> Students { get; set; } = null!;
 
     /// <summary>
-    /// Gets and sets the list of subjects with specified teachers for the class.
+    /// Gets and sets the class journal.
     /// </summary>
-    public Dictionary<Subject, Teacher> Subjects { get; set; } = null!;
-
-    /// <summary>
-    /// Gets and sets the class teacher of the class.
-    /// </summary>
-    public Teacher ClassTeacher { get; set; } = null!;
+    public List<SubjectJournal> Journal { get; set; } = null!;
 }

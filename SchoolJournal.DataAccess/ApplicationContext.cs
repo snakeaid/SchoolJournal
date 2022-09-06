@@ -13,10 +13,8 @@ public class ApplicationContext : DbContext
     /// Constructs an instance of <see cref="ApplicationContext"/> using the specified options.
     /// </summary>
     /// <param name="options"></param>
-    public ApplicationContext(DbContextOptions<ApplicationContext> options)
-        : base(options)
+    public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
     {
-        //Database.EnsureCreated(); //TODO: Should we use it?
     }
 
     /// <summary>
@@ -38,10 +36,16 @@ public class ApplicationContext : DbContext
     public DbSet<Class> Classes { get; set; } = null!;
 
     /// <summary>
-    /// Gets and sets the instance of <see cref="DbSet{TEntity}"/> for <see cref="Subjects"/>,
+    /// Gets and sets the instance of <see cref="DbSet{TEntity}"/> for <see cref="Subject"/>,
     /// represents the subjects table and is used for database interactions.
     /// </summary>
     public DbSet<Subject> Subjects { get; set; } = null!;
+
+    /// <summary>
+    /// Gets and sets the instance of <see cref="DbSet{TEntity}"/> for <see cref="Lesson"/>,
+    /// represents the lessons table and is used for database interactions.
+    /// </summary>
+    public DbSet<Lesson> Lessons { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -51,26 +55,23 @@ public class ApplicationContext : DbContext
                 x => JsonConvert.SerializeObject(x),
                 x => JsonConvert.DeserializeObject<List<Student>>(x)!);
         modelBuilder.Entity<Class>()
-            .Property(x => x.Subjects)
+            .Property(x => x.Journal)
             .HasConversion(
                 x => JsonConvert.SerializeObject(x),
-                x => JsonConvert.DeserializeObject<Dictionary<Subject, Teacher>>(x)!);
-        modelBuilder.Entity<Class>()
-            .Property(x => x.Specialization)
-            .HasConversion(
-                x => JsonConvert.SerializeObject(x),
-                x => JsonConvert.DeserializeObject<List<Subject>>(x)!);
+                x => JsonConvert.DeserializeObject<List<SubjectJournal>>(x)!);
 
-        modelBuilder.Entity<Teacher>()
-            .Property(x => x.Classes)
+        modelBuilder.Entity<Lesson>()
+            .Property(x => x.Marks)
             .HasConversion(
                 x => JsonConvert.SerializeObject(x),
-                x => JsonConvert.DeserializeObject<List<Class>>(x)!);
-        modelBuilder.Entity<Teacher>()
-            .Property(x => x.Specialization)
+                x => JsonConvert.DeserializeObject<Dictionary<Student, Mark?>>(x)!);
+
+        modelBuilder.Entity<SubjectJournal>()
+            .Property(x => x.Lessons)
             .HasConversion(
                 x => JsonConvert.SerializeObject(x),
-                x => JsonConvert.DeserializeObject<List<Subject>>(x)!);
+                x => JsonConvert.DeserializeObject<List<Lesson>>(x)!);
+
         base.OnModelCreating(modelBuilder);
     }
 }
