@@ -38,3 +38,150 @@
 2022-09-08 17:17:23.212 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
 2022-09-08 17:17:23.450 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 238.2024ms
 2022-09-08 17:17:50.346 +03:00 [INF] Application is shutting down...
+2022-09-08 17:20:25.069 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-08 17:20:25.237 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-08 17:20:25.245 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-08 17:20:25.246 +03:00 [INF] Hosting environment: Development
+2022-09-08 17:20:25.247 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-08 17:20:26.145 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-08 17:20:26.782 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 646.5083ms
+2022-09-08 17:20:27.257 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-08 17:20:27.913 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 652.5636ms
+2022-09-08 17:20:39.631 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/api/Classes - -
+2022-09-08 17:20:39.650 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-08 17:20:39.693 +03:00 [INF] Route matched with {action = "Get", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-08 17:20:43.418 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: None
+2022-09-08 17:20:45.368 +03:00 [INF] Executed DbCommand (141ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."ClassTeacherId", c."Number", t."Id", s."Id", s."Birthday", s."ClassId", s."FirstName", s."LastName", s."Login", s."Password", t."Birthday", t."FirstName", t."LastName", t."Login", t."Password"
+FROM "Classes" AS c
+INNER JOIN "Teachers" AS t ON c."ClassTeacherId" = t."Id"
+LEFT JOIN "Students" AS s ON c."Id" = s."ClassId"
+ORDER BY c."Id", t."Id"
+2022-09-08 17:20:46.013 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchoolJournal.Primitives.ClassViewModel, SchoolJournal.Primitives, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-08 17:20:46.088 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API) in 6372.6614ms
+2022-09-08 17:20:46.092 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-08 17:20:46.298 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/api/Classes - - - 200 - application/json;+charset=utf-8 6666.3243ms
+2022-09-08 17:22:28.884 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/api/Classes/1 - -
+2022-09-08 17:22:28.886 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-08 17:22:28.949 +03:00 [INF] Route matched with {action = "Get", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-08 17:22:29.003 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: None
+2022-09-08 17:22:29.184 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t0."Id", t0."ClassTeacherId", t0."Number", t0."Id0", s."Id", s."Birthday", s."ClassId", s."FirstName", s."LastName", s."Login", s."Password", t0."Birthday", t0."FirstName", t0."LastName", t0."Login", t0."Password"
+FROM (
+    SELECT c."Id", c."ClassTeacherId", c."Number", t."Id" AS "Id0", t."Birthday", t."FirstName", t."LastName", t."Login", t."Password"
+    FROM "Classes" AS c
+    INNER JOIN "Teachers" AS t ON c."ClassTeacherId" = t."Id"
+    WHERE c."Id" = @__request_Id_0
+    LIMIT 1
+) AS t0
+LEFT JOIN "Students" AS s ON t0."Id" = s."ClassId"
+ORDER BY t0."Id", t0."Id0"
+2022-09-08 17:22:29.201 +03:00 [INF] Executing OkObjectResult, writing value of type 'SchoolJournal.Primitives.ClassViewModel'.
+2022-09-08 17:22:29.202 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API) in 253.0121ms
+2022-09-08 17:22:29.202 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-08 17:22:29.203 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/api/Classes/1 - - - 200 - application/json;+charset=utf-8 319.4246ms
+2022-09-08 17:22:54.344 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/api/Classes/2 - -
+2022-09-08 17:22:54.354 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-08 17:22:54.355 +03:00 [INF] Route matched with {action = "Get", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-08 17:22:54.497 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: None
+2022-09-08 17:22:54.510 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t0."Id", t0."ClassTeacherId", t0."Number", t0."Id0", s."Id", s."Birthday", s."ClassId", s."FirstName", s."LastName", s."Login", s."Password", t0."Birthday", t0."FirstName", t0."LastName", t0."Login", t0."Password"
+FROM (
+    SELECT c."Id", c."ClassTeacherId", c."Number", t."Id" AS "Id0", t."Birthday", t."FirstName", t."LastName", t."Login", t."Password"
+    FROM "Classes" AS c
+    INNER JOIN "Teachers" AS t ON c."ClassTeacherId" = t."Id"
+    WHERE c."Id" = @__request_Id_0
+    LIMIT 1
+) AS t0
+LEFT JOIN "Students" AS s ON t0."Id" = s."ClassId"
+ORDER BY t0."Id", t0."Id0"
+2022-09-08 17:22:54.516 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API) in 160.6922ms
+2022-09-08 17:22:54.516 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-08 17:22:54.530 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/api/Classes/2 - - - 404 - application/json 186.0027ms
+2022-09-08 17:23:58.762 +03:00 [INF] Application is shutting down...
+2022-09-08 17:41:06.924 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-08 17:41:07.094 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-08 17:41:07.104 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-08 17:41:07.105 +03:00 [INF] Hosting environment: Development
+2022-09-08 17:41:07.105 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-08 17:41:07.816 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-08 17:41:08.487 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 687.7896ms
+2022-09-08 17:41:09.155 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-08 17:41:09.713 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 558.1566ms
+2022-09-08 17:45:49.037 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/api/Classes - -
+2022-09-08 17:45:49.091 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-08 17:45:49.187 +03:00 [INF] Route matched with {action = "Get", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-08 17:45:50.466 +03:00 [INF] Getting all classes.
+2022-09-08 17:45:53.148 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: None
+2022-09-08 17:45:55.193 +03:00 [INF] Executed DbCommand (292ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."ClassTeacherId", c."Number", t."Id", s."Id", s."Birthday", s."ClassId", s."FirstName", s."LastName", s."Login", s."Password", t."Birthday", t."FirstName", t."LastName", t."Login", t."Password"
+FROM "Classes" AS c
+INNER JOIN "Teachers" AS t ON c."ClassTeacherId" = t."Id"
+LEFT JOIN "Students" AS s ON c."Id" = s."ClassId"
+ORDER BY c."Id", t."Id"
+2022-09-08 17:45:55.611 +03:00 [INF] Got all classes successfully.
+2022-09-08 17:45:55.681 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchoolJournal.Primitives.ClassViewModel, SchoolJournal.Primitives, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-08 17:45:55.821 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API) in 6606.4736ms
+2022-09-08 17:45:55.832 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-08 17:45:55.984 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/api/Classes - - - 200 - application/json;+charset=utf-8 6947.0640ms
+2022-09-08 17:46:26.687 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/api/Classes/1 - -
+2022-09-08 17:46:26.691 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-08 17:46:26.761 +03:00 [INF] Route matched with {action = "Get", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-08 17:46:26.794 +03:00 [INF] Getting class : ID 1.
+2022-09-08 17:46:26.800 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: None
+2022-09-08 17:46:27.102 +03:00 [INF] Executed DbCommand (139ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t0."Id", t0."ClassTeacherId", t0."Number", t0."Id0", s."Id", s."Birthday", s."ClassId", s."FirstName", s."LastName", s."Login", s."Password", t0."Birthday", t0."FirstName", t0."LastName", t0."Login", t0."Password"
+FROM (
+    SELECT c."Id", c."ClassTeacherId", c."Number", t."Id" AS "Id0", t."Birthday", t."FirstName", t."LastName", t."Login", t."Password"
+    FROM "Classes" AS c
+    INNER JOIN "Teachers" AS t ON c."ClassTeacherId" = t."Id"
+    WHERE c."Id" = @__request_Id_0
+    LIMIT 1
+) AS t0
+LEFT JOIN "Students" AS s ON t0."Id" = s."ClassId"
+ORDER BY t0."Id", t0."Id0"
+2022-09-08 17:46:27.138 +03:00 [INF] Getting class successfully : ID 1.
+2022-09-08 17:46:27.150 +03:00 [INF] Executing OkObjectResult, writing value of type 'SchoolJournal.Primitives.ClassViewModel'.
+2022-09-08 17:46:27.151 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API) in 389.3304ms
+2022-09-08 17:46:27.151 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-08 17:46:27.154 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/api/Classes/1 - - - 200 - application/json;+charset=utf-8 466.6609ms
+2022-09-08 17:46:42.577 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/api/Classes/2 - -
+2022-09-08 17:46:42.588 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-08 17:46:42.588 +03:00 [INF] Route matched with {action = "Get", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-08 17:46:42.906 +03:00 [INF] Getting class : ID 2.
+2022-09-08 17:46:43.109 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: None
+2022-09-08 17:46:43.241 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t0."Id", t0."ClassTeacherId", t0."Number", t0."Id0", s."Id", s."Birthday", s."ClassId", s."FirstName", s."LastName", s."Login", s."Password", t0."Birthday", t0."FirstName", t0."LastName", t0."Login", t0."Password"
+FROM (
+    SELECT c."Id", c."ClassTeacherId", c."Number", t."Id" AS "Id0", t."Birthday", t."FirstName", t."LastName", t."Login", t."Password"
+    FROM "Classes" AS c
+    INNER JOIN "Teachers" AS t ON c."ClassTeacherId" = t."Id"
+    WHERE c."Id" = @__request_Id_0
+    LIMIT 1
+) AS t0
+LEFT JOIN "Students" AS s ON t0."Id" = s."ClassId"
+ORDER BY t0."Id", t0."Id0"
+2022-09-08 17:46:43.264 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API) in 362.0857ms
+2022-09-08 17:46:43.266 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-08 17:46:43.353 +03:00 [WRN] {"errorMessage":"Class NOT FOUND : ID 2."}
+2022-09-08 17:46:43.354 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/api/Classes/2 - - - 404 - application/json 776.5557ms
+2022-09-08 17:47:11.827 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/api/Classes/2 - -
+2022-09-08 17:47:11.828 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-08 17:47:11.835 +03:00 [INF] Route matched with {action = "Get", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-08 17:47:11.864 +03:00 [INF] Getting class : ID 2.
+2022-09-08 17:47:11.868 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: None
+2022-09-08 17:47:11.933 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t0."Id", t0."ClassTeacherId", t0."Number", t0."Id0", s."Id", s."Birthday", s."ClassId", s."FirstName", s."LastName", s."Login", s."Password", t0."Birthday", t0."FirstName", t0."LastName", t0."Login", t0."Password"
+FROM (
+    SELECT c."Id", c."ClassTeacherId", c."Number", t."Id" AS "Id0", t."Birthday", t."FirstName", t."LastName", t."Login", t."Password"
+    FROM "Classes" AS c
+    INNER JOIN "Teachers" AS t ON c."ClassTeacherId" = t."Id"
+    WHERE c."Id" = @__request_Id_0
+    LIMIT 1
+) AS t0
+LEFT JOIN "Students" AS s ON t0."Id" = s."ClassId"
+ORDER BY t0."Id", t0."Id0"
+2022-09-08 17:47:11.936 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API) in 98.7507ms
+2022-09-08 17:47:11.938 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-08 17:47:11.944 +03:00 [WRN] Class NOT FOUND : ID 2.
+2022-09-08 17:47:11.947 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/api/Classes/2 - - - 404 - application/json 119.7726ms

@@ -2,6 +2,7 @@ using System.Net;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
 
 namespace SchoolJournal.Middleware;
 
@@ -10,6 +11,13 @@ namespace SchoolJournal.Middleware;
 /// </summary>
 public class ExceptionHandlingMiddleware : IMiddleware
 {
+    private readonly ILogger _logger;
+
+    public ExceptionHandlingMiddleware(ILogger<ExceptionHandlingMiddleware> logger)
+    {
+        _logger = logger;
+    }
+
     /// <summary>
     /// Tries to invoke the delegate and catches the exception if there is one.
     /// </summary>
@@ -33,6 +41,8 @@ public class ExceptionHandlingMiddleware : IMiddleware
         response.ContentType = "application/json";
 
         var message = JsonSerializer.Serialize(new { errorMessage = Regex.Unescape(exception.Message) });
+
+        _logger.LogWarning(Regex.Unescape(exception.Message));
 
         switch (exception)
         {

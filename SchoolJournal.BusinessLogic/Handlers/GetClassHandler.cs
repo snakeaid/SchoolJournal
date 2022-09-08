@@ -1,6 +1,7 @@
 using AutoMapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using SchoolJournal.BusinessLogic.Queries;
 using SchoolJournal.DataAccess;
 using SchoolJournal.Primitives;
@@ -15,6 +16,7 @@ namespace SchoolJournal.BusinessLogic.Handlers;
 public class GetClassHandler : IRequestHandler<GetClassQuery, ClassViewModel>
 {
     private readonly ApplicationContext _context;
+    private readonly ILogger _logger;
     private readonly IMapper _mapper;
 
     /// <summary>
@@ -22,18 +24,29 @@ public class GetClassHandler : IRequestHandler<GetClassQuery, ClassViewModel>
     /// </summary>
     /// <param name="context">An instance of <see cref="ApplicationContext"/>.</param>
     /// <param name="mapper">An instance of <see cref="IMapper"/>.</param>
-    public GetClassHandler(ApplicationContext context, IMapper mapper)
+    /// <param name="logger">An instance of <see cref="ILogger{TCategoryName}"/> for <see cref="GetClassHandler"/>.</param>
+    public GetClassHandler(ApplicationContext context, IMapper mapper, ILogger<GetClassHandler> logger)
     {
         _context = context;
         _mapper = mapper;
+        _logger = logger;
     }
 
+    /// <summary>
+    /// Handles the specified request to get a class.
+    /// </summary>
+    /// <param name="request">Request to get a class.</param>
+    /// <param name="cancellationToken">Cancellation token.</param>
+    /// <returns><see cref="Task{TResult}"/> for <see cref="ClassViewModel"/></returns>
+    /// <exception cref="KeyNotFoundException">Thrown if no class with the specified ID is found.</exception>
     public async Task<ClassViewModel> Handle(GetClassQuery request, CancellationToken cancellationToken)
     {
+        _logger.LogInformation($"Getting class : ID {request.Id}.");
         var entity = await _context.Classes.Include(x => x.Students).Include(x => x.ClassTeacher)
             .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
-        if (entity == null) throw new KeyNotFoundException($"Class with ID {request.Id} NOT FOUND");
+        if (entity == null) throw new KeyNotFoundException($"Class NOT FOUND : ID {request.Id}.");
         var model = _mapper.Map<ClassViewModel>(entity);
+        _logger.LogInformation($"Got class successfully : ID {request.Id}.");
 
         return model;
     }
