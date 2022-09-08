@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SchoolJournal.DataAccess;
@@ -11,9 +12,10 @@ using SchoolJournal.DataAccess;
 namespace SchoolJournal.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20220908105936_After deletion")]
+    partial class Afterdeletion
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -33,22 +35,21 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.Property<int>("ClassTeacherId")
                         .HasColumnType("integer");
 
+                    b.Property<string>("Journal")
+                        .HasColumnType("text");
+
                     b.Property<int>("Number")
                         .HasColumnType("integer");
+
+                    b.Property<string>("Students")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ClassTeacherId");
 
                     b.ToTable("Classes");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ClassTeacherId = 1,
-                            Number = 11
-                        });
                 });
 
             modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.Lesson", b =>
@@ -115,28 +116,6 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.HasIndex("ClassId");
 
                     b.ToTable("Students");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Birthday = new DateOnly(2005, 7, 9),
-                            ClassId = 1,
-                            FirstName = "Mikhail",
-                            LastName = "Mikhaylov",
-                            Login = "mikhail",
-                            Password = "1111"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Birthday = new DateOnly(2006, 1, 2),
-                            ClassId = 1,
-                            FirstName = "Vasiliy",
-                            LastName = "Vasiliev",
-                            Login = "vasya2006",
-                            Password = "13863"
-                        });
                 });
 
             modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.Subject", b =>
@@ -164,6 +143,10 @@ namespace SchoolJournal.DataAccess.Migrations
 
                     b.Property<int>("ClassId")
                         .HasColumnType("integer");
+
+                    b.Property<string>("Lessons")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("SubjectId")
                         .HasColumnType("integer");
@@ -212,17 +195,6 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Teachers");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Birthday = new DateOnly(1983, 11, 18),
-                            FirstName = "Yana",
-                            LastName = "Yanovna",
-                            Login = "yanito",
-                            Password = "lll"
-                        });
                 });
 
             modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.Class", b =>
@@ -239,7 +211,7 @@ namespace SchoolJournal.DataAccess.Migrations
             modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.Lesson", b =>
                 {
                     b.HasOne("SchoolJournal.DataAccess.Primitives.SubjectJournal", "SubjectJournal")
-                        .WithMany("Lessons")
+                        .WithMany()
                         .HasForeignKey("SubjectJournalId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -250,7 +222,7 @@ namespace SchoolJournal.DataAccess.Migrations
             modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.Student", b =>
                 {
                     b.HasOne("SchoolJournal.DataAccess.Primitives.Class", "Class")
-                        .WithMany("Students")
+                        .WithMany()
                         .HasForeignKey("ClassId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -261,7 +233,7 @@ namespace SchoolJournal.DataAccess.Migrations
             modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.SubjectJournal", b =>
                 {
                     b.HasOne("SchoolJournal.DataAccess.Primitives.Class", "Class")
-                        .WithMany("Journal")
+                        .WithMany()
                         .HasForeignKey("ClassId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -283,18 +255,6 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.Navigation("Subject");
 
                     b.Navigation("Teacher");
-                });
-
-            modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.Class", b =>
-                {
-                    b.Navigation("Journal");
-
-                    b.Navigation("Students");
-                });
-
-            modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.SubjectJournal", b =>
-                {
-                    b.Navigation("Lessons");
                 });
 #pragma warning restore 612, 618
         }

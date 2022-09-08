@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SchoolJournal.DataAccess;
@@ -11,9 +12,10 @@ using SchoolJournal.DataAccess;
 namespace SchoolJournal.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20220908110804_Removed conversions")]
+    partial class Removedconversions
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,14 +43,6 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.HasIndex("ClassTeacherId");
 
                     b.ToTable("Classes");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ClassTeacherId = 1,
-                            Number = 11
-                        });
                 });
 
             modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.Lesson", b =>
@@ -115,28 +109,6 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.HasIndex("ClassId");
 
                     b.ToTable("Students");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Birthday = new DateOnly(2005, 7, 9),
-                            ClassId = 1,
-                            FirstName = "Mikhail",
-                            LastName = "Mikhaylov",
-                            Login = "mikhail",
-                            Password = "1111"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Birthday = new DateOnly(2006, 1, 2),
-                            ClassId = 1,
-                            FirstName = "Vasiliy",
-                            LastName = "Vasiliev",
-                            Login = "vasya2006",
-                            Password = "13863"
-                        });
                 });
 
             modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.Subject", b =>
@@ -212,17 +184,6 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Teachers");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Birthday = new DateOnly(1983, 11, 18),
-                            FirstName = "Yana",
-                            LastName = "Yanovna",
-                            Login = "yanito",
-                            Password = "lll"
-                        });
                 });
 
             modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.Class", b =>

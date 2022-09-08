@@ -16,6 +16,11 @@ public class Lesson
     public SubjectJournal SubjectJournal { get; set; } = null!;
 
     /// <summary>
+    /// Gets and sets the unique identifier of the journal for the lesson.
+    /// </summary>
+    public Guid SubjectJournalId { get; set; }
+
+    /// <summary>
     /// Gets and sets the list of marks for students on the lesson.
     /// </summary>
     public Dictionary<Student, Mark?> Marks { get; set; } = null!; //TODO: Add mark handling

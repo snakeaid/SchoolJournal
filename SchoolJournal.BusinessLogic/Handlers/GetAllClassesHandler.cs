@@ -30,7 +30,8 @@ public class GetAllClassesHandler : IRequestHandler<GetAllClassesQuery, List<Cla
 
     public async Task<List<ClassModel>> Handle(GetAllClassesQuery request, CancellationToken cancellationToken)
     {
-        var list = await _context.Classes.ToListAsync();
+        var list = await _context.Classes.Include(x => x.Students).Include(x => x.ClassTeacher)
+            .ToListAsync(cancellationToken);
         var listModel = _mapper.Map<List<ClassModel>>(list);
 
         return listModel;

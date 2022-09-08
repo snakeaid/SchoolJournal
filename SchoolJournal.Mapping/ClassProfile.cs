@@ -4,12 +4,10 @@ using SchoolJournal.Primitives;
 
 namespace SchoolJournal.Mapping;
 
-public class StudentProfile : Profile
+public class ClassProfile : Profile
 {
-    public StudentProfile()
+    public ClassProfile()
     {
-        CreateMap<Student, StudentModel>()
-            .ForMember(x => x.FullName,
-                opt => opt.MapFrom(src => $"{src.FirstName} {src.LastName}"));
+        CreateMap<Class, ClassModel>();
     }
 }

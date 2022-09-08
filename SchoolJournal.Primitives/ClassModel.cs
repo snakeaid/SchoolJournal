@@ -15,7 +15,7 @@ public class ClassModel
     /// <summary>
     /// Gets and sets the displayed class teacher of the class.
     /// </summary>
-    public Teacher ClassTeacher { get; set; } = null!;
+    public TeacherModel ClassTeacher { get; set; } = null!;
 
     /// <summary>
     /// Gets and sets the displayed list of students in the class.

@@ -16,14 +16,29 @@ public class SubjectJournal
     public Subject Subject { get; set; } = null!;
 
     /// <summary>
+    /// Gets and sets the unique identifier of the subject of the journal.
+    /// </summary>
+    public int SubjectId { get; set; }
+
+    /// <summary>
     /// Gets and sets the teacher for the subject.
     /// </summary>
     public Teacher Teacher { get; set; } = null!;
 
     /// <summary>
+    /// Gets and sets the unique identifier of the teacher for the subject.
+    /// </summary>
+    public int TeacherId { get; set; }
+
+    /// <summary>
     /// Gets and sets the class for the subject.
     /// </summary>
     public Class Class { get; set; } = null!;
+
+    /// <summary>
+    /// Gets and sets the unique identifier of the class for the subject.
+    /// </summary>
+    public int ClassId { get; set; }
 
     /// <summary>
     /// Gets and sets the list of lessons for the journal.
