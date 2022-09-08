@@ -5,7 +5,7 @@ namespace SchoolJournal.Primitives;
 /// <summary>
 /// Model class for entity <see cref="Student"/>.
 /// </summary>
-public class StudentModel
+public class StudentViewModel
 {
     /// <summary>
     /// Gets and sets the displayed full name of the student.

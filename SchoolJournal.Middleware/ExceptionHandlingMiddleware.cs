@@ -36,6 +36,9 @@ public class ExceptionHandlingMiddleware : IMiddleware
 
         switch (exception)
         {
+            case KeyNotFoundException:
+                response.StatusCode = (int)HttpStatusCode.NotFound;
+                break;
             default:
                 response.StatusCode = (int)HttpStatusCode.InternalServerError;
                 break;

@@ -10,9 +10,9 @@ namespace SchoolJournal.BusinessLogic.Handlers;
 /// <summary>
 /// MediatR handler class which handles the query to get all classes and
 /// implements <see cref="IRequestHandler{TRequest,TResponse}"/> for
-/// <see cref="GetAllClassesQuery"/>, <see cref="List{T}"/> for <see cref="ClassModel"/>.
+/// <see cref="GetAllClassesQuery"/>, <see cref="List{T}"/> for <see cref="ClassViewModel"/>.
 /// </summary>
-public class GetAllClassesHandler : IRequestHandler<GetAllClassesQuery, List<ClassModel>>
+public class GetAllClassesHandler : IRequestHandler<GetAllClassesQuery, List<ClassViewModel>>
 {
     private readonly ApplicationContext _context;
     private readonly IMapper _mapper;
@@ -28,11 +28,11 @@ public class GetAllClassesHandler : IRequestHandler<GetAllClassesQuery, List<Cla
         _mapper = mapper;
     }
 
-    public async Task<List<ClassModel>> Handle(GetAllClassesQuery request, CancellationToken cancellationToken)
+    public async Task<List<ClassViewModel>> Handle(GetAllClassesQuery request, CancellationToken cancellationToken)
     {
         var list = await _context.Classes.Include(x => x.Students).Include(x => x.ClassTeacher)
             .ToListAsync(cancellationToken);
-        var listModel = _mapper.Map<List<ClassModel>>(list);
+        var listModel = _mapper.Map<List<ClassViewModel>>(list);
 
         return listModel;
     }

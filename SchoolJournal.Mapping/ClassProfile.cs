@@ -8,6 +8,6 @@ public class ClassProfile : Profile
 {
     public ClassProfile()
     {
-        CreateMap<Class, ClassModel>();
+        CreateMap<Class, ClassViewModel>();
     }
 }

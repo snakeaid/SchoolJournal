@@ -53,9 +53,8 @@ public class ApplicationContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         var options = new JsonSerializerOptions();
-        options.Converters.Add(new DateOnlyJsonConverter());
+        options.Converters.Add(new DateOnlyJsonConverter()); //TODO: Check with empty options
 
-        //TODO: Deal with comparers
         var marksComparer = new ValueComparer<Dictionary<Student, Mark?>>(
             (c1, c2) => c1!.SequenceEqual(c2!),
             c => c.Aggregate(0, (a, v) => HashCode.Combine(a, v.GetHashCode())),

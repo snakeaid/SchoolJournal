@@ -8,7 +8,7 @@ public class StudentProfile : Profile
 {
     public StudentProfile()
     {
-        CreateMap<Student, StudentModel>()
+        CreateMap<Student, StudentViewModel>()
             .ForMember(x => x.FullName,
                 opt => opt.MapFrom(src => $"{src.FirstName} {src.LastName}"));
     }

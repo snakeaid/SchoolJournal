@@ -5,7 +5,7 @@ namespace SchoolJournal.Primitives;
 /// <summary>
 /// Model class for entity <see cref="Class"/>.
 /// </summary>
-public class ClassModel
+public class ClassViewModel
 {
     /// <summary>
     /// Gets and sets the displayed number of the class.
@@ -15,10 +15,10 @@ public class ClassModel
     /// <summary>
     /// Gets and sets the displayed class teacher of the class.
     /// </summary>
-    public TeacherModel ClassTeacher { get; set; } = null!;
+    public TeacherViewModel ClassTeacher { get; set; } = null!;
 
     /// <summary>
     /// Gets and sets the displayed list of students in the class.
     /// </summary>
-    public List<StudentModel> Students { get; set; } = null!;
+    public List<StudentViewModel> Students { get; set; } = null!;
 }

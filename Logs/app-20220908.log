@@ -1,0 +1,40 @@
+[2022-09-08 17:03:48.915 +03:00  INF]  Now listening on: https://localhost:7202
+[2022-09-08 17:03:49.035 +03:00  INF]  Now listening on: http://localhost:5285
+[2022-09-08 17:03:49.047 +03:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-09-08 17:03:49.048 +03:00  INF]  Hosting environment: Development
+[2022-09-08 17:03:49.048 +03:00  INF]  Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+[2022-09-08 17:03:50.648 +03:00  INF]  Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+[2022-09-08 17:03:51.034 +03:00  INF]  Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 393.2179ms
+[2022-09-08 17:03:51.306 +03:00  INF]  Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+[2022-09-08 17:03:51.613 +03:00  INF]  Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 306.6661ms
+[2022-09-08 17:05:30.360 +03:00  INF]  Application is shutting down...
+2022-09-08 17:07:50.684 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-08 17:07:50.775 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-08 17:07:50.783 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-08 17:07:50.784 +03:00 [INF] Hosting environment: Development
+2022-09-08 17:07:50.784 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-08 17:07:51.806 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-08 17:07:52.758 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 972.8846ms
+2022-09-08 17:07:53.612 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-08 17:07:53.905 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 293.4962ms
+2022-09-08 17:09:01.726 +03:00 [INF] Application is shutting down...
+2022-09-08 17:09:29.304 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-08 17:09:29.960 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-08 17:09:29.978 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-08 17:09:29.979 +03:00 [INF] Hosting environment: Development
+2022-09-08 17:09:29.980 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-08 17:09:30.196 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-08 17:09:30.768 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 575.8381ms
+2022-09-08 17:09:31.249 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-08 17:09:31.594 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 344.5992ms
+2022-09-08 17:16:04.162 +03:00 [INF] Application is shutting down...
+2022-09-08 17:17:20.346 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-08 17:17:20.544 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-08 17:17:20.549 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-08 17:17:20.550 +03:00 [INF] Hosting environment: Development
+2022-09-08 17:17:20.550 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-08 17:17:21.478 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-08 17:17:22.646 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 1180.0202ms
+2022-09-08 17:17:23.212 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-08 17:17:23.450 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 238.2024ms
+2022-09-08 17:17:50.346 +03:00 [INF] Application is shutting down...
