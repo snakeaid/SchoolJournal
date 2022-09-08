@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\SchoolJournal.DataAccess.Primitives\SchoolJournal.DataAccess.Primitives.csproj"/>
+    </ItemGroup>
+
 </Project>

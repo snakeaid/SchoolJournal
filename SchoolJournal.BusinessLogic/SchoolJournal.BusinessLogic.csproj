@@ -7,18 +7,22 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0"/>
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1"/>
+        <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0"/>
         <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0"/>
         <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0"/>
     </ItemGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\SchoolJournal.DataAccess\SchoolJournal.DataAccess.csproj"/>
+        <ProjectReference Include="..\SchoolJournal.Mapping\SchoolJournal.Mapping.csproj"/>
+        <ProjectReference Include="..\SchoolJournal.Middleware\SchoolJournal.Middleware.csproj"/>
+        <ProjectReference Include="..\SchoolJournal.Primitives\SchoolJournal.Primitives.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
         <Folder Include="Commands"/>
-        <Folder Include="Handlers"/>
-        <Folder Include="Queries"/>
     </ItemGroup>
 
 </Project>

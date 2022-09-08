@@ -8,6 +8,9 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="DateOnlyTimeOnly.AspNet" Version="1.0.3"/>
+        <PackageReference Include="DateOnlyTimeOnly.AspNet.Swashbuckle" Version="1.0.3"/>
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.8">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -18,6 +21,8 @@
     <ItemGroup>
         <ProjectReference Include="..\SchoolJournal.BusinessLogic\SchoolJournal.BusinessLogic.csproj"/>
         <ProjectReference Include="..\SchoolJournal.DataAccess\SchoolJournal.DataAccess.csproj"/>
+        <ProjectReference Include="..\SchoolJournal.Mapping\SchoolJournal.Mapping.csproj"/>
+        <ProjectReference Include="..\SchoolJournal.Primitives\SchoolJournal.Primitives.csproj"/>
     </ItemGroup>
 
 </Project>

@@ -3,7 +3,7 @@ using SchoolJournal.DataAccess.Abstractions;
 namespace SchoolJournal.DataAccess.Primitives;
 
 /// <summary>
-/// Entity class which represents a student.
+/// Entity class which represents a student and implements <see cref="IUser"/>.
 /// </summary>
 public class Student : IUser
 {
@@ -16,6 +16,11 @@ public class Student : IUser
     /// Gets and sets the class of the student.
     /// </summary>
     public Class Class { get; set; } = null!;
+
+    /// <summary>
+    /// Gets and sets the unique identifier of the class of the student.
+    /// </summary>
+    public int ClassId { get; set; }
 
     /// <summary>
     /// Gets and sets the first name of the student.

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SchoolJournal.DataAccess;
@@ -11,9 +12,10 @@ using SchoolJournal.DataAccess;
 namespace SchoolJournal.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20220908085449_Added JSON converters")]
+    partial class AddedJSONconverters
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -55,7 +57,7 @@ namespace SchoolJournal.DataAccess.Migrations
                             Id = 1,
                             ClassTeacherId = 1,
                             Number = 11,
-                            Students = "[{\"Id\":1,\"Class\":null,\"ClassId\":1,\"FirstName\":\"Mikhail\",\"LastName\":\"Mikhaylov\",\"Birthday\":\"2005-07-09\",\"Login\":\"mikhail\",\"Password\":\"1111\"},{\"Id\":2,\"Class\":null,\"ClassId\":1,\"FirstName\":\"Vasiliy\",\"LastName\":\"Vasiliev\",\"Birthday\":\"2006-01-02\",\"Login\":\"vasya2006\",\"Password\":\"13863\"}]"
+                            Students = "[{\"Id\":1,\"Class\":null,\"ClassId\":1,\"FirstName\":\"Mikhail\",\"LastName\":\"Mikhaylov\",\"Birthday\":{\"Year\":2005,\"Month\":7,\"Day\":9,\"DayOfWeek\":6,\"DayOfYear\":190,\"DayNumber\":732135},\"Login\":\"mikhail\",\"Password\":\"1111\"},{\"Id\":2,\"Class\":null,\"ClassId\":1,\"FirstName\":\"Vasiliy\",\"LastName\":\"Vasiliev\",\"Birthday\":{\"Year\":2006,\"Month\":1,\"Day\":2,\"DayOfWeek\":1,\"DayOfYear\":2,\"DayNumber\":732312},\"Login\":\"vasya2006\",\"Password\":\"13863\"}]"
                         });
                 });
 

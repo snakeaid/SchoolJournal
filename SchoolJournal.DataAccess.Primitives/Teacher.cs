@@ -3,7 +3,7 @@ using SchoolJournal.DataAccess.Abstractions;
 namespace SchoolJournal.DataAccess.Primitives;
 
 /// <summary>
-/// Entity class which represents a teacher.
+/// Entity class which represents a teacher and implements <see cref="IUser"/>.
 /// </summary>
 public class Teacher : IUser
 {

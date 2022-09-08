@@ -21,6 +21,11 @@ public class Class
     public Teacher ClassTeacher { get; set; } = null!;
 
     /// <summary>
+    /// Gets and sets the unique identifier of class teacher of the class.
+    /// </summary>
+    public int ClassTeacherId { get; set; }
+
+    /// <summary>
     /// Gets and sets the list of students in the class.
     /// </summary>
     public List<Student> Students { get; set; } = null!;
@@ -28,5 +33,5 @@ public class Class
     /// <summary>
     /// Gets and sets the class journal.
     /// </summary>
-    public List<SubjectJournal> Journal { get; set; } = null!;
+    public List<SubjectJournal>? Journal { get; set; }
 }
