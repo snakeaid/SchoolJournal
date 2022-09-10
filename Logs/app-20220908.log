@@ -185,3 +185,4 @@ ORDER BY t0."Id", t0."Id0"
 2022-09-08 17:47:11.938 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
 2022-09-08 17:47:11.944 +03:00 [WRN] Class NOT FOUND : ID 2.
 2022-09-08 17:47:11.947 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/api/Classes/2 - - - 404 - application/json 119.7726ms
+2022-09-08 17:48:00.187 +03:00 [INF] Application is shutting down...

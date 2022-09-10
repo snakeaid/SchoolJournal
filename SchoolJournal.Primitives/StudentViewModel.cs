@@ -3,7 +3,7 @@ using SchoolJournal.DataAccess.Primitives;
 namespace SchoolJournal.Primitives;
 
 /// <summary>
-/// Model class for entity <see cref="Student"/>.
+/// View model class for entity <see cref="Student"/>.
 /// </summary>
 public class StudentViewModel
 {

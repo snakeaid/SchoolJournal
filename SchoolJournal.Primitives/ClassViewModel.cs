@@ -3,7 +3,7 @@ using SchoolJournal.DataAccess.Primitives;
 namespace SchoolJournal.Primitives;
 
 /// <summary>
-/// Model class for entity <see cref="Class"/>.
+/// View model class for entity <see cref="Class"/>.
 /// </summary>
 public class ClassViewModel
 {
@@ -21,4 +21,9 @@ public class ClassViewModel
     /// Gets and sets the displayed list of students in the class.
     /// </summary>
     public List<StudentViewModel> Students { get; set; } = null!;
+
+    /// <summary>
+    /// Gets and sets the displayed class journal.
+    /// </summary>
+    public List<SubjectJournalViewModel>? Journal { get; set; }
 }

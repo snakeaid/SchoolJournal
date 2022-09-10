@@ -43,6 +43,7 @@ public class GetClassHandler : IRequestHandler<GetClassQuery, ClassViewModel>
     {
         _logger.LogInformation($"Getting class : ID {request.Id}.");
         var entity = await _context.Classes.Include(x => x.Students).Include(x => x.ClassTeacher)
+            .Include(x => x.Journal)
             .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
         if (entity == null) throw new KeyNotFoundException($"Class NOT FOUND : ID {request.Id}.");
         var model = _mapper.Map<ClassViewModel>(entity);

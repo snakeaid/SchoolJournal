@@ -41,7 +41,7 @@ public class GetAllClassesHandler : IRequestHandler<GetAllClassesQuery, List<Cla
     public async Task<List<ClassViewModel>> Handle(GetAllClassesQuery request, CancellationToken cancellationToken)
     {
         _logger.LogInformation("Getting all classes.");
-        var list = await _context.Classes.Include(x => x.Students).Include(x => x.ClassTeacher)
+        var list = await _context.Classes.Include(x => x.Students).Include(x => x.ClassTeacher).Include(x => x.Journal)
             .ToListAsync(cancellationToken);
         var listModel = _mapper.Map<List<ClassViewModel>>(list);
         _logger.LogInformation("Got all classes successfully.");

@@ -86,10 +86,35 @@ public class ApplicationContext : DbContext
         {
             Id = 1, Number = 11, ClassTeacherId = 1
         };
+        var s = new Subject
+        {
+            Id = 1,
+            Name = "Art"
+        };
+        var journalId = Guid.NewGuid();
+        var l = new Lesson
+        {
+            Id = Guid.NewGuid(),
+            BeginDateTime = new DateTime(2022, 9, 7, 11, 10, 00),
+            EndDateTime = new DateTime(2022, 9, 7, 11, 40, 00),
+            HomeTask = "Draw a picture.",
+            SubjectJournalId = journalId,
+            Marks = new Dictionary<Student, Mark?>()
+        };
+        var j = new SubjectJournal
+        {
+            Id = journalId,
+            ClassId = 1,
+            TeacherId = 1,
+            SubjectId = 1,
+        };
 
         modelBuilder.Entity<Student>().HasData(s1, s2);
         modelBuilder.Entity<Teacher>().HasData(t);
         modelBuilder.Entity<Class>().HasData(c);
+        modelBuilder.Entity<Subject>().HasData(s);
+        modelBuilder.Entity<SubjectJournal>().HasData(j);
+        modelBuilder.Entity<Lesson>().HasData(l);
 
         base.OnModelCreating(modelBuilder);
     }

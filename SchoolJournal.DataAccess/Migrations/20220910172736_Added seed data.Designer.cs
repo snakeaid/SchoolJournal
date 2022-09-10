@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SchoolJournal.DataAccess;
@@ -11,9 +12,10 @@ using SchoolJournal.DataAccess;
 namespace SchoolJournal.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20220910172736_Added seed data")]
+    partial class Addedseeddata
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -57,10 +59,10 @@ namespace SchoolJournal.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<DateTimeOffset>("BeginDateTime")
+                    b.Property<DateTime>("BeginDateTime")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTimeOffset>("EndDateTime")
+                    b.Property<DateTime>("EndDateTime")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("HomeTask")
@@ -82,12 +84,12 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("a054a2af-dcdf-411e-b2fe-a4346892a5df"),
-                            BeginDateTime = new DateTimeOffset(new DateTime(2022, 9, 7, 11, 10, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 3, 0, 0, 0)),
-                            EndDateTime = new DateTimeOffset(new DateTime(2022, 9, 7, 11, 40, 0, 0, DateTimeKind.Unspecified), new TimeSpan(0, 3, 0, 0, 0)),
+                            Id = new Guid("dc0a0283-4a07-4457-8ac7-cb9682299233"),
+                            BeginDateTime = new DateTime(2022, 9, 7, 11, 10, 0, 0, DateTimeKind.Unspecified),
+                            EndDateTime = new DateTime(2022, 9, 7, 11, 40, 0, 0, DateTimeKind.Unspecified),
                             HomeTask = "Draw a picture.",
                             Marks = "{}",
-                            SubjectJournalId = new Guid("96fe28ca-89a9-4580-b74a-f4f7c7cfa2bb")
+                            SubjectJournalId = new Guid("d859cd86-acde-4185-adf7-c669fe0f0f05")
                         });
                 });
 
@@ -202,7 +204,7 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("96fe28ca-89a9-4580-b74a-f4f7c7cfa2bb"),
+                            Id = new Guid("d859cd86-acde-4185-adf7-c669fe0f0f05"),
                             ClassId = 1,
                             SubjectId = 1,
                             TeacherId = 1
