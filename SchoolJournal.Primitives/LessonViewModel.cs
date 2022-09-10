@@ -1,3 +1,4 @@
+using NodaTime;
 using SchoolJournal.DataAccess.Primitives;
 
 namespace SchoolJournal.Primitives;
@@ -15,12 +16,12 @@ public class LessonViewModel
     /// <summary>
     /// Gets and sets the displayed beginning time of the lesson.
     /// </summary>
-    public DateTime BeginDateTime { get; set; }
+    public OffsetDateTime BeginDateTime { get; set; }
 
     /// <summary>
     /// Gets and sets the displayed ending time of the lesson.
     /// </summary>
-    public DateTime EndDateTime { get; set; }
+    public OffsetDateTime EndDateTime { get; set; }
 
     /// <summary>
     /// Gets and sets the displayed home task of the lesson.

@@ -2,6 +2,7 @@ using AutoMapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using SchoolJournal.BusinessLogic.Extensions;
 using SchoolJournal.BusinessLogic.Queries;
 using SchoolJournal.DataAccess;
 using SchoolJournal.Primitives;
@@ -42,9 +43,7 @@ public class GetClassHandler : IRequestHandler<GetClassQuery, ClassViewModel>
     public async Task<ClassViewModel> Handle(GetClassQuery request, CancellationToken cancellationToken)
     {
         _logger.LogInformation($"Getting class : ID {request.Id}.");
-        var entity = await _context.Classes.Include(x => x.Students).Include(x => x.ClassTeacher)
-            .Include(x => x.Journal)
-            .FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
+        var entity = await _context.CompleteClasses().FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
         if (entity == null) throw new KeyNotFoundException($"Class NOT FOUND : ID {request.Id}.");
         var model = _mapper.Map<ClassViewModel>(entity);
         _logger.LogInformation($"Got class successfully : ID {request.Id}.");

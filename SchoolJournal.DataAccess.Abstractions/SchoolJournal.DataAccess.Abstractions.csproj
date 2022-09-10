@@ -6,4 +6,10 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+        <Reference Include="NodaTime">
+            <HintPath>..\..\..\.nuget\packages\nodatime\3.1.2\lib\net6.0\NodaTime.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
 </Project>

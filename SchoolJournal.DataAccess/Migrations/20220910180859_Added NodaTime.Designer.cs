@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using NodaTime;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SchoolJournal.DataAccess;
 
@@ -12,8 +13,8 @@ using SchoolJournal.DataAccess;
 namespace SchoolJournal.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20220910172736_Added seed data")]
-    partial class Addedseeddata
+    [Migration("20220910180859_Added NodaTime")]
+    partial class AddedNodaTime
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -59,10 +60,10 @@ namespace SchoolJournal.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<DateTime>("BeginDateTime")
+                    b.Property<OffsetDateTime>("BeginDateTime")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime>("EndDateTime")
+                    b.Property<OffsetDateTime>("EndDateTime")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("HomeTask")
@@ -84,12 +85,12 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("dc0a0283-4a07-4457-8ac7-cb9682299233"),
-                            BeginDateTime = new DateTime(2022, 9, 7, 11, 10, 0, 0, DateTimeKind.Unspecified),
-                            EndDateTime = new DateTime(2022, 9, 7, 11, 40, 0, 0, DateTimeKind.Unspecified),
+                            Id = new Guid("e160f9d0-397f-426b-98a1-a6a3956210fb"),
+                            BeginDateTime = new NodaTime.OffsetDateTime(new NodaTime.LocalDateTime(2022, 9, 7, 11, 10), NodaTime.Offset.FromHours(0)),
+                            EndDateTime = new NodaTime.OffsetDateTime(new NodaTime.LocalDateTime(2022, 9, 7, 11, 40), NodaTime.Offset.FromHours(0)),
                             HomeTask = "Draw a picture.",
                             Marks = "{}",
-                            SubjectJournalId = new Guid("d859cd86-acde-4185-adf7-c669fe0f0f05")
+                            SubjectJournalId = new Guid("5611343c-eec7-4097-a976-60dedf419bf4")
                         });
                 });
 
@@ -101,7 +102,7 @@ namespace SchoolJournal.DataAccess.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<DateOnly>("Birthday")
+                    b.Property<LocalDate>("Birthday")
                         .HasColumnType("date");
 
                     b.Property<int>("ClassId")
@@ -133,7 +134,7 @@ namespace SchoolJournal.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            Birthday = new DateOnly(2005, 7, 9),
+                            Birthday = new NodaTime.LocalDate(2005, 7, 9),
                             ClassId = 1,
                             FirstName = "Mikhail",
                             LastName = "Mikhaylov",
@@ -143,7 +144,7 @@ namespace SchoolJournal.DataAccess.Migrations
                         new
                         {
                             Id = 2,
-                            Birthday = new DateOnly(2006, 1, 2),
+                            Birthday = new NodaTime.LocalDate(2006, 1, 2),
                             ClassId = 1,
                             FirstName = "Vasiliy",
                             LastName = "Vasiliev",
@@ -204,7 +205,7 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("d859cd86-acde-4185-adf7-c669fe0f0f05"),
+                            Id = new Guid("5611343c-eec7-4097-a976-60dedf419bf4"),
                             ClassId = 1,
                             SubjectId = 1,
                             TeacherId = 1
@@ -219,7 +220,7 @@ namespace SchoolJournal.DataAccess.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<DateOnly>("Birthday")
+                    b.Property<LocalDate>("Birthday")
                         .HasColumnType("date");
 
                     b.Property<string>("FirstName")
@@ -246,7 +247,7 @@ namespace SchoolJournal.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            Birthday = new DateOnly(1983, 11, 18),
+                            Birthday = new NodaTime.LocalDate(1983, 11, 18),
                             FirstName = "Yana",
                             LastName = "Yanovna",
                             Login = "yanito",

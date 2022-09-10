@@ -10,4 +10,8 @@
         <ProjectReference Include="..\SchoolJournal.DataAccess.Abstractions\SchoolJournal.DataAccess.Abstractions.csproj"/>
     </ItemGroup>
 
+    <ItemGroup>
+        <PackageReference Include="NodaTime" Version="3.1.2"/>
+    </ItemGroup>
+
 </Project>

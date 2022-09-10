@@ -1,3 +1,5 @@
+using NodaTime;
+
 namespace SchoolJournal.DataAccess.Abstractions;
 
 /// <summary>
@@ -28,7 +30,7 @@ public interface IUser
     /// <summary>
     /// Gets and sets the date of birth of the user.
     /// </summary>
-    public DateOnly Birthday { get; set; }
+    public LocalDate Birthday { get; set; }
 
     //TODO: Add contact information and passport/birth certificate (blob storage)
 }
