@@ -1,3 +1,5 @@
+using NodaTime;
+
 namespace SchoolJournal.DataAccess.Primitives;
 
 /// <summary>
@@ -28,12 +30,12 @@ public class Lesson
     /// <summary>
     /// Gets and sets the beginning time of the lesson.
     /// </summary>
-    public DateTime BeginDateTime { get; set; }
+    public OffsetDateTime BeginDateTime { get; set; }
 
     /// <summary>
     /// Gets and sets the ending time of the lesson.
     /// </summary>
-    public DateTime EndDateTime { get; set; }
+    public OffsetDateTime EndDateTime { get; set; }
 
     /// <summary>
     /// Gets and sets the home task of the lesson.

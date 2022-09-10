@@ -1,6 +1,7 @@
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
+using NodaTime;
 using SchoolJournal.DataAccess.Primitives;
 
 namespace SchoolJournal.DataAccess;
@@ -53,7 +54,7 @@ public class ApplicationContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         var options = new JsonSerializerOptions();
-        options.Converters.Add(new DateOnlyJsonConverter()); //TODO: Check with empty options
+        //options.Converters.Add(new DateOnlyJsonConverter()); //TODO: Check with empty options
 
         var marksComparer = new ValueComparer<Dictionary<Student, Mark?>>(
             (c1, c2) => c1!.SequenceEqual(c2!),
@@ -70,17 +71,17 @@ public class ApplicationContext : DbContext
         var s1 = new Student
         {
             Id = 1, FirstName = "Mikhail", LastName = "Mikhaylov", ClassId = 1,
-            Birthday = new DateOnly(2005, 7, 9), Login = "mikhail", Password = "1111"
+            Birthday = new(2005, 7, 9), Login = "mikhail", Password = "1111"
         };
         var s2 = new Student
         {
             Id = 2, FirstName = "Vasiliy", LastName = "Vasiliev", ClassId = 1,
-            Birthday = new DateOnly(2006, 1, 2), Login = "vasya2006", Password = "13863"
+            Birthday = new(2006, 1, 2), Login = "vasya2006", Password = "13863"
         };
         var t = new Teacher
         {
             Id = 1, FirstName = "Yana", LastName = "Yanovna",
-            Birthday = new DateOnly(1983, 11, 18), Login = "yanito", Password = "lll"
+            Birthday = new(1983, 11, 18), Login = "yanito", Password = "lll"
         };
         var c = new Class
         {
@@ -95,8 +96,8 @@ public class ApplicationContext : DbContext
         var l = new Lesson
         {
             Id = Guid.NewGuid(),
-            BeginDateTime = new DateTime(2022, 9, 7, 11, 10, 00),
-            EndDateTime = new DateTime(2022, 9, 7, 11, 40, 00),
+            BeginDateTime = new OffsetDateTime(new LocalDateTime(2022, 9, 7, 11, 10, 00), Offset.Zero),
+            EndDateTime = new OffsetDateTime(new LocalDateTime(2022, 9, 7, 11, 40, 00), Offset.Zero),
             HomeTask = "Draw a picture.",
             SubjectJournalId = journalId,
             Marks = new Dictionary<Student, Mark?>()

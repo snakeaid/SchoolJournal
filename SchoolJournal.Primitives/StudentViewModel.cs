@@ -1,3 +1,4 @@
+using NodaTime;
 using SchoolJournal.DataAccess.Primitives;
 
 namespace SchoolJournal.Primitives;
@@ -15,5 +16,5 @@ public class StudentViewModel
     /// <summary>
     /// Gets and sets the displayed date of birth of the student.
     /// </summary>
-    public DateOnly Birthday { get; set; }
+    public LocalDate Birthday { get; set; }
 }

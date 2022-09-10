@@ -1,4 +1,7 @@
+using MicroElements.Swashbuckle.NodaTime;
 using Microsoft.AspNetCore.Mvc;
+using NodaTime;
+using NodaTime.Serialization.SystemTextJson;
 using SchoolJournal.BusinessLogic.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,12 +14,13 @@ builder.Services.AddDbContexts(configuration);
 builder.Services.AddMappingProfiles();
 builder.Services.AddMediator();
 builder.Services.AddCustomMiddleware();
-builder.Services.Configure<JsonOptions>(options => options.UseDateOnlyTimeOnlyStringConverters())
-    .AddControllers(options => options.UseDateOnlyTimeOnlyStringConverters());
+builder.Services.AddControllers();
+builder.Services.Configure<JsonOptions>(options =>
+    options.JsonSerializerOptions.ConfigureForNodaTime(DateTimeZoneProviders.Tzdb));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c => c.UseDateOnlyTimeOnlyStringConverters());
+builder.Services.AddSwaggerGen(c => c.ConfigureForNodaTimeWithSystemTextJson());
 
 var app = builder.Build();
 

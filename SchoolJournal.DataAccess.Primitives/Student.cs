@@ -1,3 +1,4 @@
+using NodaTime;
 using SchoolJournal.DataAccess.Abstractions;
 
 namespace SchoolJournal.DataAccess.Primitives;
@@ -35,7 +36,7 @@ public class Student : IUser
     /// <summary>
     /// Gets and sets the date of birth of the student.
     /// </summary>
-    public DateOnly Birthday { get; set; }
+    public LocalDate Birthday { get; set; }
 
     /// <summary>
     /// Gets and sets login of the student.

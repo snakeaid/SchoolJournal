@@ -80,3 +80,590 @@ SELECT "MigrationId", "ProductVersion"
 FROM "__EFMigrationsHistory"
 ORDER BY "MigrationId";
 2022-09-10 20:33:52.894 +03:00 [INF] Applying migration '20220910172736_Added seed data'.
+2022-09-10 21:05:18.153 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-10 21:05:42.592 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-10 21:05:43.206 +03:00 [INF] Executed DbCommand (108ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-09-10 21:05:43.256 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-09-10 21:05:43.286 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-09-10 21:05:43.330 +03:00 [INF] Applying migration '20220910172736_Added seed data'.
+2022-09-10 21:07:15.322 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-10 21:07:16.665 +03:00 [INF] Executed DbCommand (109ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-09-10 21:07:16.700 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-09-10 21:07:34.993 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-10 21:07:37.086 +03:00 [INF] Executed DbCommand (150ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-09-10 21:07:37.120 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-09-10 21:07:57.586 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-10 21:07:59.143 +03:00 [INF] Executed DbCommand (232ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-09-10 21:07:59.182 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-09-10 21:08:57.726 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-10 21:09:18.622 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-10 21:09:19.226 +03:00 [INF] Executed DbCommand (115ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-09-10 21:09:19.271 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-09-10 21:09:19.305 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-09-10 21:09:19.352 +03:00 [INF] Applying migration '20220910180859_Added NodaTime'.
+2022-09-10 21:09:19.568 +03:00 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Students" SET "Birthday" = DATE '2005-07-09'
+WHERE "Id" = 1;
+2022-09-10 21:09:19.570 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Students" SET "Birthday" = DATE '2006-01-02'
+WHERE "Id" = 2;
+2022-09-10 21:09:19.610 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Subjects" ("Id", "Name")
+VALUES (1, 'Art');
+2022-09-10 21:09:19.612 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Teachers" SET "Birthday" = DATE '1983-11-18'
+WHERE "Id" = 1;
+2022-09-10 21:09:19.676 +03:00 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "SubjectJournal" ("Id", "ClassId", "SubjectId", "TeacherId")
+VALUES ('5611343c-eec7-4097-a976-60dedf419bf4', 1, 1, 1);
+2022-09-10 21:09:19.720 +03:00 [INF] Executed DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Lessons" ("Id", "BeginDateTime", "EndDateTime", "HomeTask", "Marks", "SubjectJournalId")
+VALUES ('e160f9d0-397f-426b-98a1-a6a3956210fb', TIMESTAMPTZ '2022-09-07T11:10:00Z', TIMESTAMPTZ '2022-09-07T11:40:00Z', 'Draw a picture.', '{}', '5611343c-eec7-4097-a976-60dedf419bf4');
+2022-09-10 21:09:19.756 +03:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT setval(
+    pg_get_serial_sequence('"Subjects"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "Subjects") + 1,
+        nextval(pg_get_serial_sequence('"Subjects"', 'Id'))),
+    false);
+2022-09-10 21:09:19.758 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20220910180859_Added NodaTime', '6.0.8');
+2022-09-10 21:09:36.187 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-10 21:09:36.310 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-10 21:09:36.315 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-10 21:09:36.315 +03:00 [INF] Hosting environment: Development
+2022-09-10 21:09:36.315 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-10 21:09:37.055 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-10 21:09:37.558 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 510.0041ms
+2022-09-10 21:09:37.958 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-10 21:09:38.516 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 557.6894ms
+2022-09-10 21:09:53.089 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/api/Classes - -
+2022-09-10 21:09:53.113 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-10 21:09:53.188 +03:00 [INF] Route matched with {action = "Get", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-10 21:09:54.260 +03:00 [INF] Getting all classes.
+2022-09-10 21:09:57.017 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-10 21:09:57.989 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-09-10 21:09:58.807 +03:00 [INF] Executed DbCommand (141ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."ClassTeacherId", c."Number", t."Id", s."Id", s."Birthday", s."ClassId", s."FirstName", s."LastName", s."Login", s."Password", t."Birthday", t."FirstName", t."LastName", t."Login", t."Password", s0."Id", s0."ClassId", s0."SubjectId", s0."TeacherId"
+FROM "Classes" AS c
+INNER JOIN "Teachers" AS t ON c."ClassTeacherId" = t."Id"
+LEFT JOIN "Students" AS s ON c."Id" = s."ClassId"
+LEFT JOIN "SubjectJournal" AS s0 ON c."Id" = s0."ClassId"
+ORDER BY c."Id", t."Id", s."Id"
+2022-09-10 21:09:59.286 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API) in 6076.565ms
+2022-09-10 21:09:59.292 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-10 21:09:59.316 +03:00 [WRN] Error mapping types.
+
+Mapping types:
+List`1 -> List`1
+System.Collections.Generic.List`1[[SchoolJournal.DataAccess.Primitives.Class, SchoolJournal.DataAccess.Primitives, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.List`1[[SchoolJournal.Primitives.ClassViewModel, SchoolJournal.Primitives, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+2022-09-10 21:09:59.414 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/api/Classes - - - 500 - application/json 6324.7319ms
+2022-09-10 21:10:45.654 +03:00 [INF] Application is shutting down...
+2022-09-10 21:11:16.654 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-10 21:11:17.284 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-10 21:11:17.284 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-10 21:11:17.294 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-10 21:11:17.295 +03:00 [INF] Hosting environment: Development
+2022-09-10 21:11:17.295 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-10 21:11:17.900 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 623.5671ms
+2022-09-10 21:11:18.190 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-10 21:11:18.588 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 398.3694ms
+2022-09-10 21:14:21.259 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/api/Classes - -
+2022-09-10 21:14:21.284 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-10 21:14:21.342 +03:00 [INF] Route matched with {action = "Get", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-10 21:14:22.340 +03:00 [INF] Getting all classes.
+2022-09-10 21:14:25.548 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-10 21:14:27.044 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-09-10 21:14:27.903 +03:00 [INF] Executed DbCommand (140ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."ClassTeacherId", c."Number", t."Id", s."Id", s."Birthday", s."ClassId", s."FirstName", s."LastName", s."Login", s."Password", t."Birthday", t."FirstName", t."LastName", t."Login", t."Password", s0."Id", s0."ClassId", s0."SubjectId", s0."TeacherId"
+FROM "Classes" AS c
+INNER JOIN "Teachers" AS t ON c."ClassTeacherId" = t."Id"
+LEFT JOIN "Students" AS s ON c."Id" = s."ClassId"
+LEFT JOIN "SubjectJournal" AS s0 ON c."Id" = s0."ClassId"
+ORDER BY c."Id", t."Id", s."Id"
+2022-09-10 21:14:28.362 +03:00 [INF] Got all classes successfully.
+2022-09-10 21:14:28.408 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchoolJournal.Primitives.ClassViewModel, SchoolJournal.Primitives, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-10 21:14:28.512 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API) in 7150.0745ms
+2022-09-10 21:14:28.515 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-10 21:14:28.571 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/api/Classes - - - 200 - application/json;+charset=utf-8 7311.7826ms
+2022-09-10 21:26:09.820 +03:00 [INF] Application is shutting down...
+2022-09-10 21:26:34.239 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-10 21:26:34.781 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-10 21:26:34.796 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-10 21:26:34.797 +03:00 [INF] Hosting environment: Development
+2022-09-10 21:26:34.797 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-10 21:26:35.008 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-10 21:26:35.621 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 619.2340ms
+2022-09-10 21:26:36.134 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-10 21:26:36.483 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 349.5537ms
+2022-09-10 21:30:07.888 +03:00 [INF] Application is shutting down...
+2022-09-10 21:33:29.080 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-10 21:33:29.740 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-10 21:33:29.756 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-10 21:33:29.757 +03:00 [INF] Hosting environment: Development
+2022-09-10 21:33:29.757 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-10 21:33:29.989 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-10 21:33:30.360 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenOptionsExtensions.ConfigureForNodaTime(SwaggerGenOptions config)
+   at Program.<>c.<<Main>$>b__0_0(SwaggerGenOptions c) in /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/Program.cs:line 17
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions..ctor(IOptions`1 swaggerGenOptionsAccessor, IServiceProvider serviceProvider, IWebHostEnvironment hostingEnv)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.<>c.<AddSwaggerGen>b__0_1(IServiceProvider s)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method1(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-10 21:33:30.891 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 500 - text/html;+charset=utf-8 911.1055ms
+2022-09-10 21:33:31.140 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/favicon.ico - -
+2022-09-10 21:33:31.148 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenOptionsExtensions.ConfigureForNodaTime(SwaggerGenOptions config)
+   at Program.<>c.<<Main>$>b__0_0(SwaggerGenOptions c) in /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/Program.cs:line 17
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions..ctor(IOptions`1 swaggerGenOptionsAccessor, IServiceProvider serviceProvider, IWebHostEnvironment hostingEnv)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.<>c.<AddSwaggerGen>b__0_1(IServiceProvider s)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method1(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-10 21:33:31.181 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/favicon.ico - - - 500 - text/plain;+charset=utf-8 40.7242ms
+2022-09-10 21:45:52.067 +03:00 [INF] Application is shutting down...
+2022-09-10 21:46:12.131 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-10 21:46:12.256 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-10 21:46:12.263 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-10 21:46:12.264 +03:00 [INF] Hosting environment: Development
+2022-09-10 21:46:12.265 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-10 21:46:13.015 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-10 21:46:13.240 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenOptionsExtensions.ConfigureForNodaTime(SwaggerGenOptions config)
+   at Program.<>c.<<Main>$>b__0_1(SwaggerGenOptions c) in /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/Program.cs:line 21
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions..ctor(IOptions`1 swaggerGenOptionsAccessor, IServiceProvider serviceProvider, IWebHostEnvironment hostingEnv)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.<>c.<AddSwaggerGen>b__0_1(IServiceProvider s)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method1(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-10 21:46:13.828 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 500 - text/html;+charset=utf-8 817.7588ms
+2022-09-10 21:46:14.061 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/favicon.ico - -
+2022-09-10 21:46:14.062 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenOptionsExtensions.ConfigureForNodaTime(SwaggerGenOptions config)
+   at Program.<>c.<<Main>$>b__0_1(SwaggerGenOptions c) in /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/Program.cs:line 21
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions..ctor(IOptions`1 swaggerGenOptionsAccessor, IServiceProvider serviceProvider, IWebHostEnvironment hostingEnv)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.<>c.<AddSwaggerGen>b__0_1(IServiceProvider s)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method1(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-10 21:46:14.075 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/favicon.ico - - - 500 - text/plain;+charset=utf-8 13.8964ms
+2022-09-10 21:50:28.968 +03:00 [INF] Application is shutting down...
+2022-09-10 21:50:41.006 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-10 21:50:41.226 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-10 21:50:41.237 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-10 21:50:41.241 +03:00 [INF] Hosting environment: Development
+2022-09-10 21:50:41.241 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-10 21:50:41.939 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-10 21:50:42.088 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenOptionsExtensions.ConfigureForNodaTime(SwaggerGenOptions config)
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__1(SwaggerGenOptions c) in /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/Program.cs:line 30
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions..ctor(IOptions`1 swaggerGenOptionsAccessor, IServiceProvider serviceProvider, IWebHostEnvironment hostingEnv)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.<>c.<AddSwaggerGen>b__0_1(IServiceProvider s)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method1(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-10 21:50:42.508 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 500 - text/html;+charset=utf-8 582.5660ms
+2022-09-10 21:50:42.759 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/favicon.ico - -
+2022-09-10 21:50:42.760 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenOptionsExtensions.ConfigureForNodaTime(SwaggerGenOptions config)
+   at Program.<>c__DisplayClass0_0.<<Main>$>b__1(SwaggerGenOptions c) in /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/Program.cs:line 30
+   at Microsoft.Extensions.Options.ConfigureNamedOptions`1.Configure(String name, TOptions options)
+   at Microsoft.Extensions.Options.OptionsFactory`1.Create(String name)
+   at Microsoft.Extensions.Options.UnnamedOptionsManager`1.get_Value()
+   at Swashbuckle.AspNetCore.SwaggerGen.ConfigureSwaggerGeneratorOptions..ctor(IOptions`1 swaggerGenOptionsAccessor, IServiceProvider serviceProvider, IWebHostEnvironment hostingEnv)
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(Type serviceType)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.SwaggerGenServiceCollectionExtensions.<>c.<AddSwaggerGen>b__0_1(IServiceProvider s)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.GetService(IServiceProvider sp, Type type, Type middleware)
+   at lambda_method1(Closure , Object , HttpContext , IServiceProvider )
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_1.<UseMiddleware>b__2(HttpContext context)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-09-10 21:50:42.778 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/favicon.ico - - - 500 - text/plain;+charset=utf-8 19.6357ms
+2022-09-10 21:51:39.266 +03:00 [INF] Application is shutting down...
+2022-09-10 21:54:18.967 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-10 21:54:19.594 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-10 21:54:19.605 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-10 21:54:19.606 +03:00 [INF] Hosting environment: Development
+2022-09-10 21:54:19.606 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-10 21:54:19.726 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-10 21:54:21.009 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 1289.8114ms
+2022-09-10 21:54:21.383 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-10 21:54:21.750 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 367.2991ms
+2022-09-10 21:54:42.590 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/api/Classes - -
+2022-09-10 21:54:42.622 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-10 21:54:42.671 +03:00 [INF] Route matched with {action = "Get", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-10 21:54:43.746 +03:00 [INF] Getting all classes.
+2022-09-10 21:54:46.356 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-10 21:54:47.196 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-09-10 21:54:48.148 +03:00 [INF] Executed DbCommand (230ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."ClassTeacherId", c."Number", t."Id", s."Id", s."Birthday", s."ClassId", s."FirstName", s."LastName", s."Login", s."Password", t."Birthday", t."FirstName", t."LastName", t."Login", t."Password", s0."Id", s0."ClassId", s0."SubjectId", s0."TeacherId"
+FROM "Classes" AS c
+INNER JOIN "Teachers" AS t ON c."ClassTeacherId" = t."Id"
+LEFT JOIN "Students" AS s ON c."Id" = s."ClassId"
+LEFT JOIN "SubjectJournal" AS s0 ON c."Id" = s0."ClassId"
+ORDER BY c."Id", t."Id", s."Id"
+2022-09-10 21:54:48.649 +03:00 [INF] Got all classes successfully.
+2022-09-10 21:54:48.702 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchoolJournal.Primitives.ClassViewModel, SchoolJournal.Primitives, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-10 21:54:48.777 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API) in 6086.1866ms
+2022-09-10 21:54:48.781 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-10 21:54:48.861 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/api/Classes - - - 200 - application/json;+charset=utf-8 6270.8363ms
+2022-09-10 21:55:32.275 +03:00 [INF] Application is shutting down...
+2022-09-10 21:57:03.922 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-10 21:57:04.494 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-10 21:57:04.501 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-10 21:57:04.502 +03:00 [INF] Hosting environment: Development
+2022-09-10 21:57:04.502 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-10 21:57:04.702 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-10 21:57:06.078 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 1384.8443ms
+2022-09-10 21:57:06.508 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-10 21:57:07.150 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 636.0544ms
+2022-09-10 21:57:17.125 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/api/Classes - -
+2022-09-10 21:57:17.157 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-10 21:57:17.207 +03:00 [INF] Route matched with {action = "Get", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-10 21:57:18.118 +03:00 [INF] Getting all classes.
+2022-09-10 21:57:20.875 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-10 21:57:21.843 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-09-10 21:57:22.731 +03:00 [INF] Executed DbCommand (148ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."ClassTeacherId", c."Number", t."Id", s."Id", s."Birthday", s."ClassId", s."FirstName", s."LastName", s."Login", s."Password", t."Birthday", t."FirstName", t."LastName", t."Login", t."Password", t0."Id", t0."ClassId", t0."SubjectId", t0."TeacherId", t0."Id0", t0."BeginDateTime", t0."EndDateTime", t0."HomeTask", t0."Marks", t0."SubjectJournalId"
+FROM "Classes" AS c
+INNER JOIN "Teachers" AS t ON c."ClassTeacherId" = t."Id"
+LEFT JOIN "Students" AS s ON c."Id" = s."ClassId"
+LEFT JOIN (
+    SELECT s0."Id", s0."ClassId", s0."SubjectId", s0."TeacherId", l."Id" AS "Id0", l."BeginDateTime", l."EndDateTime", l."HomeTask", l."Marks", l."SubjectJournalId"
+    FROM "SubjectJournal" AS s0
+    LEFT JOIN "Lessons" AS l ON s0."Id" = l."SubjectJournalId"
+) AS t0 ON c."Id" = t0."ClassId"
+ORDER BY c."Id", t."Id", s."Id", t0."Id"
+2022-09-10 21:57:23.121 +03:00 [INF] Got all classes successfully.
+2022-09-10 21:57:23.159 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchoolJournal.Primitives.ClassViewModel, SchoolJournal.Primitives, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-10 21:57:23.226 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API) in 6000.6381ms
+2022-09-10 21:57:23.230 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-10 21:57:23.336 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/api/Classes - - - 200 - application/json;+charset=utf-8 6210.5647ms
+2022-09-10 21:59:40.966 +03:00 [INF] Application is shutting down...
+2022-09-10 22:10:50.150 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-10 22:10:50.723 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-10 22:10:50.748 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-10 22:10:50.749 +03:00 [INF] Hosting environment: Development
+2022-09-10 22:10:50.749 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-10 22:10:50.838 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-10 22:10:51.975 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 1154.7821ms
+2022-09-10 22:10:52.356 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-10 22:10:52.682 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 324.8225ms
+2022-09-10 22:10:59.141 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/api/Classes - -
+2022-09-10 22:10:59.170 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-10 22:10:59.243 +03:00 [INF] Route matched with {action = "Get", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-10 22:11:00.422 +03:00 [INF] Getting all classes.
+2022-09-10 22:11:03.297 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-10 22:11:04.273 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-09-10 22:11:05.068 +03:00 [INF] Executed DbCommand (138ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."ClassTeacherId", c."Number", t."Id", s."Id", s."Birthday", s."ClassId", s."FirstName", s."LastName", s."Login", s."Password", t."Birthday", t."FirstName", t."LastName", t."Login", t."Password", t0."Id", t0."ClassId", t0."SubjectId", t0."TeacherId", t0."Id0", t0."Id1", t0."BeginDateTime", t0."EndDateTime", t0."HomeTask", t0."Marks", t0."SubjectJournalId", t0."Name"
+FROM "Classes" AS c
+INNER JOIN "Teachers" AS t ON c."ClassTeacherId" = t."Id"
+LEFT JOIN "Students" AS s ON c."Id" = s."ClassId"
+LEFT JOIN (
+    SELECT s0."Id", s0."ClassId", s0."SubjectId", s0."TeacherId", s1."Id" AS "Id0", l."Id" AS "Id1", l."BeginDateTime", l."EndDateTime", l."HomeTask", l."Marks", l."SubjectJournalId", s1."Name"
+    FROM "SubjectJournal" AS s0
+    INNER JOIN "Subjects" AS s1 ON s0."SubjectId" = s1."Id"
+    LEFT JOIN "Lessons" AS l ON s0."Id" = l."SubjectJournalId"
+) AS t0 ON c."Id" = t0."ClassId"
+ORDER BY c."Id", t."Id", s."Id", t0."Id", t0."Id0"
+2022-09-10 22:11:05.584 +03:00 [INF] Got all classes successfully.
+2022-09-10 22:11:05.632 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchoolJournal.Primitives.ClassViewModel, SchoolJournal.Primitives, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-10 22:11:05.713 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API) in 6448.9557ms
+2022-09-10 22:11:05.716 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-10 22:11:05.826 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/api/Classes - - - 200 - application/json;+charset=utf-8 6685.1226ms
+2022-09-10 22:11:27.951 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/api/Classes/1 - -
+2022-09-10 22:11:27.952 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-10 22:11:27.996 +03:00 [INF] Route matched with {action = "Get", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-10 22:11:28.030 +03:00 [INF] Getting class : ID 1.
+2022-09-10 22:11:28.036 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-10 22:11:28.121 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2022-09-10 22:11:28.237 +03:00 [INF] Executed DbCommand (52ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t0."Id", t0."ClassTeacherId", t0."Number", t0."Id0", s."Id", s."Birthday", s."ClassId", s."FirstName", s."LastName", s."Login", s."Password", t0."Birthday", t0."FirstName", t0."LastName", t0."Login", t0."Password", t1."Id", t1."ClassId", t1."SubjectId", t1."TeacherId", t1."Id0", t1."Id1", t1."BeginDateTime", t1."EndDateTime", t1."HomeTask", t1."Marks", t1."SubjectJournalId", t1."Name"
+FROM (
+    SELECT c."Id", c."ClassTeacherId", c."Number", t."Id" AS "Id0", t."Birthday", t."FirstName", t."LastName", t."Login", t."Password"
+    FROM "Classes" AS c
+    INNER JOIN "Teachers" AS t ON c."ClassTeacherId" = t."Id"
+    WHERE c."Id" = @__request_Id_0
+    LIMIT 1
+) AS t0
+LEFT JOIN "Students" AS s ON t0."Id" = s."ClassId"
+LEFT JOIN (
+    SELECT s0."Id", s0."ClassId", s0."SubjectId", s0."TeacherId", s1."Id" AS "Id0", l."Id" AS "Id1", l."BeginDateTime", l."EndDateTime", l."HomeTask", l."Marks", l."SubjectJournalId", s1."Name"
+    FROM "SubjectJournal" AS s0
+    INNER JOIN "Subjects" AS s1 ON s0."SubjectId" = s1."Id"
+    LEFT JOIN "Lessons" AS l ON s0."Id" = l."SubjectJournalId"
+) AS t1 ON t0."Id" = t1."ClassId"
+ORDER BY t0."Id", t0."Id0", s."Id", t1."Id", t1."Id0"
+2022-09-10 22:11:28.264 +03:00 [INF] Got class successfully : ID 1.
+2022-09-10 22:11:28.265 +03:00 [INF] Executing OkObjectResult, writing value of type 'SchoolJournal.Primitives.ClassViewModel'.
+2022-09-10 22:11:28.266 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API) in 269.7719ms
+2022-09-10 22:11:28.267 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-10 22:11:28.268 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/api/Classes/1 - - - 200 - application/json;+charset=utf-8 317.4604ms
+2022-09-10 22:11:34.916 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/api/Classes/3 - -
+2022-09-10 22:11:34.921 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-10 22:11:34.922 +03:00 [INF] Route matched with {action = "Get", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-10 22:11:34.927 +03:00 [INF] Getting class : ID 3.
+2022-09-10 22:11:35.107 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-10 22:11:35.130 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@__request_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t0."Id", t0."ClassTeacherId", t0."Number", t0."Id0", s."Id", s."Birthday", s."ClassId", s."FirstName", s."LastName", s."Login", s."Password", t0."Birthday", t0."FirstName", t0."LastName", t0."Login", t0."Password", t1."Id", t1."ClassId", t1."SubjectId", t1."TeacherId", t1."Id0", t1."Id1", t1."BeginDateTime", t1."EndDateTime", t1."HomeTask", t1."Marks", t1."SubjectJournalId", t1."Name"
+FROM (
+    SELECT c."Id", c."ClassTeacherId", c."Number", t."Id" AS "Id0", t."Birthday", t."FirstName", t."LastName", t."Login", t."Password"
+    FROM "Classes" AS c
+    INNER JOIN "Teachers" AS t ON c."ClassTeacherId" = t."Id"
+    WHERE c."Id" = @__request_Id_0
+    LIMIT 1
+) AS t0
+LEFT JOIN "Students" AS s ON t0."Id" = s."ClassId"
+LEFT JOIN (
+    SELECT s0."Id", s0."ClassId", s0."SubjectId", s0."TeacherId", s1."Id" AS "Id0", l."Id" AS "Id1", l."BeginDateTime", l."EndDateTime", l."HomeTask", l."Marks", l."SubjectJournalId", s1."Name"
+    FROM "SubjectJournal" AS s0
+    INNER JOIN "Subjects" AS s1 ON s0."SubjectId" = s1."Id"
+    LEFT JOIN "Lessons" AS l ON s0."Id" = l."SubjectJournalId"
+) AS t1 ON t0."Id" = t1."ClassId"
+ORDER BY t0."Id", t0."Id0", s."Id", t1."Id", t1."Id0"
+2022-09-10 22:11:35.144 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API) in 220.9917ms
+2022-09-10 22:11:35.145 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-10 22:11:35.161 +03:00 [WRN] Class NOT FOUND : ID 3.
+2022-09-10 22:11:35.181 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/api/Classes/3 - - - 404 - application/json 264.4123ms
+2022-09-10 22:12:50.891 +03:00 [INF] Application is shutting down...
