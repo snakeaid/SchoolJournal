@@ -10,6 +10,12 @@ public class TeacherProfile : Profile
     {
         CreateMap<Teacher, TeacherViewModel>()
             .ForMember(x => x.FullName,
-                opt => opt.MapFrom(src => $"{src.FirstName} {src.LastName}"));
+                opt => opt.MapFrom(src => string.Join(' ', src.Names)));
+        // CreateMap<TeacherUpdateModel, Teacher>()
+        //     .ForMember(x => x.Names,
+        //         opt => opt.MapFrom(src => src.FullName.Split(' ', StringSplitOptions.None)));
+        // CreateMap<TeacherCreateModel, Teacher>()
+        //     .ForMember(x => x.Names,
+        //         opt => opt.MapFrom(src => src.FullName.Split(' ', StringSplitOptions.None)));
     }
 }

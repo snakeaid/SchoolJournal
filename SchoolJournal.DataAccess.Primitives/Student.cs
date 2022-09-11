@@ -24,14 +24,9 @@ public class Student : IUser
     public int ClassId { get; set; }
 
     /// <summary>
-    /// Gets and sets the first name of the student.
+    /// Gets and sets the names of the student.
     /// </summary>
-    public string FirstName { get; set; } = null!;
-
-    /// <summary>
-    /// Gets and sets the last name of the student.
-    /// </summary>
-    public string LastName { get; set; } = null!;
+    public string[] Names { get; set; } = null!;
 
     /// <summary>
     /// Gets and sets the date of birth of the student.

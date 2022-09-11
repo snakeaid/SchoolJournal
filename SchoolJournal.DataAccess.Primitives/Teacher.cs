@@ -14,14 +14,9 @@ public class Teacher : IUser
     public int Id { get; set; }
 
     /// <summary>
-    /// Gets and sets the first name of the teacher.
+    /// Gets and sets the names of the teacher.
     /// </summary>
-    public string FirstName { get; set; } = null!;
-
-    /// <summary>
-    /// Gets and sets the last name of the teacher.
-    /// </summary>
-    public string LastName { get; set; } = null!;
+    public string[] Names { get; set; } = null!;
 
     /// <summary>
     /// Gets and sets the date of birth of the teacher.

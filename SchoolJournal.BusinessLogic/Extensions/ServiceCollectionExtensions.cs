@@ -1,3 +1,5 @@
+using System.Reflection;
+using MassTransit;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -58,6 +60,31 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection AddCustomMiddleware(this IServiceCollection services)
     {
         services.AddScoped<ExceptionHandlingMiddleware>();
+        return services;
+    }
+
+    /// <summary>
+    /// Adds MassTransit consumers to the services collection.
+    /// </summary>
+    /// <param name="services">The collection of services.</param>
+    /// <returns><see cref="IServiceCollection"/></returns>
+    public static IServiceCollection AddMassTransitConsumers(this IServiceCollection services)
+    {
+        services.AddMassTransit(x =>
+        {
+            x.AddConsumers(Assembly.GetCallingAssembly());
+
+            x.UsingRabbitMq((context, cfg) =>
+            {
+                cfg.Host("localhost", "/", h =>
+                {
+                    h.Username("guest");
+                    h.Password("guest");
+                });
+
+                cfg.ConfigureEndpoints(context);
+            });
+        });
         return services;
     }
 }

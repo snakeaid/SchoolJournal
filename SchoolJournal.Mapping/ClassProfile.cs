@@ -9,5 +9,7 @@ public class ClassProfile : Profile
     public ClassProfile()
     {
         CreateMap<Class, ClassViewModel>();
+        CreateMap<ClassCreateModel, Class>();
+        CreateMap<ClassUpdateModel, Class>();
     }
 }

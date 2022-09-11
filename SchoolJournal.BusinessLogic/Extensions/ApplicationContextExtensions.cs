@@ -20,6 +20,7 @@ public static class ApplicationContextExtensions
             .Include(x => x.Students)
             .Include(x => x.ClassTeacher)
             .Include(x => x.Journal)!.ThenInclude(x => x.Lessons)
-            .Include(x => x.Journal)!.ThenInclude(x => x.Subject);
+            .Include(x => x.Journal)!.ThenInclude(x => x.Subject)
+            .AsNoTracking();
     }
 }
