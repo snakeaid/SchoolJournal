@@ -12,6 +12,7 @@ var configuration = builder.Configuration;
 // Add services to the container.
 builder.Logging.AddCustomLogging();
 builder.Services.AddDbContexts(configuration);
+builder.Services.AddMappingProfiles();
 builder.Services.AddMediator();
 builder.Services.AddCustomMiddleware();
 builder.Services.AddControllers();

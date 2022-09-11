@@ -193,3 +193,21 @@ ORDER BY t0."Id", t0."Id0", s."Id", t1."Id", t1."Id0"
 2022-09-11 19:06:27.845 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
 2022-09-11 19:06:27.846 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/api/Classes/1 - - - 200 - application/json;+charset=utf-8 56.8447ms
 2022-09-11 19:52:03.525 +03:00 [INF] Application is shutting down...
+2022-09-11 21:32:45.231 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-11 21:32:45.339 +03:00 [INF] Bus started: "rabbitmq://localhost/"
+2022-09-11 21:32:45.384 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-11 21:32:45.387 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-11 21:32:45.388 +03:00 [INF] Hosting environment: Development
+2022-09-11 21:32:45.388 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-11 21:32:46.426 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-11 21:32:47.669 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 1254.2753ms
+2022-09-11 21:32:47.829 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/swagger-ui-bundle.js - -
+2022-09-11 21:32:47.974 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-09-11 21:32:47.991 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 162.0246ms
+2022-09-11 21:32:48.322 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-11 21:32:48.710 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 387.7743ms
+2022-09-11 22:22:40.609 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/favicon-32x32.png - -
+2022-09-11 22:22:40.620 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2022-09-11 22:22:40.621 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/favicon-32x32.png - - - 200 628 image/png 12.9902ms
+2022-09-11 22:37:24.228 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-11 22:37:24.267 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 38.6490ms

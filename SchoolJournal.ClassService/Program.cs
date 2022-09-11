@@ -12,6 +12,7 @@ IHost host = Host.CreateDefaultBuilder(args)
     {
         services.AddDbContexts(configuration);
         services.AddMappingProfiles();
+        services.AddValidators();
         services.AddMassTransitConsumers();
     })
     .ConfigureLogging(logging => logging.AddCustomLogging())

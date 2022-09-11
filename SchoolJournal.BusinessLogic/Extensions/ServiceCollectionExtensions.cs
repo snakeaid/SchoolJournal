@@ -1,4 +1,5 @@
 using System.Reflection;
+using FluentValidation;
 using MassTransit;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +9,7 @@ using SchoolJournal.BusinessLogic.Handlers;
 using SchoolJournal.DataAccess;
 using SchoolJournal.Mapping;
 using SchoolJournal.Middleware;
+using SchoolJournal.Validation;
 
 namespace SchoolJournal.BusinessLogic.Extensions;
 
@@ -31,7 +33,7 @@ public static class ServiceCollectionExtensions
     }
 
     /// <summary>
-    /// Adds mapping profiles to the services collection.
+    /// Adds AutoMapper mapping profiles to the services collection.
     /// </summary>
     /// <param name="services">The collection of services.</param>
     /// <returns><see cref="IServiceCollection"/></returns>
@@ -85,6 +87,17 @@ public static class ServiceCollectionExtensions
                 cfg.ConfigureEndpoints(context);
             });
         });
+        return services;
+    }
+
+    /// <summary>
+    /// Adds FluentValidation validators to the collection of services.
+    /// </summary>
+    /// <param name="services">The collection of services.</param>
+    /// <returns><see cref="IServiceCollection"/></returns>
+    public static IServiceCollection AddValidators(this IServiceCollection services)
+    {
+        services.AddValidatorsFromAssemblyContaining(typeof(ClassCreateModelValidator));
         return services;
     }
 }
