@@ -8,6 +8,11 @@ namespace SchoolJournal.Primitives;
 public class ClassUpdateModel
 {
     /// <summary>
+    /// Gets and sets the received identifier of the class.
+    /// </summary>
+    public int Id { get; set; }
+
+    /// <summary>
     /// Gets and sets the received number of the class.
     /// </summary>
     public int Number { get; set; }

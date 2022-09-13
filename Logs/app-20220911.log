@@ -211,3 +211,5 @@ ORDER BY t0."Id", t0."Id0", s."Id", t1."Id", t1."Id0"
 2022-09-11 22:22:40.621 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/favicon-32x32.png - - - 200 628 image/png 12.9902ms
 2022-09-11 22:37:24.228 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
 2022-09-11 22:37:24.267 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 38.6490ms
+2022-09-11 22:56:20.669 +03:00 [INF] Application is shutting down...
+2022-09-11 22:56:20.812 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"

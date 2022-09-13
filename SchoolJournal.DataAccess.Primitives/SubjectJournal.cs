@@ -1,9 +1,12 @@
+using NodaTime;
+using SchoolJournal.DataAccess.Abstractions;
+
 namespace SchoolJournal.DataAccess.Primitives;
 
 /// <summary>
 /// Entity class which represents lesson journal for a subject and class.
 /// </summary>
-public class SubjectJournal
+public class SubjectJournal : ISoftDeletable
 {
     /// <summary>
     /// Gets and sets the unique identifier of the subject journal.
@@ -44,4 +47,9 @@ public class SubjectJournal
     /// Gets and sets the list of lessons for the journal.
     /// </summary>
     public List<Lesson> Lessons { get; set; } = null!;
+
+    /// <summary>
+    /// Gets and sets the date and time of deletion.
+    /// </summary>
+    public LocalDateTime? DateTimeDeleted { get; set; }
 }

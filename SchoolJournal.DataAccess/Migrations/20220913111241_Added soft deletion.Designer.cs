@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NodaTime;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
@@ -12,9 +13,10 @@ using SchoolJournal.DataAccess;
 namespace SchoolJournal.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20220913111241_Added soft deletion")]
+    partial class Addedsoftdeletion
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,8 +36,8 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.Property<int>("ClassTeacherId")
                         .HasColumnType("integer");
 
-                    b.Property<LocalDateTime?>("DateTimeDeleted")
-                        .HasColumnType("timestamp without time zone");
+                    b.Property<OffsetDateTime?>("DateTimeDeleted")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("Number")
                         .HasColumnType("integer");
@@ -61,14 +63,14 @@ namespace SchoolJournal.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<LocalDateTime>("BeginDateTime")
-                        .HasColumnType("timestamp without time zone");
+                    b.Property<OffsetDateTime>("BeginDateTime")
+                        .HasColumnType("timestamp with time zone");
 
-                    b.Property<LocalDateTime?>("DateTimeDeleted")
-                        .HasColumnType("timestamp without time zone");
+                    b.Property<OffsetDateTime?>("DateTimeDeleted")
+                        .HasColumnType("timestamp with time zone");
 
-                    b.Property<LocalDateTime>("EndDateTime")
-                        .HasColumnType("timestamp without time zone");
+                    b.Property<OffsetDateTime>("EndDateTime")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("HomeTask")
                         .HasColumnType("text");
@@ -89,12 +91,12 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("d13912bb-83fa-4eca-8034-3f688df04cba"),
-                            BeginDateTime = new NodaTime.LocalDateTime(2022, 9, 7, 11, 10),
-                            EndDateTime = new NodaTime.LocalDateTime(2022, 9, 7, 11, 40),
+                            Id = new Guid("69b0947b-d1ae-4fef-bcd9-6e32f1c9cfdf"),
+                            BeginDateTime = new NodaTime.OffsetDateTime(new NodaTime.LocalDateTime(2022, 9, 7, 11, 10), NodaTime.Offset.FromHours(0)),
+                            EndDateTime = new NodaTime.OffsetDateTime(new NodaTime.LocalDateTime(2022, 9, 7, 11, 40), NodaTime.Offset.FromHours(0)),
                             HomeTask = "Draw a picture.",
                             Marks = "{}",
-                            SubjectJournalId = new Guid("1f59d881-85b4-4f1d-bb2e-c37c9c8e9497")
+                            SubjectJournalId = new Guid("583b2835-3d9e-4941-bcea-3a082f9a6aaf")
                         });
                 });
 
@@ -112,8 +114,8 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.Property<int>("ClassId")
                         .HasColumnType("integer");
 
-                    b.Property<LocalDateTime?>("DateTimeDeleted")
-                        .HasColumnType("timestamp without time zone");
+                    b.Property<OffsetDateTime?>("DateTimeDeleted")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string[]>("Names")
                         .IsRequired()
@@ -150,8 +152,8 @@ namespace SchoolJournal.DataAccess.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<LocalDateTime?>("DateTimeDeleted")
-                        .HasColumnType("timestamp without time zone");
+                    b.Property<OffsetDateTime?>("DateTimeDeleted")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -178,8 +180,8 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.Property<int>("ClassId")
                         .HasColumnType("integer");
 
-                    b.Property<LocalDateTime?>("DateTimeDeleted")
-                        .HasColumnType("timestamp without time zone");
+                    b.Property<OffsetDateTime?>("DateTimeDeleted")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<int>("SubjectId")
                         .HasColumnType("integer");
@@ -200,7 +202,7 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("1f59d881-85b4-4f1d-bb2e-c37c9c8e9497"),
+                            Id = new Guid("583b2835-3d9e-4941-bcea-3a082f9a6aaf"),
                             ClassId = 1,
                             SubjectId = 1,
                             TeacherId = 1
@@ -218,8 +220,8 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.Property<LocalDate>("Birthday")
                         .HasColumnType("date");
 
-                    b.Property<LocalDateTime?>("DateTimeDeleted")
-                        .HasColumnType("timestamp without time zone");
+                    b.Property<OffsetDateTime?>("DateTimeDeleted")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string[]>("Names")
                         .IsRequired()

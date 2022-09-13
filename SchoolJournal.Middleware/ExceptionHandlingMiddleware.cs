@@ -1,6 +1,6 @@
 using System.Net;
 using System.Text.Json;
-using System.Text.RegularExpressions;
+using MassTransit;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
@@ -40,20 +40,31 @@ public class ExceptionHandlingMiddleware : IMiddleware
         var response = context.Response;
         response.ContentType = "application/json";
 
-        var message = JsonSerializer.Serialize(new { errorMessage = Regex.Unescape(exception.Message) });
-
-        _logger.LogWarning(Regex.Unescape(exception.Message));
-
-        switch (exception)
+        var exceptionType = exception.GetType().ToString().Split('.').LastOrDefault();
+        var exceptionMessage = exception.Message;
+        if (exception is RequestFaultException faultException)
         {
-            case KeyNotFoundException:
+            exceptionType = faultException.Fault!.Exceptions.FirstOrDefault()!.ExceptionType.Split('.')
+                .LastOrDefault();
+            exceptionMessage = faultException.Fault.Exceptions.FirstOrDefault()!.Message;
+        }
+
+        _logger.LogWarning(exceptionMessage);
+
+        switch (exceptionType)
+        {
+            case "KeyNotFoundException":
                 response.StatusCode = (int)HttpStatusCode.NotFound;
+                break;
+            case "ValidationException":
+                response.StatusCode = (int)HttpStatusCode.BadRequest;
                 break;
             default:
                 response.StatusCode = (int)HttpStatusCode.InternalServerError;
                 break;
         }
 
-        await response.WriteAsync(message);
+        await response.WriteAsync(JsonSerializer.Serialize(new
+            { errorMessage = exceptionMessage }, new JsonSerializerOptions { WriteIndented = true }));
     }
 }

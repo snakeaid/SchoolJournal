@@ -1,11 +1,12 @@
 using NodaTime;
+using SchoolJournal.DataAccess.Abstractions;
 
 namespace SchoolJournal.DataAccess.Primitives;
 
 /// <summary>
 /// Entity class which represents a lesson.
 /// </summary>
-public class Lesson
+public class Lesson : ISoftDeletable
 {
     /// <summary>
     /// Gets and sets the unique identifier of the lesson.
@@ -30,15 +31,20 @@ public class Lesson
     /// <summary>
     /// Gets and sets the beginning time of the lesson.
     /// </summary>
-    public OffsetDateTime BeginDateTime { get; set; }
+    public LocalDateTime BeginDateTime { get; set; }
 
     /// <summary>
     /// Gets and sets the ending time of the lesson.
     /// </summary>
-    public OffsetDateTime EndDateTime { get; set; }
+    public LocalDateTime EndDateTime { get; set; }
 
     /// <summary>
     /// Gets and sets the home task of the lesson.
     /// </summary>
     public string? HomeTask { get; set; }
+
+    /// <summary>
+    /// Gets and sets the date and time of deletion.
+    /// </summary>
+    public LocalDateTime? DateTimeDeleted { get; set; }
 }

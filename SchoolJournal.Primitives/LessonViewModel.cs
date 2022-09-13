@@ -11,17 +11,17 @@ public class LessonViewModel
     /// <summary>
     /// Gets and sets the displayed list of marks for students on the lesson.
     /// </summary>
-    public Dictionary<StudentViewModel, Mark?> Marks { get; set; } = null!; //TODO: Add mark handling
+    public Dictionary<StudentViewModel, Mark?> Marks { get; set; } = null!;
 
     /// <summary>
     /// Gets and sets the displayed beginning time of the lesson.
     /// </summary>
-    public OffsetDateTime BeginDateTime { get; set; }
+    public LocalDateTime BeginDateTime { get; set; }
 
     /// <summary>
     /// Gets and sets the displayed ending time of the lesson.
     /// </summary>
-    public OffsetDateTime EndDateTime { get; set; }
+    public LocalDateTime EndDateTime { get; set; }
 
     /// <summary>
     /// Gets and sets the displayed home task of the lesson.

@@ -72,9 +72,10 @@ public static class ServiceCollectionExtensions
     /// <returns><see cref="IServiceCollection"/></returns>
     public static IServiceCollection AddMassTransitConsumers(this IServiceCollection services)
     {
+        var assembly = Assembly.GetCallingAssembly();
         services.AddMassTransit(x =>
         {
-            x.AddConsumers(Assembly.GetCallingAssembly());
+            x.AddConsumers(assembly);
 
             x.UsingRabbitMq((context, cfg) =>
             {

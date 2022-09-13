@@ -1,7 +1,9 @@
+using System.Linq.Expressions;
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using NodaTime;
+using SchoolJournal.DataAccess.Abstractions;
 using SchoolJournal.DataAccess.Primitives;
 
 namespace SchoolJournal.DataAccess;
@@ -50,11 +52,13 @@ public class ApplicationContext : DbContext
     /// </summary>
     public DbSet<Lesson> Lessons { get; set; } = null!;
 
-    //TODO: Add comment
+    /// <summary>
+    /// This method is called when the context is first created to build the model and its mappings in memory.
+    /// </summary>
+    /// <param name="modelBuilder">The model builder.</param>
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         var options = new JsonSerializerOptions();
-        //options.Converters.Add(new DateOnlyJsonConverter()); //TODO: Check with empty options - delete them?
 
         var marksComparer = new ValueComparer<Dictionary<Student, Mark?>>(
             (c1, c2) => c1!.SequenceEqual(c2!),
@@ -68,20 +72,42 @@ public class ApplicationContext : DbContext
                 x => JsonSerializer.Deserialize<Dictionary<Student, Mark?>>(x, options)!)
             .Metadata.SetValueComparer(marksComparer);
 
+        AddDeletionQueryFilter(modelBuilder);
+        SeedData(modelBuilder);
+
+        base.OnModelCreating(modelBuilder);
+    }
+
+    private void AddDeletionQueryFilter(ModelBuilder modelBuilder)
+    {
+        foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+        {
+            if (typeof(ISoftDeletable).IsAssignableFrom(entityType.ClrType))
+            {
+                var parameter = Expression.Parameter(entityType.ClrType, "p");
+                var deletedCheck = Expression.Lambda(Expression.Equal(Expression.Property(parameter, "DateTimeDeleted"),
+                    Expression.Constant(null)), parameter);
+                modelBuilder.Entity(entityType.ClrType).HasQueryFilter(deletedCheck);
+            }
+        }
+    }
+
+    private void SeedData(ModelBuilder modelBuilder)
+    {
         var s1 = new Student
         {
             Id = 1, Names = new[] { "Mikhail", "Mikhaylov" }, ClassId = 1,
-            Birthday = new(2005, 7, 9), Login = "mikhail", Password = "1111"
+            Birthday = new(2005, 7, 9)
         };
         var s2 = new Student
         {
             Id = 2, Names = new[] { "Vasiliy", "Vasiliev" }, ClassId = 1,
-            Birthday = new(2006, 1, 2), Login = "vasya2006", Password = "13863"
+            Birthday = new(2006, 1, 2)
         };
         var t = new Teacher
         {
             Id = 1, Names = new[] { "Yana", "Yanovna" },
-            Birthday = new(1983, 11, 18), Login = "yanito", Password = "lll"
+            Birthday = new(1983, 11, 18)
         };
         var c = new Class
         {
@@ -96,8 +122,8 @@ public class ApplicationContext : DbContext
         var l = new Lesson
         {
             Id = Guid.NewGuid(),
-            BeginDateTime = new OffsetDateTime(new LocalDateTime(2022, 9, 7, 11, 10, 00), Offset.Zero),
-            EndDateTime = new OffsetDateTime(new LocalDateTime(2022, 9, 7, 11, 40, 00), Offset.Zero),
+            BeginDateTime = new LocalDateTime(2022, 9, 7, 11, 10, 00),
+            EndDateTime = new LocalDateTime(2022, 9, 7, 11, 40, 00),
             HomeTask = "Draw a picture.",
             SubjectJournalId = journalId,
             Marks = new Dictionary<Student, Mark?>()
@@ -116,7 +142,5 @@ public class ApplicationContext : DbContext
         modelBuilder.Entity<Subject>().HasData(s);
         modelBuilder.Entity<SubjectJournal>().HasData(j);
         modelBuilder.Entity<Lesson>().HasData(l);
-
-        base.OnModelCreating(modelBuilder);
     }
 }

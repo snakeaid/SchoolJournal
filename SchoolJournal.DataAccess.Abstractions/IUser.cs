@@ -12,15 +12,15 @@ public interface IUser
     /// </summary>
     public string[] Names { get; set; }
 
-    /// <summary>
-    /// Gets and sets login of the user.
-    /// </summary>
-    public string Login { get; set; }
-
-    /// <summary>
-    /// Gets and sets password of the user.
-    /// </summary>
-    public string Password { get; set; }
+    // /// <summary>
+    // /// Gets and sets login of the user.
+    // /// </summary>
+    // public string Login { get; set; }
+    //
+    // /// <summary>
+    // /// Gets and sets password of the user.
+    // /// </summary>
+    // public string Password { get; set; }
 
     /// <summary>
     /// Gets and sets the date of birth of the user.

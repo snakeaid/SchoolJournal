@@ -27,10 +27,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="Commands"/>
-    </ItemGroup>
-
-    <ItemGroup>
         <Reference Include="MassTransit">
             <HintPath>..\..\..\.nuget\packages\masstransit\8.0.6\lib\net6.0\MassTransit.dll</HintPath>
         </Reference>

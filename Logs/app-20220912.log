@@ -1,0 +1,1175 @@
+2022-09-12 11:13:27.298 +03:00 [INF] Bus started: "rabbitmq://localhost/"
+2022-09-12 11:13:27.237 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-12 11:13:27.415 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-12 11:13:27.415 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-12 11:13:27.415 +03:00 [INF] Hosting environment: Development
+2022-09-12 11:13:27.415 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-12 11:13:28.401 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-12 11:13:29.532 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 1146.4875ms
+2022-09-12 11:13:30.125 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-12 11:13:30.769 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 643.1860ms
+2022-09-12 11:13:42.679 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7202/api/Classes application/json 132
+2022-09-12 11:13:42.715 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API)'
+2022-09-12 11:13:42.819 +03:00 [INF] Route matched with {action = "Post", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(SchoolJournal.Primitives.ClassCreateModel) on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-12 11:14:13.346 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API) in 30507.2715ms
+2022-09-12 11:14:13.349 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API)'
+2022-09-12 11:14:13.357 +03:00 [WRN] Timeout waiting for response, RequestId: 443e0000-088e-6c40-8926-08da9496b53c
+2022-09-12 11:14:13.368 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7202/api/Classes application/json 132 - 500 - application/json 30687.7771ms
+2022-09-12 11:22:34.625 +03:00 [INF] Application is shutting down...
+2022-09-12 11:22:34.741 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"
+2022-09-12 11:26:27.403 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-12 11:26:27.551 +03:00 [INF] Hosting environment: Development
+2022-09-12 11:26:27.560 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.ClassService
+2022-09-12 11:26:29.999 +03:00 [INF] Application is shutting down...
+2022-09-12 11:29:02.635 +03:00 [INF] Configured endpoint ClassCreateModel, Consumer: SchoolJournal.ClassService.ClassCreateModelConsumer
+2022-09-12 11:29:03.063 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-12 11:29:03.063 +03:00 [INF] Hosting environment: Development
+2022-09-12 11:29:03.064 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.ClassService
+2022-09-12 11:29:03.647 +03:00 [INF] Bus started: "rabbitmq://localhost/"
+2022-09-12 11:29:09.866 +03:00 [INF] Application is shutting down...
+2022-09-12 11:29:10.895 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"
+2022-09-12 11:32:13.222 +03:00 [INF] Configured endpoint ClassCreateModel, Consumer: SchoolJournal.ClassService.ClassCreateModelConsumer
+2022-09-12 11:32:13.611 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-12 11:32:13.611 +03:00 [INF] Hosting environment: Development
+2022-09-12 11:32:13.612 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.ClassService
+2022-09-12 11:32:14.033 +03:00 [INF] Bus started: "rabbitmq://localhost/"
+2022-09-12 11:32:41.429 +03:00 [INF] Application is shutting down...
+2022-09-12 11:32:42.459 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"
+2022-09-12 11:32:49.500 +03:00 [INF] Configured endpoint ClassCreateModel, Consumer: SchoolJournal.ClassService.ClassCreateModelConsumer
+2022-09-12 11:32:50.076 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-12 11:32:50.076 +03:00 [INF] Hosting environment: Development
+2022-09-12 11:32:50.077 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.ClassService
+2022-09-12 11:32:50.471 +03:00 [INF] Bus started: "rabbitmq://localhost/"
+2022-09-12 11:34:26.394 +03:00 [ERR] R-FAULT "rabbitmq://localhost/ClassCreateModel" "7a440000-088e-6c40-b4ba-08da949998eb" SchoolJournal.Primitives.ClassCreateModel SchoolJournal.ClassService.ClassCreateModelConsumer("00:00:00.3739239")
+FluentValidation.ValidationException: Validation failed: 
+ -- Number: 'Number' must be between 1 and 11. You entered 0. Severity: Error
+ -- ClassTeacherId: 'Class Teacher Id' must be greater than '0'. Severity: Error
+   at FluentValidation.AbstractValidator`1.RaiseValidationException(ValidationContext`1 context, ValidationResult result) in /Users/jskinner/code/FluentValidation/src/FluentValidation/AbstractValidator.cs:line 510
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, Boolean useAsync, CancellationToken cancellation) in /Users/jskinner/code/FluentValidation/src/FluentValidation/AbstractValidator.cs:line 253
+   at FluentValidation.AbstractValidator`1.ValidateAsync(ValidationContext`1 context, CancellationToken cancellation) in /Users/jskinner/code/FluentValidation/src/FluentValidation/AbstractValidator.cs:line 220
+   at FluentValidation.DefaultValidatorExtensions.ValidateAndThrowAsync[T](IValidator`1 validator, T instance, CancellationToken cancellationToken) in /Users/jskinner/code/FluentValidation/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 72
+   at SchoolJournal.ClassService.ClassCreateModelConsumer.Consume(ConsumeContext`1 context) in /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.ClassService/ClassCreateModelConsumer.cs:line 54
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](Consum2022-09-12 11:34:26.574 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API) in 2675.6369ms
+2022-09-12 11:34:26.579 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API)'
+2022-09-12 11:34:26.594 +03:00 [WRN] The SchoolJournal.Primitives.ClassCreateModel request faulted: Validation failed: 
+ -- Number: 'Number' must be between 1 and 11. You entered 0. Severity: Error
+ -- ClassTeacherId: 'Class Teacher Id' must be greater than '0'. Severity: Error
+2022-09-122022-09-12 11:35:00.612 +03:00 [INF] Application is shutting down...
+2022-09-12 11:35:01.658 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"
+.6109ms
+2022-09-12 11:35:00.612 +03:00 [INF] Application is shutting down...
+2022-09-12 11:35:00.796 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"
+2022-09-12 11:41:34.972 +03:00 [INF] Bus started: "rabbitmq://localhost/"
+2022-09-12 11:41:34.972 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-12 11:41:35.180 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-12 11:41:35.180 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-12 11:41:35.180 +03:00 [INF] Hosting environment: Development
+2022-09-12 11:41:35.180 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-12 11:41:35.887 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-12 11:41:37.246 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 1371.5720ms
+2022-09-12 11:41:37.675 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-12 11:41:38.281 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 605.8177ms
+2022-09-12 11:41:57.733 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7202/api/Classes application/json 132
+2022-09-12 11:41:57.757 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API)'
+2022-09-12 11:41:57.811 +03:00 [INF] Route matched with {action = "Post", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(SchoolJournal.Primi2022-09-12 11:42:00.823 +03:00 [ERR] R-FAULT "rabbitmq://localhost/ClassCreateModel" "59460000-088e-6c40-6a2022-09-12 11:42:00.981 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API) in 3154.7573ms
+2022-09-12 11:42:00.984 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API)'
+2022-09-12 11:42:00.992 +03:00 [WRN] Validation failed: 
+ -- Number: 'Number' must be between 1 and 11. You entered 0. Severity: Error
+ -- ClassTeacherId: 'Class Teacher Id' must be greater than '0'. Severity: Error
+2022-09-12 11:42:01.008 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7202/api/Classes application/json 132 - 500 - application/json 3275.0824ms
+2022-09-12 11:43:01.447 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7202/api/Classes application/json 132
+2022-09-12 11:43:01.448 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API)'
+2022-09-12 11:43:01.462 +03:00 [INF] Route matched with {action = "Post", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(SchoolJournal.Primitives.ClassCreateModel) on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-12 11:43:01.572 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API) in 109.4868ms
+2022-09-12 11:43:01.572 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API)'
+2022-09-12 11:43:01.575 +03:00 [WRN] Validation failed: 
+ -- Number: 'Number' must be between 1 and 11. You entered 0. Severity: Error
+ -- ClassTeacherId: 'Class Teacher Id' must be greater than '0'. Severity: Error
+2022-09-12 11:43:01.577 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7202/api/Classes application/json 132 - 500 - application/json 130.0262ms
+2022-09-12 11:55:40.348 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7202/api/Classes application/json 132
+2022-09-12 11:55:40.351 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API)'
+2022-09-12 11:55:40.358 +03:00 [INF] Route matched with {action = "Post", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(SchoolJournal.Primitives.ClassCreateModel) on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-12 11:55:40.617 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API) in 258.0424ms
+2022-09-12 11:55:40.617 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API)'
+2022-09-12 11:55:40.623 +03:00 [WRN] Validation failed: 
+ -- Number: 'Number' must be between 1 and 11. You entered 0. Severity: Error
+ -- ClassTeacherId: 'Class Teacher Id' must be greater than '0'. Severity: Error
+2022-09-12 11:55:40.626 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7202/api/Classes application/json 132 - 400 - application/json 278.5886ms
+2022-09-12 11:55:47.254 +03:00 [INF] Application is shutting down...
+2022-09-12 11:55:47.450 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"
+eAndThrowAsync[T](IValidator`1 validator, T instance, CancellationToken cancellationToken) in /Users/jskinner/code/FluentValidation/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 72
+   at SchoolJournal.ClassService.ClassCreateModelConsumer.Consume(ConsumeContext`1 context) in /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.ClassService/ClassCreateModelConsumer.cs:line 54
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.Middleware.ConsumerMessageFilter`2.MassTransit.IFilter<MassTransit.ConsumeContext<TMessage>>.Send(ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/Middleware/ConsumerMessageFilter.cs:line 46
+2022-09-12 11:55:40.595 +03:00 [ERR] R-FAULT "rabbitmq://localhost/ClassCreateModel" "59460000-088e-6c40-e306-08da949c9189" SchoolJournal.Primitives.ClassCreateModel SchoolJournal.ClassService.ClassCreateModelConsumer("00:00:00.0206206")
+FluentValidation.ValidationException: Validation failed: 
+ -- Number: 'Number' must be between 1 and 11. You entered 0. Severity: Error
+ -- ClassTeacherId: 'Class Teacher Id' must be greater than '0'. Severity: Error
+   at FluentValidation.AbstractValidator`1.RaiseValidationException(ValidationContext`1 context, ValidationResult result) in /Users/jskinner/code/FluentValidation/src/FluentValidation/AbstractValidator.cs:line 510
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, Boolean useAsync, CancellationToken cancellation) in /Users/jskinner/code/FluentValidation/src/FluentValidation/AbstractValidator.cs:line 253
+   at FluentValidation.AbstractValidator`1.ValidateAsync(ValidationContext`1 context, CancellationToken cancellation) in /Users/jskinner/code/FluentValidation/src/FluentValidation/AbstractValidator.cs:line 220
+   at FluentValidation.DefaultValidatorExtensions.ValidateAndThrowAsync[T](IValidator`1 validator, T instance, CancellationToken cancellationToken) in /Users/jskinner/code/FluentValidation/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 72
+   at SchoolJournal.ClassService.ClassCreateModelConsumer.Consume(ConsumeContext`1 context) in /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.ClassService/ClassCreateModelConsumer.cs:line 54
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.Middleware.ConsumerMessageFilter`2.MassTransit.IFilter<MassTransit.ConsumeContext<TMessage>>.Send(ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/Middleware/ConsumerMessageFilter.cs:line 46
+2022-09-12 11:55:47.255 +03:00 [INF] Application is shutting down...
+2022-09-12 11:55:48.298 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"
+2022-09-12 11:56:01.098 +03:00 [INF] Configured endpoint ClassCreateModel, Consumer: SchoolJournal.ClassService.ClassCreateModelConsumer
+2022-09-12 11:56:01.599 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-12 11:56:01.600 +03:00 [INF] Hosting environment: Development
+2022-09-12 11:56:01.601 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.ClassService
+2022-09-12 11:56:02.004 +03:00 [INF] Bus started: "rabbitmq://localhost/"
+2022-09-12 11:56:53.524 +03:00 [ERR] R-FAULT "rabbitmq://localhost/ClassCreateModel" "d1490000-088e-6c40-07b8-08da949cbc33" SchoolJournal.Primitives.ClassCreateModel SchoolJournal.ClassService.ClassCreateModelConsumer("00:00:00.4281767")
+FluentValidation.ValidationException: Validation failed: 
+ -- Number: 'Number' must be between 1 and 11. You entered 0. Severity: Error
+ -- ClassTeacherId: 'Class Teacher Id' must be greater than '0'. Severity: Error
+   at FluentValidation.AbstractValidator`1.RaiseValidationException(ValidationContext`1 context, ValidationResult result) in /Users/jskinner/code/FluentValidation/src/FluentValidation/AbstractValidator.cs:line 510
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, Boolean useAsync, CancellationToken cancellation) in /Users/jskinner/code/FluentValidation/src/FluentValidation/AbstractValidator.cs:line 253
+   at FluentValidation.AbstractValidator`1.ValidateAsync(ValidationContext`1 context, CancellationToken cancellation) in /Users/jskinner/code/FluentValidation/src/FluentValidation/AbstractValidator.cs:line 220
+   at FluentValidation.DefaultValidatorExtensions.ValidateAndThrowAsync[T](IValidator`1 validator, T instance, CancellationToken cancellationToken) in /Users/jskinner/code/FluentValidation/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 72
+   at SchoolJournal.ClassService.ClassCreateModelConsumer.Consume(ConsumeContext`1 context) in /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.ClassService/ClassCreateModelConsumer.cs:line 54
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](Consum2022-09-12 11:56:53.678 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API) in 2296.0204ms
+2022-09-12 11:56:53.682 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API)'
+2022-09-12 11:56:53.692 +03:00 [WRN] Validation failed: 
+ -- Number: 'Number' must be between 1 and 11. You entered 0. Severity: Error
+ -- ClassTeacherId: 'Class Teacher Id' must be greater than '0'. Severity: Error
+2022-09-12 11:56:53.713 +03:00 [INF] Request finished HTTP/1.1 POST https2022-09-12 12:05:24.124 +03:00 [INF] Application is shutting down...
+2022-09-12 12:05:252022-09-12 12:05:58.566 +03:00 [INF] Application is shutting down...
+2022-09-12 12:05:58.711 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"
+2022-09-12 12:13:35.354 +03:00 [INF] Bus started: "rabbitmq://localhost/"
+2022-09-12 12:13:35.371 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-12 12:13:35.489 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-12 12:13:35.489 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-12 12:13:35.489 +03:00 [INF] Hosting environment: Development
+2022-09-12 12:13:35.490 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-12 12:13:36.452 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-12 12:13:37.329 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 891.8312ms
+2022-09-12 12:13:37.713 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-12 12:13:38.119 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 406.3617ms
+2022-09-12 12:14:37.299 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7202/api/Classes application/json 133
+2022-09-12 12:14:37.330 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API)'
+2022-09-12 12:14:37.389 +03:00 [INF] Route matched with {action = "Post", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(SchoolJournal.Primi2022-09-12 12:14:40.405 +03:00 [ERR] R-FAULT "rabbitmq://localhost/ClassCreateModel" "9f4d0000-088e-6c40-6c2022-09-12 12:14:40.518 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API) in 3115.7476ms
+2022-09-12 12:14:40.521 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API)'
+2022-09-12 12:14:40.529 +03:00 [WRN] Validation failed: 
+ -- Number: 'Number' must be between 1 and 11. You entered 12. Severity: Error
+2022-09-12 12:14:40.548 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7202/api/Classes application/json 133 - 400 - application/json 3248.2925ms
+2022-09-12 12:14:49.162 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7202/api/Classes application/json 132
+2022-09-12 12:14:49.163 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API)'
+2022-09-12 12:14:49.163 +03:00 [INF] Route matched with {action = "Post", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(SchoolJournal.Primitives.ClassCreateModel) on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-12 12:14:53.363 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API) in 4199.4551ms
+2022-09-12 12:14:53.364 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API)'
+2022-09-12 12:14:53.365 +03:00 [WRN] An error occurred while saving the entity changes. See the inner exception for details.
+2022-09-12 12:14:53.368 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7202/api/Classes application/json 132 - 500 - application/json 4205.3211ms
+2022-09-12 12:20:45.842 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-12 12:20:45.875 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 32.4474ms
+2022-09-12 12:20:46.415 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-12 12:20:46.434 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 18.9252ms
+2022-09-12 12:21:10.436 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-12 12:21:10.457 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 20.2644ms
+2022-09-12 12:21:10.940 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-12 12:21:10.949 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 8.5430ms
+2022-09-12 12:21:57.858 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7202/api/Classes application/json 157
+2022-09-12 12:21:57.865 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API)'
+2022-09-12 12:21:57.877 +03:00 [INF] Route matched with {action = "Post", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(SchoolJournal.Primitives.ClassCreateModel) on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-12 12:21:58.394 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API) in 516.336ms
+2022-09-12 12:21:58.394 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API)'
+2022-09-12 12:21:58.395 +03:00 [WRN] An error occurred while saving the entity changes. See the inner exception for details.
+2022-09-12 12:21:58.397 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7202/api/Classes application/json 157 - 500 - application/json 539.3252ms
+2022-09-12 14:57:43.416 +03:00 [INF] Application is shutting down...
+2022-09-12 14:57:43.618 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"
+oken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "Login" of relation "Students" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Students
+    ColumnName: Login
+    File: execMain.c
+    Line: 1883
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "Login" of relation "Students" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "Login" of relation "Students" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Students
+    ColumnName: Login
+    File: execMain.c
+    Line: 1883
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-09-12 12:14:53.359 +03:00 [ERR] R-FAULT "rabbitmq://localhost/ClassCreateModel" "9f4d0000-088e-6c40-c3d0-08da949f3e43" SchoolJournal.Primitives.ClassCreateModel SchoolJournal.ClassService.ClassCreateModelConsumer("00:00:04.1678077")
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "Login" of relation "Students" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "Login" of relation "Students" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Students
+    ColumnName: Login
+    File: execMain.c
+    Line: 1883
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at SchoolJournal.ClassService.ClassCreateModelConsumer.Consume(ConsumeContext`1 context) in /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.ClassService/ClassCreateModelConsumer.cs:line 63
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.Middleware.ConsumerMessageFilter`2.MassTransit.IFilter<MassTransit.ConsumeContext<TMessage>>.Send(ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/Middleware/ConsumerMessageFilter.cs:line 46
+2022-09-12 12:21:58.075 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-12 12:21:58.206 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Classes" ("ClassTeacherId", "Number")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2022-09-12 12:21:58.227 +03:00 [ERR] Failed executing DbCommand (15ms) [Parameters=[@p2='?' (DbType = Date), @p3='?' (DbType = Int32), @p4='?', @p5='?' (DbType = Object), @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Students" ("Birthday", "ClassId", "Login", "Names", "Password")
+VALUES (@p2, @p3, @p4, @p5, @p6)
+RETURNING "Id";
+2022-09-12 12:21:58.257 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SchoolJournal.DataAccess.ApplicationContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "Login" of relation "Students" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "Login" of relation "Students" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Students
+    ColumnName: Login
+    File: execMain.c
+    Line: 1883
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "Login" of relation "Students" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "Login" of relation "Students" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Students
+    ColumnName: Login
+    File: execMain.c
+    Line: 1883
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-09-12 12:21:58.365 +03:00 [ERR] R-FAULT "rabbitmq://localhost/ClassCreateModel" "9f4d0000-088e-6c40-ca70-08da94a03dce" SchoolJournal.Primitives.ClassCreateModel SchoolJournal.ClassService.ClassCreateModelConsumer("00:00:00.3434823")
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "Login" of relation "Students" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "Login" of relation "Students" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Students
+    ColumnName: Login
+    File: execMain.c
+    Line: 1883
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at SchoolJournal.ClassService.ClassCreateModelConsumer.Consume(ConsumeContext`1 context) in /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.ClassService/ClassCreateModelConsumer.cs:line 63
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.Middleware.ConsumerMessageFilter`2.MassTransit.IFilter<MassTransit.ConsumeContext<TMessage>>.Send(ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/Middleware/ConsumerMessageFilter.cs:line 46
+2022-09-12 14:57:39.158 +03:00 [INF] Application is shutting down...
+2022-09-12 14:57:39.378 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"
+2022-09-12 15:29:21.020 +03:00 [INF] Configured endpoint ClassCreateModel, Consumer: SchoolJournal.ClassService.ClassCreateModelConsumer
+2022-09-12 15:29:21.229 +03:00 [INF] Configured endpoint ClassDeleteModel, Consumer: SchoolJournal.ClassService.ClassDeleteModelConsumer
+2022-09-12 15:29:21.514 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-12 15:29:21.514 +03:00 [INF] Hosting environment: Development
+2022-09-12 15:29:21.515 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.ClassService
+2022-09-12 15:29:22.633 +03:00 [INF] Bus started: "rabbitmq://localhost/"
+2022-09-12 15:31:09.999 +03:00 [ERR] R-FAULT "rabbitmq://localhost/ClassCreateModel" "d0580000-088e-6c40-715a-08da94baaabb" SchoolJournal.Primitives.ClassCreateModel SchoolJournal.ClassService.ClassCreateModelConsumer("00:00:00.8039192")
+FluentValidation.ValidationException: Validation failed: 
+ -- Number: 'Number' must be between 1 and 11. You entered 111. Severity: Error
+   at FluentValidation.AbstractValidator`1.RaiseValidationException(ValidationContext`1 context, ValidationResult result) in /Users/jskinner/code/FluentValidation/src/FluentValidation/AbstractValidator.cs:line 510
+   at FluentValidation.AbstractValidator`1.ValidateInternalAsync(ValidationContext`1 context, Boolean useAsync, CancellationToken cancellation) in /Users/jskinner/code/FluentValidation/src/FluentValidation/AbstractValidator.cs:line 253
+   at FluentValidation.AbstractValidator`1.ValidateAsync(ValidationContext`1 context, CancellationToken cancellation) in /Users/jskinner/code/FluentValidation/src/FluentValidation/AbstractValidator.cs:line 220
+   at FluentValidation.DefaultValidatorExtensions.ValidateAndThrowAsync[T](IValidator`1 validator, T instance, CancellationToken cancellationToken) in /Users/jskinner/code/FluentValidation/src/FluentValidation/DefaultValidatorExtensions_Validate.cs:line 72
+   at SchoolJournal.ClassService.ClassCreateModelConsumer.Consume(ConsumeContext`1 context) in /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.ClassService/ClassCreateModelConsumer.cs:line 59
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.Middleware.ConsumerMessageFilter`2.MassTransit.IFilter<MassTransit.ConsumeContext<TMessage>>.Send(ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/Middleware/ConsumerMessageFilter.cs:line 46
+2022-09-12 15:31:18.034 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-12 15:31:19.007 +03:00 [INF] Executed DbCommand (112ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Classes" ("ClassTeacherId", "Number")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2022-09-12 15:31:19.134 +03:00 [ERR] Failed executing DbCommand (42ms) [Parameters=[@p2='?' (DbType = Date), @p3='?' (DbType = Int32), @p4='?', @p5='?' (DbType = Object), @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Students" ("Birthday", "ClassId", "Login", "Names", "Password")
+VALUES (@p2, @p3, @p4, @p5, @p6)
+RETURNING "Id";
+2022-09-12 15:31:19.193 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SchoolJournal.DataAccess.ApplicationContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "Password" of relation "Students" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "Password" of relation "Students" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Students
+    ColumnName: Password
+    File: execMain.c
+    Line: 1883
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "Password" of relation "Students" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "Password" of relation "Students" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Students
+    ColumnName: Password
+    File: execMain.c
+    Line: 1883
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFra2022-09-12 15:31:19.243 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API) in 3922.1169ms
+2022-09-12 15:31:19.244 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API)'
+2022-09-12 15:31:19.244 +03:00 [WRN] An error occ2022-09-12 15:31:19.239 +03:00 [ERR] R-FAULT "rabbitmq://localhost/ClassCreateModel" "d0580000-088e-6c40-24ce-08da94baaf5d" SchoolJournal.Primitives.ClassCreateModel SchoolJournal.ClassService.ClassCreateModelConsumer("00:00:03.8674417")2022-09-12 15:31:46.531 +03:00 [INF] Application is shutting down...
+2022-09-12 15:31:46.736 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"
+ Npgsql.PostgresException (0x80004005): 23502: null value in column "Password" of relation "Students" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "Password" of relation "Students" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Students
+    ColumnName: Password
+    File: execMain.c
+    Line: 1883
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at SchoolJournal.ClassService.ClassCreateModelConsumer.Consume(ConsumeContext`1 context) in /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.ClassService/ClassCreateModelConsumer.cs:line 63
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.Middleware.ConsumerMessageFilter`2.MassTransit.IFilter<MassTransit.ConsumeContext<TMessage>>.Send(ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/Middleware/ConsumerMessageFilter.cs:line 46
+2022-09-12 15:31:46.531 +03:00 [INF] Application is shutting down...
+2022-09-12 15:31:46.732 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"
+2022-09-12 15:34:29.295 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-12 15:34:29.295 +03:00 [INF] Bus started: "rabbitmq://localhost/"
+2022-09-12 15:34:29.410 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-12 15:34:29.415 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-12 15:34:29.416 +03:00 [INF] Hosting environment: Development
+2022-09-12 15:34:29.416 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-12 15:34:30.277 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-12 15:34:31.684 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 1425.2704ms
+2022-09-12 15:34:32.249 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-12 15:34:32.772 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 523.4007ms
+2022-09-12 15:35:06.433 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7202/api/Classes application/json 133
+2022-09-12 15:35:06.482 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API)'
+2022-09-12 15:35:06.580 +03:00 [INF] Route matched with {action = "Post", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(SchoolJournal.Primitives.ClassCreateModel) on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-12 15:35:12.647 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API) in 6051.7694ms
+2022-09-12 15:35:12.650 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Post (SchoolJournal.API)'
+2022-09-12 15:35:12.658 +03:00 [WRN] An error occurred while saving the entity changes. See the inner exception for details.
+2022-09-12 15:35:12.674 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7202/api/Classes application/json 133 - 500 - application/json 6241.8982ms
+2022-09-12 15:35:24.616 +03:00 [INF] Application is shutting down...
+2022-09-12 15:35:24.793 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"
+', CommandTimeout='30']
+INSERT INTO "Students" ("Birthday", "ClassId", "Names")
+VALUES (@p2, @p3, @p4)
+RETURNING "Id";
+2022-09-12 15:35:12.088 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'SchoolJournal.DataAccess.ApplicationContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "Login" of relation "Students" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "Login" of relation "Students" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Students
+    ColumnName: Login
+    File: execMain.c
+    Line: 1883
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "Login" of relation "Students" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "Login" of relation "Students" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Students
+    ColumnName: Login
+    File: execMain.c
+    Line: 1883
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2022-09-12 15:35:12.494 +03:00 [ERR] R-FAULT "rabbitmq://localhost/ClassCreateModel" "0f5a0000-088e-6c40-2dc8-08da94bb39ac" SchoolJournal.Primitives.ClassCreateModel SchoolJournal.ClassService.ClassCreateModelConsumer("00:00:04.0243786")
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "Login" of relation "Students" violates not-null constraint
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "Login" of relation "Students" violates not-null constraint
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Students
+    ColumnName: Login
+    File: execMain.c
+    Line: 1883
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at SchoolJournal.ClassService.ClassCreateModelConsumer.Consume(ConsumeContext`1 context) in /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.ClassService/ClassCreateModelConsumer.cs:line 63
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.Middleware.ConsumerMessageFilter`2.MassTransit.IFilter<MassTransit.ConsumeContext<TMessage>>.Send(ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/Middleware/ConsumerMessageFilter.cs:line 46
+2022-09-12 15:35:24.617 +03:00 [INF] Application is shutting down...
+2022-09-12 15:35:24.812 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"
+2022-09-12 15:35:56.788 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-12 15:37:14.707 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-12 15:37:15.549 +03:00 [INF] Executed DbCommand (165ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+REVOKE CONNECT ON DATABASE "SchoolJournal_DB" FROM PUBLIC;
+SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE datname = 'SchoolJournal_DB';
+2022-09-12 15:37:16.392 +03:00 [INF] Executed DbCommand (838ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP DATABASE "SchoolJournal_DB";
+2022-09-12 15:37:45.990 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-12 15:38:07.991 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-12 15:38:09.278 +03:00 [INF] Executed DbCommand (606ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE DATABASE "SchoolJournal_DB";
+2022-09-12 15:38:09.805 +03:00 [INF] Executed DbCommand (177ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2022-09-12 15:38:09.867 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (SELECT 1 FROM pg_catalog.pg_class c JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace WHERE c.relname='__EFMigrationsHistory');
+2022-09-12 15:38:09.875 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2022-09-12 15:38:09.914 +03:00 [INF] Applying migration '20220904134329_Initial'.
+2022-09-12 15:38:10.002 +03:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Subjects" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    CONSTRAINT "PK_Subjects" PRIMARY KEY ("Id")
+);
+2022-09-12 15:38:10.023 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Teachers" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Classes" text NOT NULL,
+    "Specialization" text NOT NULL,
+    "FirstName" text NOT NULL,
+    "LastName" text NOT NULL,
+    "Birthday" date NOT NULL,
+    "Login" text NOT NULL,
+    "Password" text NOT NULL,
+    CONSTRAINT "PK_Teachers" PRIMARY KEY ("Id")
+);
+2022-09-12 15:38:10.059 +03:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Classes" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Number" integer NOT NULL,
+    "Specialization" text NOT NULL,
+    "Students" text NOT NULL,
+    "Subjects" text NOT NULL,
+    "ClassTeacherId" integer NOT NULL,
+    CONSTRAINT "PK_Classes" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Classes_Teachers_ClassTeacherId" FOREIGN KEY ("ClassTeacherId") REFERENCES "Teachers" ("Id") ON DELETE CASCADE
+);
+2022-09-12 15:38:10.078 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Students" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "ClassId" integer NOT NULL,
+    "FirstName" text NOT NULL,
+    "LastName" text NOT NULL,
+    "Birthday" date NOT NULL,
+    "Login" text NOT NULL,
+    "Password" text NOT NULL,
+    CONSTRAINT "PK_Students" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Students_Classes_ClassId" FOREIGN KEY ("ClassId") REFERENCES "Classes" ("Id") ON DELETE CASCADE
+);
+2022-09-12 15:38:10.086 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Classes_ClassTeacherId" ON "Classes" ("ClassTeacherId");
+2022-09-12 15:38:10.091 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Students_ClassId" ON "Students" ("ClassId");
+2022-09-12 15:38:10.098 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20220904134329_Initial', '6.0.8');
+2022-09-12 15:38:10.111 +03:00 [INF] Applying migration '20220906164712_Added journal'.
+2022-09-12 15:38:10.131 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Teachers" DROP COLUMN "Classes";
+2022-09-12 15:38:10.135 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Teachers" DROP COLUMN "Specialization";
+2022-09-12 15:38:10.140 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Classes" DROP COLUMN "Specialization";
+2022-09-12 15:38:10.143 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Classes" RENAME COLUMN "Subjects" TO "Journal";
+2022-09-12 15:38:10.163 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "SubjectJournal" (
+    "Id" uuid NOT NULL,
+    "SubjectId" integer NOT NULL,
+    "TeacherId" integer NOT NULL,
+    "ClassId" integer NOT NULL,
+    "Lessons" text NOT NULL,
+    CONSTRAINT "PK_SubjectJournal" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_SubjectJournal_Classes_ClassId" FOREIGN KEY ("ClassId") REFERENCES "Classes" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_SubjectJournal_Subjects_SubjectId" FOREIGN KEY ("SubjectId") REFERENCES "Subjects" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_SubjectJournal_Teachers_TeacherId" FOREIGN KEY ("TeacherId") REFERENCES "Teachers" ("Id") ON DELETE CASCADE
+);
+2022-09-12 15:38:10.184 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Lessons" (
+    "Id" uuid NOT NULL,
+    "SubjectJournalId" uuid NOT NULL,
+    "Marks" text NOT NULL,
+    "BeginDateTime" timestamp with time zone NOT NULL,
+    "EndDateTime" timestamp with time zone NOT NULL,
+    "HomeTask" text NULL,
+    CONSTRAINT "PK_Lessons" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Lessons_SubjectJournal_SubjectJournalId" FOREIGN KEY ("SubjectJournalId") REFERENCES "SubjectJournal" ("Id") ON DELETE CASCADE
+);
+2022-09-12 15:38:10.191 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Lessons_SubjectJournalId" ON "Lessons" ("SubjectJournalId");
+2022-09-12 15:38:10.195 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_SubjectJournal_ClassId" ON "SubjectJournal" ("ClassId");
+2022-09-12 15:38:10.199 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_SubjectJournal_SubjectId" ON "SubjectJournal" ("SubjectId");
+2022-09-12 15:38:10.203 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_SubjectJournal_TeacherId" ON "SubjectJournal" ("TeacherId");
+2022-09-12 15:38:10.205 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20220906164712_Added journal', '6.0.8');
+2022-09-12 15:38:10.210 +03:00 [INF] Applying migration '20220906190622_Added foreign keys'.
+2022-09-12 15:38:10.249 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Classes" ALTER COLUMN "Journal" DROP NOT NULL;
+2022-09-12 15:38:10.262 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Teachers" ("Id", "Birthday", "FirstName", "LastName", "Login", "Password")
+VALUES (1, DATE '1983-11-18', 'Yana', 'Yanovna', 'yanito', 'lll');
+2022-09-12 15:38:10.266 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Classes" ("Id", "ClassTeacherId", "Journal", "Number", "Students")
+VALUES (1, 1, NULL, 11, '[{"Id":1,"Class":null,"ClassId":1,"FirstName":"Mikhail","LastName":"Mikhaylov","Birthday":{"Year":2005,"Month":7,"Day":9,"DayOfWeek":6,"DayOfYear":190,"DayNumber":732135},"Login":"mikhail","Password":"1111"},{"Id":2,"Class":null,"ClassId":1,"FirstName":"Vasiliy","LastName":"Vasiliev","Birthday":{"Year":2006,"Month":1,"Day":2,"DayOfWeek":1,"DayOfYear":2,"DayNumber":732312},"Login":"vasya2006","Password":"13863"}]');
+2022-09-12 15:38:10.271 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Students" ("Id", "Birthday", "ClassId", "FirstName", "LastName", "Login", "Password")
+VALUES (1, DATE '2005-07-09', 1, 'Mikhail', 'Mikhaylov', 'mikhail', '1111');
+INSERT INTO "Students" ("Id", "Birthday", "ClassId", "FirstName", "LastName", "Login", "Password")
+VALUES (2, DATE '2006-01-02', 1, 'Vasiliy', 'Vasiliev', 'vasya2006', '13863');
+2022-09-12 15:38:10.293 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT setval(
+    pg_get_serial_sequence('"Teachers"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "Teachers") + 1,
+        nextval(pg_get_serial_sequence('"Teachers"', 'Id'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('"Classes"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "Classes") + 1,
+        nextval(pg_get_serial_sequence('"Classes"', 'Id'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('"Students"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "Students") + 1,
+        nextval(pg_get_serial_sequence('"Students"', 'Id'))),
+    false);
+2022-09-12 15:38:10.295 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20220906190622_Added foreign keys', '6.0.8');
+2022-09-12 15:38:10.307 +03:00 [INF] Applying migration '20220908085449_Added JSON converters'.
+2022-09-12 15:38:10.320 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20220908085449_Added JSON converters', '6.0.8');
+2022-09-12 15:38:10.322 +03:00 [INF] Applying migration '20220908093202_Added new JSON converter'.
+2022-09-12 15:38:10.352 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Classes" SET "Students" = '[{"Id":1,"Class":null,"ClassId":1,"FirstName":"Mikhail","LastName":"Mikhaylov","Birthday":"2005-07-09","Login":"mikhail","Password":"1111"},{"Id":2,"Class":null,"ClassId":1,"FirstName":"Vasiliy","LastName":"Vasiliev","Birthday":"2006-01-02","Login":"vasya2006","Password":"13863"}]'
+WHERE "Id" = 1;
+2022-09-12 15:38:10.354 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20220908093202_Added new JSON converter', '6.0.8');
+2022-09-12 15:38:10.356 +03:00 [INF] Applying migration '20220908093741_Removed JsonConverter attributes'.
+2022-09-12 15:38:10.367 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20220908093741_Removed JsonConverter attributes', '6.0.8');
+2022-09-12 15:38:10.369 +03:00 [INF] Applying migration '20220908105936_After deletion'.
+2022-09-12 15:38:10.392 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Students"
+WHERE "Id" = 1;
+2022-09-12 15:38:10.394 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Students"
+WHERE "Id" = 2;
+2022-09-12 15:38:10.400 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Classes"
+WHERE "Id" = 1;
+2022-09-12 15:38:10.402 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Teachers"
+WHERE "Id" = 1;
+2022-09-12 15:38:10.404 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20220908105936_After deletion', '6.0.8');
+2022-09-12 15:38:10.406 +03:00 [INF] Applying migration '20220908110804_Removed conversions'.
+2022-09-12 15:38:10.419 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "SubjectJournal" DROP COLUMN "Lessons";
+2022-09-12 15:38:10.421 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Classes" DROP COLUMN "Journal";
+2022-09-12 15:38:10.423 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Classes" DROP COLUMN "Students";
+2022-09-12 15:38:10.426 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20220908110804_Removed conversions', '6.0.8');
+2022-09-12 15:38:10.428 +03:00 [INF] Applying migration '20220908111356_Added data seeding'.
+2022-09-12 15:38:10.444 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Teachers" ("Id", "Birthday", "FirstName", "LastName", "Login", "Password")
+VALUES (1, DATE '1983-11-18', 'Yana', 'Yanovna', 'yanito', 'lll');
+2022-09-12 15:38:10.446 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Classes" ("Id", "ClassTeacherId", "Number")
+VALUES (1, 1, 11);
+2022-09-12 15:38:10.448 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Students" ("Id", "Birthday", "ClassId", "FirstName", "LastName", "Login", "Password")
+VALUES (1, DATE '2005-07-09', 1, 'Mikhail', 'Mikhaylov', 'mikhail', '1111');
+INSERT INTO "Students" ("Id", "Birthday", "ClassId", "FirstName", "LastName", "Login", "Password")
+VALUES (2, DATE '2006-01-02', 1, 'Vasiliy', 'Vasiliev', 'vasya2006', '13863');
+2022-09-12 15:38:10.451 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT setval(
+    pg_get_serial_sequence('"Teachers"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "Teachers") + 1,
+        nextval(pg_get_serial_sequence('"Teachers"', 'Id'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('"Classes"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "Classes") + 1,
+        nextval(pg_get_serial_sequence('"Classes"', 'Id'))),
+    false);
+SELECT setval(
+    pg_get_serial_sequence('"Students"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "Students") + 1,
+        nextval(pg_get_serial_sequence('"Students"', 'Id'))),
+    false);
+2022-09-12 15:38:10.453 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20220908111356_Added data seeding', '6.0.8');
+2022-09-12 15:38:10.455 +03:00 [INF] Applying migration '20220910180859_Added NodaTime'.
+2022-09-12 15:38:10.522 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Students" SET "Birthday" = DATE '2005-07-09'
+WHERE "Id" = 1;
+2022-09-12 15:38:10.524 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Students" SET "Birthday" = DATE '2006-01-02'
+WHERE "Id" = 2;
+2022-09-12 15:38:10.526 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Subjects" ("Id", "Name")
+VALUES (1, 'Art');
+2022-09-12 15:38:10.528 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Teachers" SET "Birthday" = DATE '1983-11-18'
+WHERE "Id" = 1;
+2022-09-12 15:38:10.553 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "SubjectJournal" ("Id", "ClassId", "SubjectId", "TeacherId")
+VALUES ('5611343c-eec7-4097-a976-60dedf419bf4', 1, 1, 1);
+2022-09-12 15:38:10.568 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Lessons" ("Id", "BeginDateTime", "EndDateTime", "HomeTask", "Marks", "SubjectJournalId")
+VALUES ('e160f9d0-397f-426b-98a1-a6a3956210fb', TIMESTAMPTZ '2022-09-07T11:10:00Z', TIMESTAMPTZ '2022-09-07T11:40:00Z', 'Draw a picture.', '{}', '5611343c-eec7-4097-a976-60dedf419bf4');
+2022-09-12 15:38:10.571 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT setval(
+    pg_get_serial_sequence('"Subjects"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "Subjects") + 1,
+        nextval(pg_get_serial_sequence('"Subjects"', 'Id'))),
+    false);
+2022-09-12 15:38:10.573 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20220910180859_Added NodaTime', '6.0.8');
+2022-09-12 15:38:10.574 +03:00 [INF] Applying migration '20220911140235_Replace names with array'.
+2022-09-12 15:38:10.597 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Lessons"
+WHERE "Id" = 'e160f9d0-397f-426b-98a1-a6a3956210fb';
+2022-09-12 15:38:10.599 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "SubjectJournal"
+WHERE "Id" = '5611343c-eec7-4097-a976-60dedf419bf4';
+2022-09-12 15:38:10.600 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Teachers" DROP COLUMN "FirstName";
+2022-09-12 15:38:10.602 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Teachers" DROP COLUMN "LastName";
+2022-09-12 15:38:10.604 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Students" DROP COLUMN "FirstName";
+2022-09-12 15:38:10.605 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Students" DROP COLUMN "LastName";
+2022-09-12 15:38:10.616 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Teachers" ADD "Names" text[] NOT NULL DEFAULT ARRAY[]::text[];
+2022-09-12 15:38:10.619 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Students" ADD "Names" text[] NOT NULL DEFAULT ARRAY[]::text[];
+2022-09-12 15:38:10.621 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Students" SET "Names" = ARRAY['Mikhail','Mikhaylov']::text[]
+WHERE "Id" = 1;
+2022-09-12 15:38:10.623 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Students" SET "Names" = ARRAY['Vasiliy','Vasiliev']::text[]
+WHERE "Id" = 2;
+2022-09-12 15:38:10.626 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "SubjectJournal" ("Id", "ClassId", "SubjectId", "TeacherId")
+VALUES ('27c2daf4-d344-43a0-ab95-096a969134c0', 1, 1, 1);
+2022-09-12 15:38:10.628 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Teachers" SET "Names" = ARRAY['Yana','Yanovna']::text[]
+WHERE "Id" = 1;
+2022-09-12 15:38:10.632 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Lessons" ("Id", "BeginDateTime", "EndDateTime", "HomeTask", "Marks", "SubjectJournalId")
+VALUES ('ab271173-b4d4-4fbc-b76b-416842e7f29e', TIMESTAMPTZ '2022-09-07T11:10:00Z', TIMESTAMPTZ '2022-09-07T11:40:00Z', 'Draw a picture.', '{}', '27c2daf4-d344-43a0-ab95-096a969134c0');
+2022-09-12 15:38:10.636 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20220911140235_Replace names with array', '6.0.8');
+2022-09-12 15:38:10.641 +03:00 [INF] Applying migration '20220912123747_Removed login and password'.
+2022-09-12 15:38:10.655 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Lessons"
+WHERE "Id" = 'ab271173-b4d4-4fbc-b76b-416842e7f29e';
+2022-09-12 15:38:10.657 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "SubjectJournal"
+WHERE "Id" = '27c2daf4-d344-43a0-ab95-096a969134c0';
+2022-09-12 15:38:10.659 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Teachers" DROP COLUMN "Login";
+2022-09-12 15:38:10.661 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Teachers" DROP COLUMN "Password";
+2022-09-12 15:38:10.663 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Students" DROP COLUMN "Login";
+2022-09-12 15:38:10.665 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Students" DROP COLUMN "Password";
+2022-09-12 15:38:10.667 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "SubjectJournal" ("Id", "ClassId", "SubjectId", "TeacherId")
+VALUES ('9e45ff36-7191-419e-896e-cdcdf2500683', 1, 1, 1);
+2022-09-12 15:38:10.669 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Lessons" ("Id", "BeginDateTime", "EndDateTime", "HomeTask", "Marks", "SubjectJournalId")
+VALUES ('25101af5-d0b3-4992-b8da-dfcdaa170feb', TIMESTAMPTZ '2022-09-07T11:10:00Z', TIMESTAMPTZ '2022-09-07T11:40:00Z', 'Draw a picture.', '{}', '9e45ff36-7191-419e-896e-cdcdf2500683');
+2022-09-12 15:38:10.670 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20220912123747_Removed login and password', '6.0.8');
+2022-09-12 15:38:28.877 +03:00 [INF] Configured endpoint ClassCreateModel, Consumer: SchoolJournal.ClassService.ClassCreateModelConsumer
+2022-09-12 15:38:29.026 +03:00 [INF] Configured endpoint ClassDeleteModel, Consumer: SchoolJournal.ClassService.ClassDeleteModelConsumer
+2022-09-12 15:38:29.375 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-12 15:38:29.377 +03:00 [INF] Hosting environment: Development
+2022-09-12 15:38:29.378 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.ClassService
+2022-09-12 15:38:30.557 +03:00 [INF] Bus started: "rabbitmq://localhost/"
+2022-09-12 15:39:25.810 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-12 15:39:26.919 +03:00 [INF] Executed DbCommand (132ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Classes" ("ClassTeacherId", "Number")
+VALUES (@p0, @p1)
+RETURNING "Id";
+2022-09-12 15:39:27.069 +03:00 [INF] Executed DbCommand (48ms) [Parameters=[@p2='?' (DbType = Date), @p3='?' (DbType = Int32), @p4='?' (DbType = Object)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Students" ("Birthday", "ClassId", "Names")
+VALUES (@p2, @p3, @p4)
+RETURNING "Id";
+2022-09-12 15:39:27.131 +03:00 [INF] Added new class successfully : ID 2.
+2022-09-12 15:45:28.683 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-12 15:45:29.220 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__model_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."ClassTeacherId", c."Number"
+FROM "Classes" AS c
+WHERE c."Id" = @__model_Id_0
+LIMIT 1
+2022-09-12 15:45:29.247 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'SchoolJournal.DataAccess.ApplicationContext'.
+System.ObjectDisposedException: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'ApplicationContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContext.InitializeStateManager(Boolean standAlone)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.ObjectDisposedException: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'ApplicationContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContext.InitializeStateManager(Boolean standAlone)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-09-12 15:45:29.346 +03:00 [ERR] R-FAULT "rabbitmq://localhost/ClassDeleteModel" "575b0000-088e-6c40-25f6-08da94bcab7c" SchoolJournal.Primitives.ClassDeleteModel SchoolJournal.ClassService.ClassDeleteModelConsumer("00:00:01.3221291")
+System.InvalidOperationException: Can't close, connection is in state Connecting
+   at Npgsql.NpgsqlConnection.Close(Boolean async)
+   at Npgsql.NpgsqlConnection.CloseAsync()
+   at Npgsql.NpgsqlConnection.<DisposeAsync>g__DisposeAsyncCore|109_0()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.ResetStateAsync(Boolean disposeDbConnection)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.<DisposeAsync>g__Await|22_0(Int32 i, ValueTask vt, List`1 toDispose)
+   at Microsoft.EntityFrameworkCore.DbContext.DisposeAsync()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.<DisposeAsync>g__Await|22_0(Int32 i, ValueTask vt, List`1 toDispose)
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.Middleware.ConsumerMessageFilter`2.MassTransit.IFilter<MassTransit.ConsumeContext<TMessage>>.Send(ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/Middleware/ConsumerMessageFilter.cs:line 46
+2022-09-12 15:45:41.266 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-12 15:45:41.285 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__model_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."ClassTeacherId", c."Number"
+FROM "Classes" AS c
+WHERE c."Id" = @__model_Id_0
+LIMIT 1
+2022-09-12 15:45:41.286 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'SchoolJournal.DataAccess.ApplicationContext'.
+System.ObjectDisposedException: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'ApplicationContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContext.InitializeStateManager(Boolean standAlone)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.ObjectDisposedException: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'ApplicationContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContext.InitializeStateManager(Boolean standAlone)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-09-12 15:45:41.316 +03:00 [ERR] R-FAULT "rabbitmq://localhost/ClassDeleteModel" "575b0000-088e-6c40-ee6c-08da94bcb376" SchoolJournal.Primitives.ClassDeleteModel SchoolJournal.ClassService.ClassDeleteModelConsumer("00:00:00.0772001")
+System.InvalidOperationException: The entity type 'AsyncStateMachineBox<<SingleOrDefaultAsync>d__15<Class>>' was not found. Ensure that the entity type has been added to the model.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetOrCreateEntry(Object entity)
+   at Microsoft.EntityFrameworkCore.DbContext.EntryWithoutDetectChanges[TEntity](TEntity entity)
+   at Microsoft.EntityFrameworkCore.DbContext.Entry[TEntity](TEntity entity)
+   at SchoolJournal.ClassService.ClassDeleteModelConsumer.Consume(ConsumeContext`1 context) in /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.ClassService/ClassDeleteModelConsumer.cs:line 61
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.Middleware.ConsumerMessageFilter`2.MassTransit.IFilter<MassTransit.ConsumeContext<TMessage>>.Send(ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/Middleware/ConsumerMessageFilter.cs:line 46
+2022-09-12 15:46:09.045 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-12 15:46:09.051 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__model_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."ClassTeacherId", c."Number"
+FROM "Classes" AS c
+WHERE c."Id" = @__model_Id_0
+LIMIT 1
+2022-09-12 15:46:09.053 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'SchoolJournal.DataAccess.ApplicationContext'.
+System.ObjectDisposedException: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'ApplicationContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContext.InitializeStateManager(Boolean standAlone)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.ObjectDisposedException: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'ApplicationContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContext.InitializeStateManager(Boolean standAlone)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-09-12 15:49:22.862 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-12 15:49:22.896 +03:00 [ERR] R-FAULT "rabbitmq://localhost/ClassDeleteModel" "575b0000-088e-6c40-ae6e-08da94bd378f" SchoolJournal.Primitives.ClassDeleteModel SchoolJournal.ClassService.ClassDeleteModelConsumer("00:00:00.0282309")
+System.InvalidOperationException: Can't close, connection is in state Connecting
+   at Npgsql.NpgsqlConnection.Close(Boolean async)
+   at Npgsql.NpgsqlConnection.CloseAsync()
+   at Npgsql.NpgsqlConnection.<DisposeAsync>g__DisposeAsyncCore|109_0()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.ResetStateAsync(Boolean disposeDbConnection)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.<DisposeAsync>g__Await|22_0(Int32 i, ValueTask vt, List`1 toDispose)
+   at Microsoft.EntityFrameworkCore.DbContext.DisposeAsync()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.<DisposeAsync>g__Await|22_0(Int32 i, ValueTask vt, List`1 toDispose)
+   at MassTransit.DependencyInjection.ScopeConsumerFactory`1.Send[TMessage](ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/DependencyInjection/DependencyInjection/ScopeConsumerFactory.cs:line 22
+   at MassTransit.Middleware.ConsumerMessageFilter`2.MassTransit.IFilter<MassTransit.ConsumeContext<TMessage>>.Send(ConsumeContext`1 context, IPipe`1 next) in /_/src/MassTransit/Middleware/ConsumerMessageFilter.cs:line 46
+2022-09-12 15:49:22.982 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__model_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."ClassTeacherId", c."Number"
+FROM "Classes" AS c
+WHERE c."Id" = @__model_Id_0
+LIMIT 1
+2022-09-12 15:49:22.989 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'SchoolJournal.DataAccess.ApplicationContext'.
+System.ObjectDisposedException: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'ApplicationContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContext.InitializeStateManager(Boolean standAlone)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.ObjectDisposedException: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'ApplicationContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContext.InitializeStateManager(Boolean standAlone)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2022-09-12 15:51:41.730 +03:00 [INF] Application is shutting down...
+382 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."ClassTeacherId", c."Number", t."Id", s."Id", s."Birthday", s."ClassId", s."Names", t."Birthday", t."Names", t0."Id", t0."ClassId", t0."SubjectId", t0."TeacherId", t0."Id0", t0."Id1", t0."BeginDateTime", t0."EndDateTime", t0."HomeTask", t0."Marks", t0."SubjectJournalId", t0."Name"
+FROM "Classes" AS c
+INNER JOIN "Teachers" AS t ON c."ClassTeacherId" = t."Id"
+LEFT JOIN "Students" AS s ON c."Id" = s."ClassId"
+LEFT JOIN (
+    SELECT s0."Id", s0."ClassId", s0."SubjectId", s0."TeacherId", s1."Id" AS "Id0", l."Id" AS "Id1", l."BeginDateTime", l."EndDateTime", l."HomeTask", l."Marks", l."SubjectJournalId", s1."Name"
+    FROM "SubjectJournal" AS s0
+    INNER JOIN "Subjects" AS s1 ON s0."SubjectId" = s1."Id"
+    LEFT JOIN "Lessons" AS l ON s0."Id" = l."SubjectJournalId"
+) AS t0 ON c."Id" = t0."ClassId"
+ORDER BY c."Id", t."Id", s."Id", t0."Id", t0."Id0"
+2022-09-12 15:45:57.407 +03:00 [INF] Got all classes successfully.
+2022-09-12 15:45:57.408 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchoolJournal.Primitives.ClassViewModel, SchoolJournal.Primitives, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-12 15:45:57.409 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API) in 121.1684ms
+2022-09-12 15:45:57.414 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-12 15:45:57.415 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/api/Classes - - - 200 - application/json;+charset=utf-8 139.1921ms
+2022-09-12 15:46:09.021 +03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7202/api/Classes?id=2 - -
+2022-09-12 15:46:09.023 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Delete (SchoolJournal.API)'
+2022-09-12 15:46:09.023 +03:00 [INF] Route matched with {action = "Delete", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-12 15:46:39.034 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Delete (SchoolJournal.API) in 30009.9086ms
+2022-09-12 15:46:39.034 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Delete (SchoolJournal.API)'
+2022-09-12 15:46:39.035 +03:00 [WRN] Timeout waiting for response, RequestId: 575b0000-088e-6c40-99ac-08da94bcc40c
+2022-09-12 15:46:39.036 +03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7202/api/Classes?id=2 - - - 500 - application/json 30014.1533ms
+2022-09-12 15:47:42.830 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/api/Classes - -
+2022-09-12 15:47:42.839 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-12 15:47:42.842 +03:00 [INF] Route matched with {action = "Get", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-12 15:47:42.851 +03:00 [INF] Getting all classes.
+2022-09-12 15:47:42.859 +03:00 [INF] Entity Framework Core 6.0.8 initialized 'ApplicationContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:6.0.6+6fa8f3c27a7c241a66e72a6c09e0b252509215d0' with options: using NodaTime 
+2022-09-12 15:47:42.873 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."ClassTeacherId", c."Number", t."Id", s."Id", s."Birthday", s."ClassId", s."Names", t."Birthday", t."Names", t0."Id", t0."ClassId", t0."SubjectId", t0."TeacherId", t0."Id0", t0."Id1", t0."BeginDateTime", t0."EndDateTime", t0."HomeTask", t0."Marks", t0."SubjectJournalId", t0."Name"
+FROM "Classes" AS c
+INNER JOIN "Teachers" AS t ON c."ClassTeacherId" = t."Id"
+LEFT JOIN "Students" AS s ON c."Id" = s."ClassId"
+LEFT JOIN (
+    SELECT s0."Id", s0."ClassId", s0."SubjectId", s0."TeacherId", s1."Id" AS "Id0", l."Id" AS "Id1", l."BeginDateTime", l."EndDateTime", l."HomeTask", l."Marks", l."SubjectJournalId", s1."Name"
+    FROM "SubjectJournal" AS s0
+    INNER JOIN "Subjects" AS s1 ON s0."SubjectId" = s1."Id"
+    LEFT JOIN "Lessons" AS l ON s0."Id" = l."SubjectJournalId"
+) AS t0 ON c."Id" = t0."ClassId"
+ORDER BY c."Id", t."Id", s."Id", t0."Id", t0."Id0"
+2022-09-12 15:47:42.885 +03:00 [INF] Got all classes successfully.
+2022-09-12 15:47:42.887 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[SchoolJournal.Primitives.ClassViewModel, SchoolJournal.Primitives, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-09-12 15:47:42.889 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API) in 46.4103ms
+2022-09-12 15:47:42.889 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Get (SchoolJournal.API)'
+2022-09-12 15:47:42.890 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/api/Classes - - - 200 - application/json;+charset=utf-8 60.8093ms
+2022-09-12 15:49:22.819 +03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7202/api/Classes?id=2 - -
+2022-09-12 15:49:22.820 +03:00 [INF] Executing endpoint 'SchoolJournal.API.Controllers.ClassesController.Delete (SchoolJournal.API)'
+2022-09-12 15:49:22.821 +03:00 [INF] Route matched with {action = "Delete", controller = "Classes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller SchoolJournal.API.Controllers.ClassesController (SchoolJournal.API).
+2022-09-12 15:49:22.905 +03:00 [INF] Executed action SchoolJournal.API.Controllers.ClassesController.Delete (SchoolJournal.API) in 84.4878ms
+2022-09-12 15:49:22.907 +03:00 [INF] Executed endpoint 'SchoolJournal.API.Controllers.ClassesController.Delete (SchoolJournal.API)'
+2022-09-12 15:49:22.907 +03:00 [WRN] Can't close, connection is in state Connecting
+2022-09-12 15:49:22.910 +03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7202/api/Classes?id=2 - - - 500 - application/json 90.4069ms
+2022-09-12 15:51:46.706 +03:00 [INF] Application is shutting down...
+2022-09-12 15:51:47.097 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"
