@@ -8,19 +8,14 @@ namespace SchoolJournal.DataAccess.Abstractions;
 public interface IUser
 {
     /// <summary>
-    /// Gets and sets the names of the user.
+    /// Gets and sets the first name of the user.
     /// </summary>
-    public string[] Names { get; set; }
+    public string FirstName { get; set; }
 
-    // /// <summary>
-    // /// Gets and sets login of the user.
-    // /// </summary>
-    // public string Login { get; set; }
-    //
-    // /// <summary>
-    // /// Gets and sets password of the user.
-    // /// </summary>
-    // public string Password { get; set; }
+    /// <summary>
+    /// Gets and sets the first name of the user.
+    /// </summary>
+    public string LastName { get; set; }
 
     /// <summary>
     /// Gets and sets the date of birth of the user.

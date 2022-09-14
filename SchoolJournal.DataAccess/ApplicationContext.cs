@@ -96,17 +96,17 @@ public class ApplicationContext : DbContext
     {
         var s1 = new Student
         {
-            Id = 1, Names = new[] { "Mikhail", "Mikhaylov" }, ClassId = 1,
+            Id = 1, FirstName = "Mikhail", LastName = "Mikhaylov", ClassId = 1,
             Birthday = new(2005, 7, 9)
         };
         var s2 = new Student
         {
-            Id = 2, Names = new[] { "Vasiliy", "Vasiliev" }, ClassId = 1,
+            Id = 2, FirstName = "Vasiliy", LastName = "Vasiliev", ClassId = 1,
             Birthday = new(2006, 1, 2)
         };
         var t = new Teacher
         {
-            Id = 1, Names = new[] { "Yana", "Yanovna" },
+            Id = 1, FirstName = "Yana", LastName = "Yanovna",
             Birthday = new(1983, 11, 18)
         };
         var c = new Class

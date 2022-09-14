@@ -26,7 +26,7 @@ public class CreateClassHandler : IRequestHandler<CreateClassCommand, ClassViewM
     /// <summary>
     /// Handles the specified request to post a class.
     /// </summary>
-    /// <param name="request">Request to get a class.</param>
+    /// <param name="request">Request to post a class.</param>
     /// <param name="cancellationToken">Cancellation token.</param>
     /// <returns><see cref="Task{TResult}"/> for <see cref="ClassViewModel"/></returns>
     public async Task<ClassViewModel> Handle(CreateClassCommand request, CancellationToken cancellationToken)

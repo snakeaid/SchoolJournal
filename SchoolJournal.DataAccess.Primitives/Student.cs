@@ -29,9 +29,14 @@ public class Student : IUser, ISoftDeletable
     public LocalDateTime? DateTimeDeleted { get; set; }
 
     /// <summary>
-    /// Gets and sets the names of the student.
+    /// Gets and sets the first name of the student.
     /// </summary>
-    public string[] Names { get; set; } = null!;
+    public string FirstName { get; set; } = null!;
+
+    /// <summary>
+    /// Gets and sets the first name of the student.
+    /// </summary>
+    public string LastName { get; set; } = null!;
 
     /// <summary>
     /// Gets and sets the date of birth of the student.

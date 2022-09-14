@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolJournal.ClassService"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolJournal.Validation", "SchoolJournal.Validation\SchoolJournal.Validation.csproj", "{09F9F1B2-953A-4D98-A736-176BF7139887}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolJournal.StudentService", "SchoolJournal.StudentService\SchoolJournal.StudentService.csproj", "{97601106-674C-4B90-86CF-094993FDDC1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +68,10 @@ Global
 		{09F9F1B2-953A-4D98-A736-176BF7139887}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09F9F1B2-953A-4D98-A736-176BF7139887}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09F9F1B2-953A-4D98-A736-176BF7139887}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97601106-674C-4B90-86CF-094993FDDC1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97601106-674C-4B90-86CF-094993FDDC1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97601106-674C-4B90-86CF-094993FDDC1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97601106-674C-4B90-86CF-094993FDDC1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection

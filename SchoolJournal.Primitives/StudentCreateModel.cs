@@ -9,12 +9,22 @@ namespace SchoolJournal.Primitives;
 public class StudentCreateModel
 {
     /// <summary>
-    /// Gets and sets the received full name of the student.
+    /// Gets and sets the received first name of the student.
     /// </summary>
-    public string FullName { get; set; } = null!;
+    public string FirstName { get; set; } = null!;
+
+    /// <summary>
+    /// Gets and sets the received last name of the student.
+    /// </summary>
+    public string LastName { get; set; } = null!;
 
     /// <summary>
     /// Gets and sets the received date of birth of the student.
     /// </summary>
     public LocalDate Birthday { get; set; }
+
+    /// <summary>
+    /// Gets and sets the received unique identifier of the class of the student.
+    /// </summary>
+    public int ClassId { get; set; }
 }

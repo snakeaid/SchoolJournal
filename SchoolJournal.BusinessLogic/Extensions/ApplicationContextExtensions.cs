@@ -10,7 +10,7 @@ namespace SchoolJournal.BusinessLogic.Extensions;
 public static class ApplicationContextExtensions
 {
     /// <summary>
-    /// Gets complete classes from the database context.
+    /// Gets complete classes enumerable from the database context.
     /// </summary>
     /// <param name="context">The database context.</param>
     /// <returns><see cref="IQueryable{T}"/> fpr <see cref="Class"/></returns>
@@ -21,6 +21,18 @@ public static class ApplicationContextExtensions
             .Include(x => x.ClassTeacher)
             .Include(x => x.Journal)!.ThenInclude(x => x.Lessons)
             .Include(x => x.Journal)!.ThenInclude(x => x.Subject)
+            .AsNoTracking();
+    }
+
+    /// <summary>
+    /// Gets complete students enumerable from the database context.
+    /// </summary>
+    /// <param name="context">The database context.</param>
+    /// <returns><see cref="IQueryable{T}"/> fpr <see cref="Student"/></returns>
+    public static IQueryable<Student> CompleteStudents(this ApplicationContext context)
+    {
+        return context.Students
+            .Include(x => x.Class)
             .AsNoTracking();
     }
 }

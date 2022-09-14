@@ -9,13 +9,8 @@ public class StudentProfile : Profile
     public StudentProfile()
     {
         CreateMap<Student, StudentViewModel>()
-            .ForMember(x => x.FullName,
-                opt => opt.MapFrom(src => string.Join(' ', src.Names)));
-        CreateMap<StudentUpdateModel, Student>()
-            .ForMember(x => x.Names,
-                opt => opt.MapFrom(src => src.FullName.Split(' ', StringSplitOptions.None)));
-        CreateMap<StudentCreateModel, Student>()
-            .ForMember(x => x.Names,
-                opt => opt.MapFrom(src => src.FullName.Split(' ', StringSplitOptions.None)));
+            .ForMember(dest => dest.FullName, opt => opt.MapFrom(src => $"{src.FirstName} {src.LastName}"));
+        CreateMap<StudentUpdateModel, Student>();
+        CreateMap<StudentCreateModel, Student>();
     }
 }
