@@ -1,6 +1,9 @@
 using MassTransit;
 using MicroElements.Swashbuckle.NodaTime;
+using NodaTime;
+using NodaTime.Serialization.SystemTextJson;
 using SchoolJournal.BusinessLogic.Extensions;
+using Swashbuckle.AspNetCore.SwaggerUI;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,12 +15,19 @@ builder.Services.AddDbContexts(configuration);
 builder.Services.AddMappingProfiles();
 builder.Services.AddMediator();
 builder.Services.AddCustomMiddleware();
-builder.Services.AddControllers();
-builder.Services.AddMassTransit(x => { x.UsingRabbitMq(); });
+builder.Services.AddControllers()
+    .AddJsonOptions(options => options.JsonSerializerOptions.ConfigureForNodaTime(DateTimeZoneProviders.Tzdb));
+builder.Services.AddMassTransit(x =>
+{
+    x.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.ConfigureJsonSerializerOptions(options => options.ConfigureForNodaTime(DateTimeZoneProviders.Tzdb));
+    });
+});
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c => c.ConfigureForNodaTime());
+builder.Services.AddSwaggerGen(c => c.ConfigureForNodaTimeWithSystemTextJson());
 
 var app = builder.Build();
 
@@ -25,7 +35,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c => c.DocExpansion(DocExpansion.None));
 }
 
 app.UseCustomMiddlewares();

@@ -11,7 +11,6 @@
         <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.6"/>
         <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1"/>
         <PackageReference Include="MicroElements.Swashbuckle.NodaTime" Version="4.0.1"/>
-        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.9"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.8">
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -22,8 +21,6 @@
 
     <ItemGroup>
         <ProjectReference Include="..\SchoolJournal.BusinessLogic\SchoolJournal.BusinessLogic.csproj"/>
-        <ProjectReference Include="..\SchoolJournal.DataAccess\SchoolJournal.DataAccess.csproj"/>
-        <ProjectReference Include="..\SchoolJournal.Mapping\SchoolJournal.Mapping.csproj"/>
         <ProjectReference Include="..\SchoolJournal.Primitives\SchoolJournal.Primitives.csproj"/>
     </ItemGroup>
 

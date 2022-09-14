@@ -1,4 +1,5 @@
 using FluentValidation;
+using NodaTime;
 using SchoolJournal.Primitives;
 
 namespace SchoolJournal.Validation;
@@ -15,7 +16,7 @@ public class StudentCreateModelValidator : AbstractValidator<StudentCreateModel>
     public StudentCreateModelValidator()
     {
         RuleFor(x => x.ClassId).GreaterThan(0);
-        //RuleFor(x => LocalDate.FromDateTime(DateTime.Now).Minus(x.Birthday).Years).LessThanOrEqualTo(18);
+        RuleFor(x => LocalDate.FromDateTime(DateTime.Now).Minus(x.Birthday).Years).LessThanOrEqualTo(18);
         RuleFor(x => x.FirstName).MinimumLength(2).MaximumLength(15);
         RuleFor(x => x.LastName).MinimumLength(3).MaximumLength(15);
     }

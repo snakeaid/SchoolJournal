@@ -60,6 +60,9 @@ public class StudentCreateModelConsumer : IConsumer<StudentCreateModel>
         var model = context.Message;
         await _validator.ValidateAndThrowAsync(model);
 
+        if (await _context.Classes.FirstOrDefaultAsync(x => x.Id == model.ClassId) == null)
+            throw new ArgumentException($"Class NOT FOUND : ID {model.ClassId}");
+
         var entity = _mapper.Map<Student>(model);
         await _context.Students.AddAsync(entity);
         await _context.SaveChangesAsync();

@@ -62,6 +62,9 @@ public class StudentUpdateModelConsumer : IConsumer<StudentUpdateModel>
 
         await _validator.ValidateAndThrowAsync(model);
 
+        if (await _context.Classes.FirstOrDefaultAsync(x => x.Id == model.ClassId) == null)
+            throw new ArgumentException($"Class NOT FOUND : ID {model.ClassId}");
+
         _mapper.Map(source: model, destination: entity);
         _context.Update(entity);
         await _context.SaveChangesAsync();

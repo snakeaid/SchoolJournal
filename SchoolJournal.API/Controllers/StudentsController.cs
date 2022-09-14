@@ -69,7 +69,7 @@ public class StudentsController : ControllerBase
     /// <returns><see cref="StudentViewModel"/></returns>
     [HttpPost]
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-    [ProducesResponseType((int)HttpStatusCode.Created, Type = typeof(StudentViewModel))]
+    [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(StudentViewModel))]
     public async Task<IActionResult> Post(StudentCreateModel model)
     {
         var result = await _sender.Send(new CreateStudentCommand { Model = model });

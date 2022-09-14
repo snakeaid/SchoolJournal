@@ -44,8 +44,7 @@ public class ExceptionHandlingMiddleware : IMiddleware
         var exceptionMessage = exception.Message;
         if (exception is RequestFaultException faultException)
         {
-            exceptionType = faultException.Fault!.Exceptions.FirstOrDefault()!.ExceptionType.Split('.')
-                .LastOrDefault();
+            exceptionType = faultException.Fault!.Exceptions.FirstOrDefault()!.ExceptionType.Split('.').LastOrDefault();
             exceptionMessage = faultException.Fault.Exceptions.FirstOrDefault()!.Message;
         }
 
@@ -56,6 +55,7 @@ public class ExceptionHandlingMiddleware : IMiddleware
             case "KeyNotFoundException":
                 response.StatusCode = (int)HttpStatusCode.NotFound;
                 break;
+            case "ArgumentException":
             case "ValidationException":
                 response.StatusCode = (int)HttpStatusCode.BadRequest;
                 break;

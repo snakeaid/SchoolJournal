@@ -5,6 +5,8 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NodaTime;
+using NodaTime.Serialization.SystemTextJson;
 using SchoolJournal.BusinessLogic.Handlers;
 using SchoolJournal.DataAccess;
 using SchoolJournal.Mapping;
@@ -79,6 +81,8 @@ public static class ServiceCollectionExtensions
 
             x.UsingRabbitMq((context, cfg) =>
             {
+                cfg.ConfigureJsonSerializerOptions(options => options.ConfigureForNodaTime(DateTimeZoneProviders.Tzdb));
+
                 cfg.Host("localhost", "/", h =>
                 {
                     h.Username("guest");
