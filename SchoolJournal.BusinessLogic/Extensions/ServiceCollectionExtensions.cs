@@ -29,8 +29,16 @@ public static class ServiceCollectionExtensions
     /// <returns><see cref="IServiceCollection"/></returns>
     public static IServiceCollection AddDbContexts(this IServiceCollection services, IConfiguration configuration)
     {
+        // services.AddDbContext<ApplicationContext>(options =>
+        //     options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"), o => o.UseNodaTime()));
+
         services.AddDbContext<ApplicationContext>(options =>
-            options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"), o => o.UseNodaTime()));
+            options.UseNpgsql("Host=ec2-3-214-2-141.compute-1.amazonaws.com;" +
+                              "Port=5432;" +
+                              "Database=d9u7u7h7mju6qq;" +
+                              "Username=fzculihhhnzenl;" +
+                              "Password=85d79066035453ae87689126bbaa5ad67d3a41cfb5d1677191cf0a22ea890c4e",
+                o => o.UseNodaTime()));
 
         return services;
     }
