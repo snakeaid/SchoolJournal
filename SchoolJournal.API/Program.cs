@@ -1,3 +1,4 @@
+using System.Security.Authentication;
 using MassTransit;
 using MicroElements.Swashbuckle.NodaTime;
 using NodaTime;
@@ -30,10 +31,12 @@ builder.Services.AddMassTransit(x =>
         var username = Environment.GetEnvironmentVariable("RABBIT_USERNAME");
         var password = Environment.GetEnvironmentVariable("RABBIT_PASSWORD");
 
-        cfg.Host("yudntuee:h8_qUy7Uwean7FnlwBrZWah8399WnbO2@shark.rmq.cloudamqp.com", 5672, "yudntuee", h =>
+        cfg.Host("h8_qUy7Uwean7FnlwBrZWah8399WnbO2@shark.rmq.cloudamqp.com", 5671, "yudntuee", h =>
         {
             h.Username("yudntuee");
             h.Password("h8_qUy7Uwean7FnlwBrZWah8399WnbO2");
+
+            h.UseSsl(s => { s.Protocol = SslProtocols.Tls12; });
         });
         // }
 

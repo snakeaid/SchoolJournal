@@ -1,4 +1,5 @@
 using System.Reflection;
+using System.Security.Authentication;
 using FluentValidation;
 using MassTransit;
 using MediatR;
@@ -96,13 +97,13 @@ public static class ServiceCollectionExtensions
                 //     h.Username(username);
                 //     h.Password(password);
                 // });
-                cfg.Host("yudntuee:h8_qUy7Uwean7FnlwBrZWah8399WnbO2@shark.rmq.cloudamqp.com", 5672,
-                    "yudntuee",
-                    h =>
-                    {
-                        h.Username("yudntuee");
-                        h.Password("h8_qUy7Uwean7FnlwBrZWah8399WnbO2");
-                    });
+                cfg.Host("h8_qUy7Uwean7FnlwBrZWah8399WnbO2@shark.rmq.cloudamqp.com", 5671, "yudntuee", h =>
+                {
+                    h.Username("yudntuee");
+                    h.Password("h8_qUy7Uwean7FnlwBrZWah8399WnbO2");
+
+                    h.UseSsl(s => { s.Protocol = SslProtocols.Tls12; });
+                });
                 // }
 
                 cfg.ConfigureEndpoints(context);
