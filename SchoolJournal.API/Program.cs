@@ -8,6 +8,7 @@ using Swashbuckle.AspNetCore.SwaggerUI;
 var builder = WebApplication.CreateBuilder(args);
 
 var configuration = builder.Configuration;
+var environment = builder.Environment;
 
 // Add services to the container.
 builder.Logging.AddCustomLogging();
@@ -21,6 +22,21 @@ builder.Services.AddMassTransit(x =>
 {
     x.UsingRabbitMq((context, cfg) =>
     {
+        if (environment.IsProduction())
+        {
+            var url = Environment.GetEnvironmentVariable("RABBIT_URL");
+            var port = ushort.Parse(Environment.GetEnvironmentVariable("RABBIT_PORT")!);
+            var vhost = Environment.GetEnvironmentVariable("RABBIT_VHOST");
+            var username = Environment.GetEnvironmentVariable("RABBIT_USERNAME");
+            var password = Environment.GetEnvironmentVariable("RABBIT_PASSWORD");
+
+            cfg.Host(url, port, vhost, h =>
+            {
+                h.Username(username);
+                h.Password(password);
+            });
+        }
+
         cfg.ConfigureJsonSerializerOptions(options => options.ConfigureForNodaTime(DateTimeZoneProviders.Tzdb));
     });
 });
@@ -36,11 +52,10 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c => c.DocExpansion(DocExpansion.None));
+    app.UseHttpsRedirection();
 }
 
 app.UseCustomMiddlewares();
-
-app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

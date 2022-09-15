@@ -6,6 +6,7 @@ var configuration = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .AddUserSecrets(Assembly.GetExecutingAssembly())
     .Build();
+// var environment = new HostingEnvironment();
 
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices(services =>

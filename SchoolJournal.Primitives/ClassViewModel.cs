@@ -8,6 +8,11 @@ namespace SchoolJournal.Primitives;
 public class ClassViewModel
 {
     /// <summary>
+    /// Gets and sets the displayed identifier of the class.
+    /// </summary>
+    public int Id { get; set; }
+
+    /// <summary>
     /// Gets and sets the displayed number of the class.
     /// </summary>
     public int Number { get; set; }

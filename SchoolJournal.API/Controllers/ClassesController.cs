@@ -73,7 +73,7 @@ public class ClassesController : ControllerBase
     public async Task<IActionResult> Post(ClassCreateModel model)
     {
         var result = await _sender.Send(new CreateClassCommand { Model = model });
-        return Ok(result);
+        return Ok(result); //TODO: Add Created method.
     }
 
     /// Handles the HTTP POST request to update a class, invoked at

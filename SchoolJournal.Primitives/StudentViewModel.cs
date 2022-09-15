@@ -9,6 +9,11 @@ namespace SchoolJournal.Primitives;
 public class StudentViewModel
 {
     /// <summary>
+    /// Gets and sets the displayed identifier of the student.
+    /// </summary>
+    public int Id { get; set; }
+
+    /// <summary>
     /// Gets and sets the displayed full name of the student.
     /// </summary>
     public string FullName { get; set; } = null!;
