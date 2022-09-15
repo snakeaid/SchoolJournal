@@ -8,8 +8,10 @@ using Swashbuckle.AspNetCore.SwaggerUI;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.WebHost.UseKestrel(options =>
+    options.ListenAnyIP(Int32.Parse(Environment.GetEnvironmentVariable("PORT")!)));
+
 var configuration = builder.Configuration;
-var environment = builder.Environment;
 
 // Add services to the container.
 builder.Logging.AddCustomLogging();
