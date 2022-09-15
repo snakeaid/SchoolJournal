@@ -33,3 +33,21 @@
 2022-09-15 15:15:26.448 +03:00 [INF] Bus started: "rabbitmq://localhost/"
 2022-09-15 15:21:13.028 +03:00 [INF] Application is shutting down...
 2022-09-15 15:21:14.570 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"
+2022-09-15 20:08:17.913 +03:00 [INF] Bus started: "rabbitmq://localhost/"
+2022-09-15 20:08:18.081 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-15 20:08:18.637 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-15 20:08:18.638 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-15 20:08:18.638 +03:00 [INF] Hosting environment: Development
+2022-09-15 20:08:18.639 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-15 20:08:19.021 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-15 20:08:19.936 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 936.0447ms
+2022-09-15 20:08:19.991 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/swagger-ui-standalone-preset.js - -
+2022-09-15 20:08:20.228 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/swagger-ui-bundle.js - -
+2022-09-15 20:08:20.245 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-09-15 20:08:20.271 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 280.8349ms
+2022-09-15 20:08:20.324 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-09-15 20:08:20.325 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 96.4652ms
+2022-09-15 20:08:20.645 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-15 20:08:21.393 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 748.2999ms
+2022-09-15 20:17:11.799 +03:00 [INF] Application is shutting down...
+2022-09-15 20:17:11.933 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"

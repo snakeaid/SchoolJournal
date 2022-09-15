@@ -1,4 +1,3 @@
-using System.Security.Authentication;
 using MassTransit;
 using MicroElements.Swashbuckle.NodaTime;
 using NodaTime;
@@ -8,8 +7,8 @@ using Swashbuckle.AspNetCore.SwaggerUI;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.WebHost.UseKestrel(options =>
-    options.ListenAnyIP(Int32.Parse(Environment.GetEnvironmentVariable("PORT")!)));
+// builder.WebHost.UseKestrel(options =>
+//     options.ListenAnyIP(Int32.Parse(Environment.GetEnvironmentVariable("PORT")!)));
 
 var configuration = builder.Configuration;
 
@@ -40,13 +39,13 @@ builder.Services.AddMassTransit(x =>
         // });
         // }
 
-        cfg.Host("shark.rmq.cloudamqp.com", 5671, "yudntuee", h =>
-        {
-            h.Username("yudntuee");
-            h.Password("h8_qUy7Uwean7FnlwBrZWah8399WnbO2");
-
-            h.UseSsl(s => { s.Protocol = SslProtocols.Tls12; });
-        });
+        // cfg.Host("shark.rmq.cloudamqp.com", 5671, "yudntuee", h =>
+        // {
+        //     h.Username("yudntuee");
+        //     h.Password("h8_qUy7Uwean7FnlwBrZWah8399WnbO2");
+        //
+        //     h.UseSsl(s => { s.Protocol = SslProtocols.Tls12; });
+        // });
 
         cfg.ConfigureJsonSerializerOptions(options => options.ConfigureForNodaTime(DateTimeZoneProviders.Tzdb));
     });
