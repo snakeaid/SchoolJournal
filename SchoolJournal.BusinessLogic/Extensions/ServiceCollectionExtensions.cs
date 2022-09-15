@@ -96,7 +96,7 @@ public static class ServiceCollectionExtensions
                 //     h.Username(username);
                 //     h.Password(password);
                 // });
-                cfg.Host("h8_qUy7Uwean7FnlwBrZWah8399WnbO2@shark.rmq.cloudamqp.com", 5672,
+                cfg.Host("yudntuee:h8_qUy7Uwean7FnlwBrZWah8399WnbO2@shark.rmq.cloudamqp.com", 5672,
                     "yudntuee",
                     h =>
                     {
