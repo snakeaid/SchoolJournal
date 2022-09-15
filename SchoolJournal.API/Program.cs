@@ -30,10 +30,10 @@ builder.Services.AddMassTransit(x =>
         var username = Environment.GetEnvironmentVariable("RABBIT_USERNAME");
         var password = Environment.GetEnvironmentVariable("RABBIT_PASSWORD");
 
-        cfg.Host(url, port, vhost, h =>
+        cfg.Host("amqps://yudntuee:h8_qUy7Uwean7FnlwBrZWah8399WnbO2@shark.rmq.cloudamqp.com", 5672, "yudntuee", h =>
         {
-            h.Username(username);
-            h.Password(password);
+            h.Username("yudntuee");
+            h.Password("h8_qUy7Uwean7FnlwBrZWah8399WnbO2");
         });
         // }
 
