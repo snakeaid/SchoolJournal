@@ -20,6 +20,7 @@ public class ApplicationContext : DbContext
     /// for <see cref="ApplicationContext"/>.</param>
     public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options)
     {
+        Database.EnsureCreated();
     }
 
     /// <summary>
