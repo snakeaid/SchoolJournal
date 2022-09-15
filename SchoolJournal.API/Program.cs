@@ -24,29 +24,6 @@ builder.Services.AddMassTransit(x =>
 {
     x.UsingRabbitMq((context, cfg) =>
     {
-        // if (builder.Environment.IsProduction())
-        // {
-        // var url = Environment.GetEnvironmentVariable("RABBIT_URL");
-        // var port = ushort.Parse(Environment.GetEnvironmentVariable("RABBIT_PORT")!);
-        // var vhost = Environment.GetEnvironmentVariable("RABBIT_VHOST");
-        // var username = Environment.GetEnvironmentVariable("RABBIT_USERNAME");
-        // var password = Environment.GetEnvironmentVariable("RABBIT_PASSWORD");
-
-        // cfg.Host(url, port, vhost, h =>
-        // {
-        //     h.Username(username);
-        //     h.Password(password);
-        // });
-        // }
-
-        // cfg.Host("shark.rmq.cloudamqp.com", 5671, "yudntuee", h =>
-        // {
-        //     h.Username("yudntuee");
-        //     h.Password("h8_qUy7Uwean7FnlwBrZWah8399WnbO2");
-        //
-        //     h.UseSsl(s => { s.Protocol = SslProtocols.Tls12; });
-        // });
-
         cfg.ConfigureJsonSerializerOptions(options => options.ConfigureForNodaTime(DateTimeZoneProviders.Tzdb));
     });
 });
