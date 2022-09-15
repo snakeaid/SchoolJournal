@@ -85,17 +85,17 @@ public static class ServiceCollectionExtensions
 
                 // if (environment.IsProduction())
                 // {
-                //     var url = Environment.GetEnvironmentVariable("RABBIT_URL");
-                //     var port = ushort.Parse(Environment.GetEnvironmentVariable("RABBIT_PORT")!);
-                //     var vhost = Environment.GetEnvironmentVariable("RABBIT_VHOST");
-                //     var username = Environment.GetEnvironmentVariable("RABBIT_USERNAME");
-                //     var password = Environment.GetEnvironmentVariable("RABBIT_PASSWORD");
-                //
-                //     cfg.Host(url, port, vhost, h =>
-                //     {
-                //         h.Username(username);
-                //         h.Password(password);
-                //     });
+                var url = Environment.GetEnvironmentVariable("RABBIT_URL");
+                var port = ushort.Parse(Environment.GetEnvironmentVariable("RABBIT_PORT")!);
+                var vhost = Environment.GetEnvironmentVariable("RABBIT_VHOST");
+                var username = Environment.GetEnvironmentVariable("RABBIT_USERNAME");
+                var password = Environment.GetEnvironmentVariable("RABBIT_PASSWORD");
+
+                cfg.Host(url, port, vhost, h =>
+                {
+                    h.Username(username);
+                    h.Password(password);
+                });
                 // }
 
                 cfg.ConfigureEndpoints(context);

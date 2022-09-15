@@ -22,20 +22,20 @@ builder.Services.AddMassTransit(x =>
 {
     x.UsingRabbitMq((context, cfg) =>
     {
-        if (environment.IsProduction())
-        {
-            var url = Environment.GetEnvironmentVariable("RABBIT_URL");
-            var port = ushort.Parse(Environment.GetEnvironmentVariable("RABBIT_PORT")!);
-            var vhost = Environment.GetEnvironmentVariable("RABBIT_VHOST");
-            var username = Environment.GetEnvironmentVariable("RABBIT_USERNAME");
-            var password = Environment.GetEnvironmentVariable("RABBIT_PASSWORD");
+        // if (environment.IsProduction())
+        // {
+        var url = Environment.GetEnvironmentVariable("RABBIT_URL");
+        var port = ushort.Parse(Environment.GetEnvironmentVariable("RABBIT_PORT")!);
+        var vhost = Environment.GetEnvironmentVariable("RABBIT_VHOST");
+        var username = Environment.GetEnvironmentVariable("RABBIT_USERNAME");
+        var password = Environment.GetEnvironmentVariable("RABBIT_PASSWORD");
 
-            cfg.Host(url, port, vhost, h =>
-            {
-                h.Username(username);
-                h.Password(password);
-            });
-        }
+        cfg.Host(url, port, vhost, h =>
+        {
+            h.Username(username);
+            h.Password(password);
+        });
+        // }
 
         cfg.ConfigureJsonSerializerOptions(options => options.ConfigureForNodaTime(DateTimeZoneProviders.Tzdb));
     });
