@@ -1,0 +1,26 @@
+2022-09-15 13:42:12.498 +03:00 [INF] Bus started: "rabbitmq://localhost/"
+2022-09-15 13:42:12.540 +03:00 [INF] Now listening on: https://localhost:7202
+2022-09-15 13:42:13.150 +03:00 [INF] Now listening on: http://localhost:5285
+2022-09-15 13:42:13.150 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-15 13:42:13.150 +03:00 [INF] Hosting environment: Development
+2022-09-15 13:42:13.150 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.API/
+2022-09-15 13:42:13.410 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/index.html - -
+2022-09-15 13:42:14.285 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/index.html - - - 200 - text/html;charset=utf-8 885.1556ms
+2022-09-15 13:42:14.436 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/swagger-ui-bundle.js - -
+2022-09-15 13:42:14.613 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/swagger-ui-standalone-preset.js - -
+2022-09-15 13:42:14.810 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-09-15 13:42:14.810 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-09-15 13:42:14.818 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 205.2607ms
+2022-09-15 13:42:14.819 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 382.4704ms
+2022-09-15 13:42:15.613 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - -
+2022-09-15 13:42:16.621 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7202/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1008.2977ms
+2022-09-15 13:42:53.082 +03:00 [INF] Application is shutting down...
+2022-09-15 13:42:53.194 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"
+2022-09-15 13:42:26.997 +03:00 [INF] Configured endpoint StudentDeleteModel, Consumer: SchoolJournal.StudentService.StudentDeleteModelConsumer
+2022-09-15 13:42:27.001 +03:00 [INF] Configured endpoint StudentUpdateModel, Consumer: SchoolJournal.StudentService.StudentUpdateModelConsumer
+2022-09-15 13:42:27.336 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-09-15 13:42:27.337 +03:00 [INF] Hosting environment: Development
+2022-09-15 13:42:27.337 +03:00 [INF] Content root path: /Users/eliasa/RiderProjects/SchoolJournal/SchoolJournal.StudentService
+2022-09-15 13:42:29.892 +03:00 [INF] Bus started: "rabbitmq://localhost/"
+2022-09-15 13:42:50.198 +03:00 [INF] Application is shutting down...
+2022-09-15 13:42:51.292 +03:00 [INF] Bus stopped: "rabbitmq://localhost/"
