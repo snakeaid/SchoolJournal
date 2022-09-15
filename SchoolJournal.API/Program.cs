@@ -25,22 +25,22 @@ builder.Services.AddMassTransit(x =>
 {
     x.UsingRabbitMq((context, cfg) =>
     {
-        // if (environment.IsProduction())
-        // {
-        var url = Environment.GetEnvironmentVariable("RABBIT_URL");
-        var port = ushort.Parse(Environment.GetEnvironmentVariable("RABBIT_PORT")!);
-        var vhost = Environment.GetEnvironmentVariable("RABBIT_VHOST");
-        var username = Environment.GetEnvironmentVariable("RABBIT_USERNAME");
-        var password = Environment.GetEnvironmentVariable("RABBIT_PASSWORD");
-
-        cfg.Host("shark.rmq.cloudamqp.com", 5671, "yudntuee", h =>
+        if (builder.Environment.IsProduction())
         {
-            h.Username("yudntuee");
-            h.Password("h8_qUy7Uwean7FnlwBrZWah8399WnbO2");
+            var url = Environment.GetEnvironmentVariable("RABBIT_URL");
+            var port = ushort.Parse(Environment.GetEnvironmentVariable("RABBIT_PORT")!);
+            var vhost = Environment.GetEnvironmentVariable("RABBIT_VHOST");
+            var username = Environment.GetEnvironmentVariable("RABBIT_USERNAME");
+            var password = Environment.GetEnvironmentVariable("RABBIT_PASSWORD");
 
-            h.UseSsl(s => { s.Protocol = SslProtocols.Tls12; });
-        });
-        // }
+            cfg.Host("shark.rmq.cloudamqp.com", 5671, "yudntuee", h =>
+            {
+                h.Username("yudntuee");
+                h.Password("h8_qUy7Uwean7FnlwBrZWah8399WnbO2");
+
+                h.UseSsl(s => { s.Protocol = SslProtocols.Tls12; });
+            });
+        }
 
         cfg.ConfigureJsonSerializerOptions(options => options.ConfigureForNodaTime(DateTimeZoneProviders.Tzdb));
     });
