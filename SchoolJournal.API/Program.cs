@@ -7,9 +7,6 @@ using Swashbuckle.AspNetCore.SwaggerUI;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// builder.WebHost.UseKestrel(options =>
-//     options.ListenAnyIP(Int32.Parse(Environment.GetEnvironmentVariable("PORT")!)));
-
 var configuration = builder.Configuration;
 
 // Add services to the container.
@@ -22,7 +19,7 @@ builder.Services.AddControllers()
     .AddJsonOptions(options => options.JsonSerializerOptions.ConfigureForNodaTime(DateTimeZoneProviders.Tzdb));
 builder.Services.AddMassTransit(x =>
 {
-    x.UsingRabbitMq((context, cfg) =>
+    x.UsingRabbitMq((_, cfg) =>
     {
         cfg.ConfigureJsonSerializerOptions(options => options.ConfigureForNodaTime(DateTimeZoneProviders.Tzdb));
     });

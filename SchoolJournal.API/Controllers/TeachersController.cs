@@ -8,7 +8,7 @@ using SchoolJournal.Primitives;
 namespace SchoolJournal.API.Controllers;
 
 /// <summary>
-/// API controller teacher which controls all HTTP requests related to operations with teachers.
+/// API controller class which controls all HTTP requests related to operations with teachers.
 /// </summary>
 [ApiController]
 [Route("api/[controller]")]

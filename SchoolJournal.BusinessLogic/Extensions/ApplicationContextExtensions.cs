@@ -35,4 +35,15 @@ public static class ApplicationContextExtensions
             .Include(x => x.Class)
             .AsNoTracking();
     }
+
+    /// <summary>
+    /// Gets complete teachers enumerable from the database context.
+    /// </summary>
+    /// <param name="context">The database context.</param>
+    /// <returns><see cref="IQueryable{T}"/> fpr <see cref="Teacher"/></returns>
+    public static IQueryable<Teacher> CompleteTeachers(this ApplicationContext context)
+    {
+        return context.Teachers
+            .AsNoTracking();
+    }
 }
