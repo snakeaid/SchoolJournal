@@ -14,6 +14,11 @@ public class Teacher : IUser, ISoftDeletable
     public int Id { get; set; }
 
     /// <summary>
+    /// Gets and sets the journals of the teacher.
+    /// </summary>
+    public List<SubjectJournal>? Journals { get; set; }
+
+    /// <summary>
     /// Gets and sets the date and time of deletion.
     /// </summary>
     public LocalDateTime? DateTimeDeleted { get; set; }

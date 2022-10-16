@@ -8,6 +8,11 @@ namespace SchoolJournal.Primitives;
 public class SubjectJournalViewModel
 {
     /// <summary>
+    /// Gets and sets the displayed identifier of the journal.
+    /// </summary>
+    public Guid Id { get; set; }
+
+    /// <summary>
     /// Gets and sets the displayed subject of the journal.
     /// </summary>
     public SubjectViewModel Subject { get; set; } = null!;

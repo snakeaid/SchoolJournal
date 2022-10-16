@@ -44,7 +44,7 @@ public class SubjectJournalsController : ControllerBase
     [HttpGet("{id}")]
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
     [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(SubjectJournalViewModel))]
-    public async Task<IActionResult> Get(int id)
+    public async Task<IActionResult> Get(Guid id)
     {
         var result = await _sender.Send(new GetSubjectJournalQuery { Id = id });
         return Ok(result);

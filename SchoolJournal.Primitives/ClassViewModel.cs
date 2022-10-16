@@ -13,9 +13,14 @@ public class ClassViewModel
     public int Id { get; set; }
 
     /// <summary>
-    /// Gets and sets the displayed number of the class.
+    /// Gets and sets the displayed number and letter of the class.
     /// </summary>
     public int Number { get; set; }
+
+    /// <summary>
+    /// Gets and sets the displayed letter of the class.
+    /// </summary>
+    public string Letter { get; set; } = null!;
 
     /// <summary>
     /// Gets and sets the displayed class teacher of the class.
@@ -27,8 +32,8 @@ public class ClassViewModel
     /// </summary>
     public List<StudentViewModel> Students { get; set; } = null!;
 
-    /// <summary>
-    /// Gets and sets the displayed class journal.
-    /// </summary>
-    public List<SubjectJournalViewModel>? Journal { get; set; }
+    // /// <summary>
+    // /// Gets and sets the displayed class journal.
+    // /// </summary>
+    // public List<SubjectJournalViewModel>? Journal { get; set; }
 }

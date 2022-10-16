@@ -10,6 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 
 // Add services to the container.
+builder.Services.AddCors(p => p.AddPolicy("corsPolicy",
+    corsPolicyBuilder => { corsPolicyBuilder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin(); }));
 builder.Logging.AddCustomLogging();
 builder.Services.AddDbContexts(configuration);
 builder.Services.AddMappingProfiles();
@@ -32,17 +34,21 @@ builder.Services.AddSwaggerGen(c => c.ConfigureForNodaTimeWithSystemTextJson());
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseHttpsRedirection();
-}
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
 app.UseSwagger();
 app.UseSwaggerUI(c => c.DocExpansion(DocExpansion.None));
 
-app.UseCustomMiddlewares();
+app.UseHttpsRedirection();
+app.UseRouting();
 
+app.UseCors("corsPolicy");
+
+app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseCustomMiddlewares();
 
 app.MapControllers();
 

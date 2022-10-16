@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using NodaTime;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using SchoolJournal.DataAccess;
 
@@ -12,8 +13,8 @@ using SchoolJournal.DataAccess;
 namespace SchoolJournal.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20220908093741_Removed JsonConverter attributes")]
-    partial class RemovedJsonConverterattributes
+    [Migration("20220922145833_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -35,15 +36,15 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.Property<int>("ClassTeacherId")
                         .HasColumnType("integer");
 
-                    b.Property<string>("Journal")
+                    b.Property<LocalDateTime?>("DateTimeDeleted")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("Letter")
+                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<int>("Number")
                         .HasColumnType("integer");
-
-                    b.Property<string>("Students")
-                        .IsRequired()
-                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
@@ -56,8 +57,8 @@ namespace SchoolJournal.DataAccess.Migrations
                         {
                             Id = 1,
                             ClassTeacherId = 1,
-                            Number = 11,
-                            Students = "[{\"Id\":1,\"Class\":null,\"ClassId\":1,\"FirstName\":\"Mikhail\",\"LastName\":\"Mikhaylov\",\"Birthday\":\"2005-07-09\",\"Login\":\"mikhail\",\"Password\":\"1111\"},{\"Id\":2,\"Class\":null,\"ClassId\":1,\"FirstName\":\"Vasiliy\",\"LastName\":\"Vasiliev\",\"Birthday\":\"2006-01-02\",\"Login\":\"vasya2006\",\"Password\":\"13863\"}]"
+                            Letter = "A",
+                            Number = 11
                         });
                 });
 
@@ -67,11 +68,14 @@ namespace SchoolJournal.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<DateTime>("BeginDateTime")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<LocalDateTime>("BeginDateTime")
+                        .HasColumnType("timestamp without time zone");
 
-                    b.Property<DateTime>("EndDateTime")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<LocalDateTime?>("DateTimeDeleted")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<LocalDateTime>("EndDateTime")
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("HomeTask")
                         .HasColumnType("text");
@@ -88,6 +92,17 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.HasIndex("SubjectJournalId");
 
                     b.ToTable("Lessons");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("dc42e0d8-c434-48a5-8975-459afde23cf2"),
+                            BeginDateTime = new NodaTime.LocalDateTime(2022, 9, 7, 11, 10),
+                            EndDateTime = new NodaTime.LocalDateTime(2022, 9, 7, 11, 40),
+                            HomeTask = "Draw a picture.",
+                            Marks = "{}",
+                            SubjectJournalId = new Guid("eb2426c2-e67b-4688-8e82-12d089395f27")
+                        });
                 });
 
             modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.Student", b =>
@@ -98,25 +113,20 @@ namespace SchoolJournal.DataAccess.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<DateOnly>("Birthday")
+                    b.Property<LocalDate>("Birthday")
                         .HasColumnType("date");
 
                     b.Property<int>("ClassId")
                         .HasColumnType("integer");
+
+                    b.Property<LocalDateTime?>("DateTimeDeleted")
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Login")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -130,22 +140,18 @@ namespace SchoolJournal.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            Birthday = new DateOnly(2005, 7, 9),
+                            Birthday = new NodaTime.LocalDate(2005, 7, 9),
                             ClassId = 1,
                             FirstName = "Mikhail",
-                            LastName = "Mikhaylov",
-                            Login = "mikhail",
-                            Password = "1111"
+                            LastName = "Mikhaylov"
                         },
                         new
                         {
                             Id = 2,
-                            Birthday = new DateOnly(2006, 1, 2),
+                            Birthday = new NodaTime.LocalDate(2006, 1, 2),
                             ClassId = 1,
                             FirstName = "Vasiliy",
-                            LastName = "Vasiliev",
-                            Login = "vasya2006",
-                            Password = "13863"
+                            LastName = "Vasiliev"
                         });
                 });
 
@@ -157,6 +163,9 @@ namespace SchoolJournal.DataAccess.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<LocalDateTime?>("DateTimeDeleted")
+                        .HasColumnType("timestamp without time zone");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
@@ -164,6 +173,13 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Subjects");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Art"
+                        });
                 });
 
             modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.SubjectJournal", b =>
@@ -175,9 +191,8 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.Property<int>("ClassId")
                         .HasColumnType("integer");
 
-                    b.Property<string>("Lessons")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<LocalDateTime?>("DateTimeDeleted")
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<int>("SubjectId")
                         .HasColumnType("integer");
@@ -193,7 +208,16 @@ namespace SchoolJournal.DataAccess.Migrations
 
                     b.HasIndex("TeacherId");
 
-                    b.ToTable("SubjectJournal");
+                    b.ToTable("SubjectJournals");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("eb2426c2-e67b-4688-8e82-12d089395f27"),
+                            ClassId = 1,
+                            SubjectId = 1,
+                            TeacherId = 1
+                        });
                 });
 
             modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.Teacher", b =>
@@ -204,22 +228,17 @@ namespace SchoolJournal.DataAccess.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<DateOnly>("Birthday")
+                    b.Property<LocalDate>("Birthday")
                         .HasColumnType("date");
+
+                    b.Property<LocalDateTime?>("DateTimeDeleted")
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Login")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -231,11 +250,9 @@ namespace SchoolJournal.DataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            Birthday = new DateOnly(1983, 11, 18),
+                            Birthday = new NodaTime.LocalDate(1983, 11, 18),
                             FirstName = "Yana",
-                            LastName = "Yanovna",
-                            Login = "yanito",
-                            Password = "lll"
+                            LastName = "Yanovna"
                         });
                 });
 
@@ -253,7 +270,7 @@ namespace SchoolJournal.DataAccess.Migrations
             modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.Lesson", b =>
                 {
                     b.HasOne("SchoolJournal.DataAccess.Primitives.SubjectJournal", "SubjectJournal")
-                        .WithMany()
+                        .WithMany("Lessons")
                         .HasForeignKey("SubjectJournalId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -264,7 +281,7 @@ namespace SchoolJournal.DataAccess.Migrations
             modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.Student", b =>
                 {
                     b.HasOne("SchoolJournal.DataAccess.Primitives.Class", "Class")
-                        .WithMany()
+                        .WithMany("Students")
                         .HasForeignKey("ClassId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -275,7 +292,7 @@ namespace SchoolJournal.DataAccess.Migrations
             modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.SubjectJournal", b =>
                 {
                     b.HasOne("SchoolJournal.DataAccess.Primitives.Class", "Class")
-                        .WithMany()
+                        .WithMany("Journal")
                         .HasForeignKey("ClassId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -287,7 +304,7 @@ namespace SchoolJournal.DataAccess.Migrations
                         .IsRequired();
 
                     b.HasOne("SchoolJournal.DataAccess.Primitives.Teacher", "Teacher")
-                        .WithMany()
+                        .WithMany("Journals")
                         .HasForeignKey("TeacherId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -297,6 +314,23 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.Navigation("Subject");
 
                     b.Navigation("Teacher");
+                });
+
+            modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.Class", b =>
+                {
+                    b.Navigation("Journal");
+
+                    b.Navigation("Students");
+                });
+
+            modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.SubjectJournal", b =>
+                {
+                    b.Navigation("Lessons");
+                });
+
+            modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.Teacher", b =>
+                {
+                    b.Navigation("Journals");
                 });
 #pragma warning restore 612, 618
         }

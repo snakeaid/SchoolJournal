@@ -12,5 +12,5 @@ public class GetSubjectJournalQuery : IRequest<SubjectJournalViewModel>
     /// <summary>
     /// Gets and sets the identifier of the queried subject journal.
     /// </summary>
-    public int Id { get; set; }
+    public Guid Id { get; set; }
 }

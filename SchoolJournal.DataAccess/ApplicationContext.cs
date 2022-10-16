@@ -47,6 +47,12 @@ public class ApplicationContext : DbContext
     public DbSet<Subject> Subjects { get; set; } = null!;
 
     /// <summary>
+    /// Gets and sets the instance of <see cref="DbSet{TEntity}"/> for <see cref="SubjectJournal"/>,
+    /// represents the subject journals table and is used for database interactions.
+    /// </summary>
+    public DbSet<SubjectJournal> SubjectJournals { get; set; } = null!;
+
+    /// <summary>
     /// Gets and sets the instance of <see cref="DbSet{TEntity}"/> for <see cref="Lesson"/>,
     /// represents the lessons table and is used for database interactions.
     /// </summary>
@@ -111,7 +117,7 @@ public class ApplicationContext : DbContext
         };
         var c = new Class
         {
-            Id = 1, Number = 11, ClassTeacherId = 1
+            Id = 1, Letter = "A", Number = 11, ClassTeacherId = 1
         };
         var s = new Subject
         {

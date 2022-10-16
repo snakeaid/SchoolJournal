@@ -44,6 +44,23 @@ public static class ApplicationContextExtensions
     public static IQueryable<Teacher> CompleteTeachers(this ApplicationContext context)
     {
         return context.Teachers
+            .Include(x => x.Journals)!
+            .ThenInclude(x => x.Class)
+            .AsNoTracking();
+    }
+
+    /// <summary>
+    /// Gets complete subject journals enumerable from the database context.
+    /// </summary>
+    /// <param name="context">The database context.</param>
+    /// <returns><see cref="IQueryable{T}"/> fpr <see cref="SubjectJournal"/></returns>
+    public static IQueryable<SubjectJournal> CompleteSubjectJournals(this ApplicationContext context)
+    {
+        return context.SubjectJournals
+            .Include(x => x.Class)
+            .Include(x => x.Teacher)
+            .Include(x => x.Lessons)
+            .Include(x => x.Subject)
             .AsNoTracking();
     }
 }

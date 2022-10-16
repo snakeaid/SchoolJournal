@@ -22,4 +22,9 @@ public class TeacherViewModel
     /// Gets and sets the displayed date of birth of the teacher.
     /// </summary>
     public LocalDate Birthday { get; set; }
+
+    /// <summary>
+    /// Gets and sets the displayed list of classes of the teacher.
+    /// </summary>
+    public List<ClassViewModel>? Classes { get; set; }
 }

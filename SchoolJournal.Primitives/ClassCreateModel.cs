@@ -13,6 +13,11 @@ public class ClassCreateModel
     public int Number { get; set; }
 
     /// <summary>
+    /// Gets and sets the received letter of the class.
+    /// </summary>
+    public string Letter { get; set; } = null!;
+
+    /// <summary>
     /// Gets and sets the received identifier of the class teacher of the class.
     /// </summary>
     public int ClassTeacherId { get; set; }

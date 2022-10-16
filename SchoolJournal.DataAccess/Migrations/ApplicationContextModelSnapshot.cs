@@ -37,6 +37,10 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.Property<LocalDateTime?>("DateTimeDeleted")
                         .HasColumnType("timestamp without time zone");
 
+                    b.Property<string>("Letter")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.Property<int>("Number")
                         .HasColumnType("integer");
 
@@ -51,6 +55,7 @@ namespace SchoolJournal.DataAccess.Migrations
                         {
                             Id = 1,
                             ClassTeacherId = 1,
+                            Letter = "A",
                             Number = 11
                         });
                 });
@@ -89,12 +94,12 @@ namespace SchoolJournal.DataAccess.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("04d4e13c-73f7-41fc-a693-c490ffd6bf04"),
+                            Id = new Guid("dc42e0d8-c434-48a5-8975-459afde23cf2"),
                             BeginDateTime = new NodaTime.LocalDateTime(2022, 9, 7, 11, 10),
                             EndDateTime = new NodaTime.LocalDateTime(2022, 9, 7, 11, 40),
                             HomeTask = "Draw a picture.",
                             Marks = "{}",
-                            SubjectJournalId = new Guid("584ecaee-908c-4bce-9d92-28579c51b667")
+                            SubjectJournalId = new Guid("eb2426c2-e67b-4688-8e82-12d089395f27")
                         });
                 });
 
@@ -201,12 +206,12 @@ namespace SchoolJournal.DataAccess.Migrations
 
                     b.HasIndex("TeacherId");
 
-                    b.ToTable("SubjectJournal");
+                    b.ToTable("SubjectJournals");
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("584ecaee-908c-4bce-9d92-28579c51b667"),
+                            Id = new Guid("eb2426c2-e67b-4688-8e82-12d089395f27"),
                             ClassId = 1,
                             SubjectId = 1,
                             TeacherId = 1
@@ -297,7 +302,7 @@ namespace SchoolJournal.DataAccess.Migrations
                         .IsRequired();
 
                     b.HasOne("SchoolJournal.DataAccess.Primitives.Teacher", "Teacher")
-                        .WithMany()
+                        .WithMany("Journals")
                         .HasForeignKey("TeacherId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -319,6 +324,11 @@ namespace SchoolJournal.DataAccess.Migrations
             modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.SubjectJournal", b =>
                 {
                     b.Navigation("Lessons");
+                });
+
+            modelBuilder.Entity("SchoolJournal.DataAccess.Primitives.Teacher", b =>
+                {
+                    b.Navigation("Journals");
                 });
 #pragma warning restore 612, 618
         }

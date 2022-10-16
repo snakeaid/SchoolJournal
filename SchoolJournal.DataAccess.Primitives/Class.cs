@@ -19,6 +19,11 @@ public class Class : ISoftDeletable
     public int Number { get; set; }
 
     /// <summary>
+    /// Gets and sets the letter of the class.
+    /// </summary>
+    public string Letter { get; set; } = null!;
+
+    /// <summary>
     /// Gets and sets the class teacher of the class.
     /// </summary>
     public Teacher ClassTeacher { get; set; } = null!;
